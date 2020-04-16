@@ -1,0 +1,124 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="wrapper">
+    <nav class = "d-none d-sm-block" id="sidebar" [ngClass] = "{ 'active': navbarOpen }">
+        <div id="dismiss">
+            <i (click) = "toggleNavbar()" class="fa fa-arrow-left fa-align-justify"></i>
+        </div>
+        <div ng class="sidebar-header">
+            <h3>Myriathon</h3>
+        </div>
+        <ul class="list-unstyled components">
+        <div *ngIf = "session">
+            <p style = "margin: 0px; padding-bottom: 0px;">Welcome!</p>
+            <p>{{session.username}}</p>
+        </div>
+        <li [routerLinkActive] = "['active']">
+            <a [routerLink] = "['home']">Home</a>
+        </li>
+        <li [routerLinkActive] = "['active']">
+            <a [routerLink] = "['marathons']">Marathons</a>
+        </li>
+        <li [routerLinkActive] = "['active']">
+            <a [routerLink] = "['rescue']">Rescue</a>
+        </li>
+        <li [routerLinkActive] = "['active']">
+            <a [routerLink] = "['videos']">Videos</a>
+        </li>
+        <li [routerLinkActive] = "['active']">
+            <a [routerLink] = "['about']">About</a>
+        </li>
+        <li [routerLinkActive] = "['active']">
+            <a [routerLink] = "['admin']">Admin</a>
+        </li>
+        <div>
+            <button style="position: absolute; left: 0; bottom: 0;" class="btn btn-danger btn-block" *ngIf="session" (click) = "logout()">Logout</button>
+        </div>
+        </ul>
+    </nav>
+    <div id = "content">
+        <nav id = "topNav" class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <button (click) = "toggleNavbar()" type="button" id="sidebarNotCollapse" class="btn d-none d-sm-block">
+                    <i class="fa fa-arrow-right fa-align-justify"></i>
+                </button>
+                <button [attr.aria-expanded] = "hamburgerOpen" class="btn btn-dark d-inline-block d-sm-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i (click) = "toggleHamburger()" class="fa fa-bars fa-align-justify"></i>
+                </button>
+                <div [ngClass] = "{ 'show': hamburgerOpen }" class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div *ngIf = "session" class = "d-block d-sm-block d-md-none">
+                        <p>{{session.username}}</p>
+                    </div>
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item" [routerLinkActive] = "['active']">
+                            <a class="nav-link" [routerLink] = "['home']">Home</a>
+                        </li>
+                        <li  class="nav-item" [routerLinkActive] = "['active']">
+                            <a class="nav-link" [routerLink] = "['marathons']">Marathons</a>
+                        </li>
+                        <li class="nav-item" [routerLinkActive] = "['active']">
+                            <a class="nav-link" [routerLink] = "['rescue']">Rescue</a>
+                        </li>
+                        <li class="nav-item" [routerLinkActive] = "['active']">
+                            <a class="nav-link" [routerLink] = "['videos']">Videos</a>
+                        </li>
+                        <li class="nav-item" [routerLinkActive] = "['active']">
+                            <a class="nav-link" [routerLink] = "['about']">About</a>
+                        </li>
+                        <li class = nav-item>
+                            <div *ngIf = "session" class = "d-block d-sm-block d-md-none">
+                                <button id = "logout-button-block" class="btn btn-danger btn-block" *ngIf="session" (click) = "logout()">Logout</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <router-outlet></router-outlet>
+        <footer class = "d-flex justify-content-center footer">
+            <div id = "footer-text" class = "d-flex justify-content-center container">
+                <span class = "text-muted">Copyright 2020</span>
+            </div>
+            <div class = "d-flex justify-content-center container">
+                <a href = "#">
+                    <img src = "assets/img/twitter_icon.png">
+                </a>
+                <a href = "#">
+                    <img src = "assets/img/twitch_icon.png">
+                </a>
+                <a href = "#">
+                    <img src = "assets/img/discord_icon.png">
+                </a>
+            </div>
+        </footer>
+    </div>
+</div>
+<div class="overlay"></div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#sidebar").mCustomScrollbar({
+            theme: "minimal"
+        });
+
+        $('#dismiss, .overlay').on('click', function () {
+            $('#sidebar').removeClass('active');
+            $('.overlay').removeClass('active');
+        });
+
+        $('#sidebarCollapse').on('click', function () {
+            $('#sidebar').addClass('active');
+            $('.overlay').addClass('active');
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+</script>
+</body>

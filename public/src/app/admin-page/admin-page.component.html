@@ -1,0 +1,119 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <div class = "container-fluid">
+        <div *ngIf="displayFalseMessage" class = "container">
+            <div class = "row invalid">
+                <p>{{falseMessage}}</p>
+            </div>
+            <div class = "row invalid">
+                <p>{{serverError}}</p>
+            </div>
+        </div>
+        <div class = "row">
+            <h3>Admin Login: </h3>
+        </div>
+        <div class = "row">
+            <form (submit) = "onLogin()">
+                <div class = "form-group">
+                    <label>Email</label>
+                    <input 
+                    type = "email" 
+                    class = "form-control" 
+                    placeholder="Enter Email"
+                    name = "loginUser.email"
+                    required
+                    minlength = "7"
+                    [(ngModel)] = "loginUser.email"
+                    #loginEmail = "ngModel"
+                    />
+                <div class="invalid" *ngIf="loginEmail.errors && (loginEmail.dirty || loginEmail.touched)">email is required!</div>
+                </div>
+                <div class = "form-group">
+                    <label>Password</label>
+                    <input 
+                    type = "password" 
+                    class = "form-control" 
+                    placeholder="Enter Password"
+                    name = "loginUser.password"
+                    required
+                    minlength = "7"
+                    [(ngModel)] = "loginUser.password"
+                    #loginPassword = "ngModel"
+                    />
+                <div class="invalid" *ngIf="loginPassword.errors && (loginPassword.dirty || loginPassword.touched)">password is required!</div>
+                </div>
+                <button [disabled] = "!loginEmail.valid || !loginPassword.valid" type = "submit" class = "btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+    <hr my-4>
+    <div class = "container-fluid">
+        <div class = "row">
+            <h3>Register: </h3>
+        </div>
+        <div class = "row">
+            <form (submit) = "onRegister()">
+                <div class = "form-group">
+                    <label>Username</label>
+                    <input 
+                    type = "text" 
+                    class = "form-control" 
+                    placeholder="Enter Username"
+                    name = "newUser.newUsername"
+                    required
+                    minlength = "5"
+                    [(ngModel)] = "newUser.newUsername"
+                    #newUsername = "ngModel"
+                    />
+                    <div class="invalid" *ngIf="newUsername.errors && (newUsername.dirty || newUsername.touched)">Username must be at least 5 characters long!</div>
+                    <div class="valid" *ngIf="newUsername.valid">This is a valid Username</div>
+                </div>
+                <div class = "form-group">
+                    <label>Email</label>
+                    <input 
+                    type = "email" 
+                    class = "form-control" 
+                    placeholder="Enter Email"
+                    name = "newUser.newEmail"
+                    required
+                    minlength = "7"
+                    [(ngModel)] = "newUser.newEmail"
+                    #newEmail = "ngModel"
+                    />
+                    <div class="invalid" *ngIf="newEmail.errors && (newEmail.dirty || newEmail.touched)">email is required with length at least 7!</div>
+                </div>
+                <div class = "form-group">
+                    <label>Password</label>
+                    <input 
+                    type = "password" 
+                    class = "form-control" 
+                    placeholder="Enter Password"
+                    name = newUser.newPassword
+                    required
+                    minlength = "7"
+                    [(ngModel)] = 'newUser.newPassword'
+                    #newPassword = "ngModel"
+                    />
+                    <div class="invalid" *ngIf="newPassword.errors && (newPassword.dirty || newPassword.touched)">Password must be at least 7 characters long!</div>
+                    <div class="valid" *ngIf="newPassword.valid">This is a valid Password</div>
+                </div>
+                <div class = "form-group">
+                    <label>Secret Message</label>
+                    <input 
+                    type = text 
+                    class = "form-control" 
+                    placeholder="Enter the Secret Message"
+                    name = "newUser.newSecretMessage"
+                    required
+                    [(ngModel)] = "newUser.newSecretMessage"
+                    #newSecretMessage = "ngModel"
+                    />
+                </div>
+                <button [disabled] = "!newEmail.valid || !newPassword.valid || !newUsername.valid" type = "submit" class = "btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+    <hr my-4 id = "admin-bottom">

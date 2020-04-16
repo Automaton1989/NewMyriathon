@@ -1,0 +1,106 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <div class = "container-fluid">
+        <div *ngIf="displayFalseMessage" class = "container">
+            <div class = "row invalid">
+                <p>{{falseMessage}}</p>
+            </div>
+            <div class = "row invalid">
+                <p>{{serverError}}</p>
+            </div>
+        </div>
+        <div class = "row">
+            <h3>Add New Season</h3>
+        </div>
+        <div class = "row">
+            <form (submit) = "createSeason()">
+                <div class = "form-group">
+                    <label>Name: </label>
+                    <input 
+                    type = "text"
+                    class = "form-control"
+                    placeholder="Enter Season Name"
+                    name = "newSeason.newSeasonName"
+                    required 
+                    minlength = "3"
+                    [(ngModel)] = "newSeason.newSeasonName"
+                    #newSeasonName = "ngModel"
+                    />
+                    <div class = "invalid" *ngIf="newSeasonName.errors && (newSeasonName.dirty || newSeasonName.touched)">Season Name is Required!</div>
+                </div>
+                <div class = "form-group">
+                    <label>Season Number: </label>
+                    <input 
+                    type = "number"
+                    class = "form-control"
+                    name = "newSeason.newSeasonNumber"
+                    required
+                    [(ngModel)] = "newSeason.newSeasonNumber"
+                    #newSeasonNumber = "ngModel"
+                    />
+                </div>
+                <button [disabled] = "!newSeasonName.valid || !newSeasonNumber.valid" type = "submit" class = "btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <hr my-4>
+        <div class = "row">
+            <form (submit) = "createVideo()">
+                <div class = "form-group">
+                    <label>Title: </label>
+                    <input
+                    type = "text"
+                    class = "form-control"
+                    placeholder="Enter Video Title"
+                    name = "newVideo.newVideoTitle"
+                    required
+                    minlength = "3"
+                    [(ngModel)] = "newVideo.newVideoTitle"
+                    #newVideoTitle = "ngModel"
+                    />
+                    <div class = "invalid" *ngIf="newVideoTitle.errors && (newVideoTitle.dirty || newVideoTitle.touched)">Video Title is Required!</div>
+                </div>
+                <div class = "form-group">
+                    <label>Description: </label>
+                    <textarea
+                    class = "form-control"
+                    placeholder="Enter Video Description (Not Required!)"
+                    rows = "3"
+                    name = "newVideo.newVideoDescription"
+                    [(ngModel)] = "newVideo.newVideoDescription"
+                    #newVideoDescription = "ngModel"
+                    ></textarea>
+                </div>
+                <div class = "form-group">
+                    <label>URL: </label>
+                    <input
+                    type = "text"
+                    class = "form-control"
+                    placeholder="Enter a Video URL"
+                    name = "newVideo.newVideoURL"
+                    required
+                    minlength="3"
+                    [(ngModel)] = "newVideo.newVideoURL"
+                    #newVideoURL = "ngModel"
+                    />
+                    <div class = "invalid" *ngIf="newVideoURL.errors && (newVideoURL.dirty || newVideoURL.touched)">Video URL is Required!</div>
+                </div>
+                <div class = "form-group">
+                    <label>Season: </label>
+                    <input 
+                    type = "number"
+                    class = "form-control"
+                    name = "newVideo.newVideoSeason"
+                    required
+                    [(ngModel)] = "newVideo.newVideoSeason"
+                    #newVideoSeason = "ngModel"
+                    />
+                <div class = "invalid" *ngIf="newVideoSeason.errors && (newVideoSeason.dirty || newVideoSeason.touched)">Video Season is Required!</div>
+                </div>
+                <button [disabled] = "!newVideoTitle.valid || !newVideoURL.valid" type = "submit" class = "btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>

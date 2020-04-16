@@ -1,0 +1,20 @@
+.valid 
+{
+    color: green;
+}
+
+.invalid
+{
+    color: red;
+}
+
+.container
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+.container-fluid
+{
+    margin-bottom: 5rem;
+}
