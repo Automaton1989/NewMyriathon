@@ -6,6 +6,7 @@ import { AddVideoPageComponent } from './add-video-page/add-video-page.component
 import { MarathonsPageComponent } from './marathons-page/marathons-page.component';
 import { MyriathonPageComponent } from './myriathon-page/myriathon-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
+import { AllVideosComponent } from './all-videos/all-videos.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
 {path: 'marathons', component: MarathonsPageComponent},
 {path: 'rescue', component: MyriathonPageComponent},
 {path: 'about', component: AboutPageComponent},
+{path: 'videos', component: AllVideosComponent},
 ];
 
 @NgModule({

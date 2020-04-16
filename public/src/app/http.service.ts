@@ -29,6 +29,10 @@ export class HttpService {
   {
     return this._http.post('myriathon/new/video', {newVideo : newVideo});
   }
+  getSeasons()
+  {
+    return this._http.get('/myriathon/all/seasons');
+  }
   send(session : any) 
   {
     this._stream$.next(session)

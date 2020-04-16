@@ -31,6 +31,12 @@ var MyriathonVideoSchema = new mongoose.Schema(
             required: [true, "You must have a title of at least 3 characters!"],
             minlength: 3
         },
+        img:
+        {
+            type: String,
+            required: [true, "You need to have an image for this video!"],
+            minlength: 3
+        },
         description:
         {
             type: String,

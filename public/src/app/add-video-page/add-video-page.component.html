@@ -74,6 +74,20 @@
                     ></textarea>
                 </div>
                 <div class = "form-group">
+                    <label>Img URL: </label>
+                    <input
+                    type = "text"
+                    class = "form-control"
+                    placeholder="Enter IMG URL"
+                    name = "newVideo.newVideoImg"
+                    required
+                    minlength="3"
+                    [(ngModel)] = "newVideo.newVideoImg"
+                    #newVideoImg = "ngModel"
+                    />
+                    <div class = "invalid" *ngIf="newVideoImg.errors && (newVideoImg.dirty || newVideoImg.touched)">Video IMG URL is Required!</div>
+                </div>
+                <div class = "form-group">
                     <label>URL: </label>
                     <input
                     type = "text"
@@ -99,7 +113,7 @@
                     />
                 <div class = "invalid" *ngIf="newVideoSeason.errors && (newVideoSeason.dirty || newVideoSeason.touched)">Video Season is Required!</div>
                 </div>
-                <button [disabled] = "!newVideoTitle.valid || !newVideoURL.valid" type = "submit" class = "btn btn-primary">Submit</button>
+                <button [disabled] = "!newVideoTitle.valid || !newVideoURL.valid || !newVideoImg.valid" type = "submit" class = "btn btn-primary">Submit</button>
             </form>
         </div>
     </div>

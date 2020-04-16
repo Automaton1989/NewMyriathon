@@ -24,7 +24,7 @@ export class AddVideoPageComponent implements OnInit {
   ngOnInit() 
   {
     this.newSeason = {newSeasonName: "", newSeasonNumber: null};
-    this.newVideo = {newVideoTitle: "", newVideoDescription: "", newVideoURL: "", newVideoSeason: null};
+    this.newVideo = {newVideoTitle: "", newVideoDescription: "", newVideoImg: "", newVideoURL: "", newVideoSeason: null};
     this.displayFalseMessage = false;
     this.checkSession();
     this.receiveMessage(this.session);
@@ -49,7 +49,7 @@ export class AddVideoPageComponent implements OnInit {
       {
         console.log("We are returning with new video data", data);
       })
-    this.newVideo = {newVideoTitle: "", newVideoDescription: "", newVideoURL: "", newVideoSeason: null};
+    this.newVideo = {newVideoTitle: "", newVideoDescription: "", newVideoImg: "", newVideoURL: "", newVideoSeason: null};
   }
 
   receiveMessage(session)

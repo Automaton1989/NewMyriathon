@@ -8,6 +8,7 @@ module.exports = {
     index: function(req, res) {
         res.json({success : true})
     },
+
     //ADDING A NEW USER
     newUser: function(req, res) {
         console.log("We are in new user controller!");
@@ -30,6 +31,7 @@ module.exports = {
             res.json({success : false})
         })
     },
+
     //LOGGING IN A USER
     loginUser: function(req, res) {
         User.findOne({email: req.body.loginUser.email}, function(err, user) 
@@ -55,6 +57,7 @@ module.exports = {
             }
         })
     },
+
     //ADDING A NEW SEASON
     addNewSeason: function(req, res) {
         console.log("We are in the users.js file now!");
@@ -90,6 +93,7 @@ module.exports = {
             }
         })
     },
+
     //ADDING A NEW VIDEO
     addNewVideo: function(req, res) {
         console.log("We are in the users.js file now!")
@@ -97,7 +101,7 @@ module.exports = {
         {
             if(video == null)
             {
-                var video = new Video({title: req.body.newVideo.newVideoTitle, description: req.body.newVideo.newVideoDescription, videoURL: req.body.newVideo.newVideoURL})
+                var video = new Video({title: req.body.newVideo.newVideoTitle, description: req.body.newVideo.newVideoDescription, img: req.body.newVideo.newVideoImg, videoURL: req.body.newVideo.newVideoURL})
                 video.save(function(err, video) 
                 {
                     if(err)
@@ -148,8 +152,27 @@ module.exports = {
             }
         })
     },
+
+    //GET ALL SEASONS DATA
+    getAllSeasons: function(req, res)
+    {
+        console.log("We are in the users.js file now!");
+        Season.find({}, function(err, seasons)
+        {
+            if(err)
+            {
+                res.json({success : false});
+            }
+            else
+            {
+                res.json({seasons : seasons});
+            }
+        })
+    },
+
     //CHECK IF USER IS ADMIN
-    checkAdmin: function(req, res) {
+    checkAdmin: function(req, res) 
+    {
         if(req.session.email) {
             User.findOne({email: req.session.email}, function(err, user) {
                 if(user.admin == false) {
@@ -164,6 +187,7 @@ module.exports = {
             res.json({success : false})
         }
     },
+
     //CHECK FOR SESSION COOKIE
     checkSession: function(req, res) {
         if(req.session.email) {
@@ -180,6 +204,7 @@ module.exports = {
             res.json({success : false})
         }
     },
+
     //LOGGING USER OUT
     logout: function(req, res) {
         if(req.session) {

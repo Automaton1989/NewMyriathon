@@ -14,6 +14,7 @@ import { MarathonsPageComponent } from './marathons-page/marathons-page.componen
 import { MyriathonPageComponent } from './myriathon-page/myriathon-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { AllVideosComponent } from './all-videos/all-videos.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { CarouselComponent } from './carousel/carousel.component';
     MyriathonPageComponent,
     AboutPageComponent,
     CarouselComponent,
+    AllVideosComponent,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

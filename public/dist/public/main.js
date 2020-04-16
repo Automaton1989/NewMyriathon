@@ -41,7 +41,7 @@ module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div *ngIf=\"displayFalseMessage\" class = \"container\">\n            <div class = \"row invalid\">\n                <p>{{falseMessage}}</p>\n            </div>\n            <div class = \"row invalid\">\n                <p>{{serverError}}</p>\n            </div>\n        </div>\n        <div class = \"row\">\n            <h3>Add New Season</h3>\n        </div>\n        <div class = \"row\">\n            <form (submit) = \"createSeason()\">\n                <div class = \"form-group\">\n                    <label>Name: </label>\n                    <input \n                    type = \"text\"\n                    class = \"form-control\"\n                    placeholder=\"Enter Season Name\"\n                    name = \"newSeason.newSeasonName\"\n                    required \n                    minlength = \"3\"\n                    [(ngModel)] = \"newSeason.newSeasonName\"\n                    #newSeasonName = \"ngModel\"\n                    />\n                    <div class = \"invalid\" *ngIf=\"newSeasonName.errors && (newSeasonName.dirty || newSeasonName.touched)\">Season Name is Required!</div>\n                </div>\n                <div class = \"form-group\">\n                    <label>Season Number: </label>\n                    <input \n                    type = \"number\"\n                    class = \"form-control\"\n                    name = \"newSeason.newSeasonNumber\"\n                    required\n                    [(ngModel)] = \"newSeason.newSeasonNumber\"\n                    #newSeasonNumber = \"ngModel\"\n                    />\n                </div>\n                <button [disabled] = \"!newSeasonName.valid || !newSeasonNumber.valid\" type = \"submit\" class = \"btn btn-primary\">Submit</button>\n            </form>\n        </div>\n        <hr my-4>\n        <div class = \"row\">\n            <form (submit) = \"createVideo()\">\n                <div class = \"form-group\">\n                    <label>Title: </label>\n                    <input\n                    type = \"text\"\n                    class = \"form-control\"\n                    placeholder=\"Enter Video Title\"\n                    name = \"newVideo.newVideoTitle\"\n                    required\n                    minlength = \"3\"\n                    [(ngModel)] = \"newVideo.newVideoTitle\"\n                    #newVideoTitle = \"ngModel\"\n                    />\n                    <div class = \"invalid\" *ngIf=\"newVideoTitle.errors && (newVideoTitle.dirty || newVideoTitle.touched)\">Video Title is Required!</div>\n                </div>\n                <div class = \"form-group\">\n                    <label>Description: </label>\n                    <textarea\n                    class = \"form-control\"\n                    placeholder=\"Enter Video Description (Not Required!)\"\n                    rows = \"3\"\n                    name = \"newVideo.newVideoDescription\"\n                    [(ngModel)] = \"newVideo.newVideoDescription\"\n                    #newVideoDescription = \"ngModel\"\n                    ></textarea>\n                </div>\n                <div class = \"form-group\">\n                    <label>URL: </label>\n                    <input\n                    type = \"text\"\n                    class = \"form-control\"\n                    placeholder=\"Enter a Video URL\"\n                    name = \"newVideo.newVideoURL\"\n                    required\n                    minlength=\"3\"\n                    [(ngModel)] = \"newVideo.newVideoURL\"\n                    #newVideoURL = \"ngModel\"\n                    />\n                    <div class = \"invalid\" *ngIf=\"newVideoURL.errors && (newVideoURL.dirty || newVideoURL.touched)\">Video URL is Required!</div>\n                </div>\n                <div class = \"form-group\">\n                    <label>Season: </label>\n                    <input \n                    type = \"number\"\n                    class = \"form-control\"\n                    name = \"newVideo.newVideoSeason\"\n                    required\n                    [(ngModel)] = \"newVideo.newVideoSeason\"\n                    #newVideoSeason = \"ngModel\"\n                    />\n                <div class = \"invalid\" *ngIf=\"newVideoSeason.errors && (newVideoSeason.dirty || newVideoSeason.touched)\">Video Season is Required!</div>\n                </div>\n                <button [disabled] = \"!newVideoTitle.valid || !newVideoURL.valid\" type = \"submit\" class = \"btn btn-primary\">Submit</button>\n            </form>\n        </div>\n    </div>\n</body>"
+module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div *ngIf=\"displayFalseMessage\" class = \"container\">\n            <div class = \"row invalid\">\n                <p>{{falseMessage}}</p>\n            </div>\n            <div class = \"row invalid\">\n                <p>{{serverError}}</p>\n            </div>\n        </div>\n        <div class = \"row\">\n            <h3>Add New Season</h3>\n        </div>\n        <div class = \"row\">\n            <form (submit) = \"createSeason()\">\n                <div class = \"form-group\">\n                    <label>Name: </label>\n                    <input \n                    type = \"text\"\n                    class = \"form-control\"\n                    placeholder=\"Enter Season Name\"\n                    name = \"newSeason.newSeasonName\"\n                    required \n                    minlength = \"3\"\n                    [(ngModel)] = \"newSeason.newSeasonName\"\n                    #newSeasonName = \"ngModel\"\n                    />\n                    <div class = \"invalid\" *ngIf=\"newSeasonName.errors && (newSeasonName.dirty || newSeasonName.touched)\">Season Name is Required!</div>\n                </div>\n                <div class = \"form-group\">\n                    <label>Season Number: </label>\n                    <input \n                    type = \"number\"\n                    class = \"form-control\"\n                    name = \"newSeason.newSeasonNumber\"\n                    required\n                    [(ngModel)] = \"newSeason.newSeasonNumber\"\n                    #newSeasonNumber = \"ngModel\"\n                    />\n                </div>\n                <button [disabled] = \"!newSeasonName.valid || !newSeasonNumber.valid\" type = \"submit\" class = \"btn btn-primary\">Submit</button>\n            </form>\n        </div>\n        <hr my-4>\n        <div class = \"row\">\n            <form (submit) = \"createVideo()\">\n                <div class = \"form-group\">\n                    <label>Title: </label>\n                    <input\n                    type = \"text\"\n                    class = \"form-control\"\n                    placeholder=\"Enter Video Title\"\n                    name = \"newVideo.newVideoTitle\"\n                    required\n                    minlength = \"3\"\n                    [(ngModel)] = \"newVideo.newVideoTitle\"\n                    #newVideoTitle = \"ngModel\"\n                    />\n                    <div class = \"invalid\" *ngIf=\"newVideoTitle.errors && (newVideoTitle.dirty || newVideoTitle.touched)\">Video Title is Required!</div>\n                </div>\n                <div class = \"form-group\">\n                    <label>Description: </label>\n                    <textarea\n                    class = \"form-control\"\n                    placeholder=\"Enter Video Description (Not Required!)\"\n                    rows = \"3\"\n                    name = \"newVideo.newVideoDescription\"\n                    [(ngModel)] = \"newVideo.newVideoDescription\"\n                    #newVideoDescription = \"ngModel\"\n                    ></textarea>\n                </div>\n                <div class = \"form-group\">\n                    <label>Img URL: </label>\n                    <input\n                    type = \"text\"\n                    class = \"form-control\"\n                    placeholder=\"Enter IMG URL\"\n                    name = \"newVideo.newVideoImg\"\n                    required\n                    minlength=\"3\"\n                    [(ngModel)] = \"newVideo.newVideoImg\"\n                    #newVideoImg = \"ngModel\"\n                    />\n                    <div class = \"invalid\" *ngIf=\"newVideoImg.errors && (newVideoImg.dirty || newVideoImg.touched)\">Video IMG URL is Required!</div>\n                </div>\n                <div class = \"form-group\">\n                    <label>URL: </label>\n                    <input\n                    type = \"text\"\n                    class = \"form-control\"\n                    placeholder=\"Enter a Video URL\"\n                    name = \"newVideo.newVideoURL\"\n                    required\n                    minlength=\"3\"\n                    [(ngModel)] = \"newVideo.newVideoURL\"\n                    #newVideoURL = \"ngModel\"\n                    />\n                    <div class = \"invalid\" *ngIf=\"newVideoURL.errors && (newVideoURL.dirty || newVideoURL.touched)\">Video URL is Required!</div>\n                </div>\n                <div class = \"form-group\">\n                    <label>Season: </label>\n                    <input \n                    type = \"number\"\n                    class = \"form-control\"\n                    name = \"newVideo.newVideoSeason\"\n                    required\n                    [(ngModel)] = \"newVideo.newVideoSeason\"\n                    #newVideoSeason = \"ngModel\"\n                    />\n                <div class = \"invalid\" *ngIf=\"newVideoSeason.errors && (newVideoSeason.dirty || newVideoSeason.touched)\">Video Season is Required!</div>\n                </div>\n                <button [disabled] = \"!newVideoTitle.valid || !newVideoURL.valid || !newVideoImg.valid\" type = \"submit\" class = \"btn btn-primary\">Submit</button>\n            </form>\n        </div>\n    </div>\n</body>"
 
 /***/ }),
 
@@ -53,6 +53,17 @@ module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.
 /***/ (function(module, exports) {
 
 module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div *ngIf=\"displayFalseMessage\" class = \"container\">\n            <div class = \"row invalid\">\n                <p>{{falseMessage}}</p>\n            </div>\n            <div class = \"row invalid\">\n                <p>{{serverError}}</p>\n            </div>\n        </div>\n        <div class = \"row\">\n            <h3>Admin Login: </h3>\n        </div>\n        <div class = \"row\">\n            <form (submit) = \"onLogin()\">\n                <div class = \"form-group\">\n                    <label>Email</label>\n                    <input \n                    type = \"email\" \n                    class = \"form-control\" \n                    placeholder=\"Enter Email\"\n                    name = \"loginUser.email\"\n                    required\n                    minlength = \"7\"\n                    [(ngModel)] = \"loginUser.email\"\n                    #loginEmail = \"ngModel\"\n                    />\n                <div class=\"invalid\" *ngIf=\"loginEmail.errors && (loginEmail.dirty || loginEmail.touched)\">email is required!</div>\n                </div>\n                <div class = \"form-group\">\n                    <label>Password</label>\n                    <input \n                    type = \"password\" \n                    class = \"form-control\" \n                    placeholder=\"Enter Password\"\n                    name = \"loginUser.password\"\n                    required\n                    minlength = \"7\"\n                    [(ngModel)] = \"loginUser.password\"\n                    #loginPassword = \"ngModel\"\n                    />\n                <div class=\"invalid\" *ngIf=\"loginPassword.errors && (loginPassword.dirty || loginPassword.touched)\">password is required!</div>\n                </div>\n                <button [disabled] = \"!loginEmail.valid || !loginPassword.valid\" type = \"submit\" class = \"btn btn-primary\">Submit</button>\n            </form>\n        </div>\n    </div>\n    <hr my-4>\n    <div class = \"container-fluid\">\n        <div class = \"row\">\n            <h3>Register: </h3>\n        </div>\n        <div class = \"row\">\n            <form (submit) = \"onRegister()\">\n                <div class = \"form-group\">\n                    <label>Username</label>\n                    <input \n                    type = \"text\" \n                    class = \"form-control\" \n                    placeholder=\"Enter Username\"\n                    name = \"newUser.newUsername\"\n                    required\n                    minlength = \"5\"\n                    [(ngModel)] = \"newUser.newUsername\"\n                    #newUsername = \"ngModel\"\n                    />\n                    <div class=\"invalid\" *ngIf=\"newUsername.errors && (newUsername.dirty || newUsername.touched)\">Username must be at least 5 characters long!</div>\n                    <div class=\"valid\" *ngIf=\"newUsername.valid\">This is a valid Username</div>\n                </div>\n                <div class = \"form-group\">\n                    <label>Email</label>\n                    <input \n                    type = \"email\" \n                    class = \"form-control\" \n                    placeholder=\"Enter Email\"\n                    name = \"newUser.newEmail\"\n                    required\n                    minlength = \"7\"\n                    [(ngModel)] = \"newUser.newEmail\"\n                    #newEmail = \"ngModel\"\n                    />\n                    <div class=\"invalid\" *ngIf=\"newEmail.errors && (newEmail.dirty || newEmail.touched)\">email is required with length at least 7!</div>\n                </div>\n                <div class = \"form-group\">\n                    <label>Password</label>\n                    <input \n                    type = \"password\" \n                    class = \"form-control\" \n                    placeholder=\"Enter Password\"\n                    name = newUser.newPassword\n                    required\n                    minlength = \"7\"\n                    [(ngModel)] = 'newUser.newPassword'\n                    #newPassword = \"ngModel\"\n                    />\n                    <div class=\"invalid\" *ngIf=\"newPassword.errors && (newPassword.dirty || newPassword.touched)\">Password must be at least 7 characters long!</div>\n                    <div class=\"valid\" *ngIf=\"newPassword.valid\">This is a valid Password</div>\n                </div>\n                <div class = \"form-group\">\n                    <label>Secret Message</label>\n                    <input \n                    type = text \n                    class = \"form-control\" \n                    placeholder=\"Enter the Secret Message\"\n                    name = \"newUser.newSecretMessage\"\n                    required\n                    [(ngModel)] = \"newUser.newSecretMessage\"\n                    #newSecretMessage = \"ngModel\"\n                    />\n                </div>\n                <button [disabled] = \"!newEmail.valid || !newPassword.valid || !newUsername.valid\" type = \"submit\" class = \"btn btn-primary\">Submit</button>\n            </form>\n        </div>\n    </div>\n    <hr my-4 id = \"admin-bottom\">"
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/all-videos/all-videos.component.html":
+/*!********************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/all-videos/all-videos.component.html ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<head>\n        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n    </head>\n    <body>\n        <div class = \"container-fluid\">\n            <div class = \"row\">\n                <div align = \"center\" id = \"image-wrapper\">\n                    <div class=\"d-none d-lg-block\" id=\"homeText\">\n                        <h3>Recent Video</h3>\n                        <p>Placeholder text goes here</p>\n                        <a herf=\"#\">\n                            <button class=\"btn\">Link Here</button>\n                        </a>\n                    </div>\n                </div>\n            </div>\n            <div class = \"row\">\n                <div class = \"col\">\n                    <div class=\"dropdown\">\n                        <button [attr.aria-expanded] = \"dropdownOpen\" (click) = \"toggleDropdown()\" class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                            Dropdown button\n                        </button>\n                        <div [ngClass] = \"{'show': dropdownOpen }\" class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n                            <a *ngFor = \"let season of seasons\" (click) = \"activeSeason(season.number)\" class=\"dropdown-item\" >{{season.name}}</a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <div id = \"videoCardsRow\" class = \"row\">\n                <div *ngIf = \"activeSeasonNumber\">\n                    <div *ngFor = \"let video of seasons[activeSeasonNumber-1].videos\" class = \"col\">\n                        <div class=\"card\" style=\"width: 18rem;\">\n                            <img src=\"{{video.img}}\" class=\"card-img-top\" alt=\"...\">\n                            <div class=\"card-body\">\n                                <h5 class=\"card-title\">{{video.title}}</h5>\n                                <p class=\"card-text\">{{video.description}}</p>\n                                <a [routerLink] = \"[video.title]\" class=\"btn btn-primary\">Go somewhere</a>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </body>\n    "
 
 /***/ }),
 
@@ -222,7 +233,7 @@ let AddVideoPageComponent = class AddVideoPageComponent {
     }
     ngOnInit() {
         this.newSeason = { newSeasonName: "", newSeasonNumber: null };
-        this.newVideo = { newVideoTitle: "", newVideoDescription: "", newVideoURL: "", newVideoSeason: null };
+        this.newVideo = { newVideoTitle: "", newVideoDescription: "", newVideoImg: "", newVideoURL: "", newVideoSeason: null };
         this.displayFalseMessage = false;
         this.checkSession();
         this.receiveMessage(this.session);
@@ -241,7 +252,7 @@ let AddVideoPageComponent = class AddVideoPageComponent {
         observable.subscribe(data => {
             console.log("We are returning with new video data", data);
         });
-        this.newVideo = { newVideoTitle: "", newVideoDescription: "", newVideoURL: "", newVideoSeason: null };
+        this.newVideo = { newVideoTitle: "", newVideoDescription: "", newVideoImg: "", newVideoURL: "", newVideoSeason: null };
     }
     receiveMessage(session) {
         this.session = session;
@@ -387,6 +398,111 @@ AdminPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
+/***/ "./src/app/all-videos/all-videos.component.css":
+/*!*****************************************************!*\
+  !*** ./src/app/all-videos/all-videos.component.css ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "body\n{\n    margin-bottom: 10rem;\n}\n\n.row\n{\n    margin-bottom: 1rem;\n}\n\n#image-wrapper\n{\n    width: 100%;\n    min-height: 650px;\n    background-position: center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    position: relative;\n    background-image: url(\"https://wallpapercave.com/wp/wp1980778.jpg\");\n}\n\n#homeText\n{\n    position: absolute;\n    bottom: 0px;\n    margin-left: 300px;\n    margin-bottom: 100px;\n    z-index: 2;\n    background: rgba(128,128,128, 0.7);\n    padding: 15px;\n    border-radius: 8px;\n    box-shadow: 10px 10px 5px black;\n}\n\n#homeText h3, p\n    {\n        color: white;\n        opacity: 1;\n    }\n\n#homeText a\n    {\n        color: lightblue;\n        text-decoration: none;\n        background-color: transparent;\n    }\n\n#homeText button\n    {\n        background-color: #6d7fcc;\n        color: white;\n        opacity: 1;\n    }\n\n#homeText button:hover\n        {\n            color: #6d7fcc;\n            background-color: white;\n            border: 1px solid #6d7fcc;\n            -webkit-transform: translateY(-3px);\n                    transform: translateY(-3px);\n            box-shadow: 3px 3px 10px black;\n        }\n\n#homeText button:active\n        {\n            box-shadow: 3px 3px 10px black;\n            -webkit-transform: translateY(2px);\n                    transform: translateY(2px);\n        }\n\n#videoCardsRow\n{\n    margin-bottom: 1rem;\n}\n\n.card-body p\n{\n    color: black;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWxsLXZpZGVvcy9hbGwtdmlkZW9zLmNvbXBvbmVudC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0lBRUksb0JBQW9CO0FBQ3hCOztBQUVBOztJQUVJLG1CQUFtQjtBQUN2Qjs7QUFFQTs7SUFFSSxXQUFXO0lBQ1gsaUJBQWlCO0lBQ2pCLDJCQUEyQjtJQUMzQiw0QkFBNEI7SUFDNUIsc0JBQXNCO0lBQ3RCLGtCQUFrQjtJQUNsQixtRUFBbUU7QUFDdkU7O0FBRUE7O0lBRUksa0JBQWtCO0lBQ2xCLFdBQVc7SUFDWCxrQkFBa0I7SUFDbEIsb0JBQW9CO0lBQ3BCLFVBQVU7SUFDVixrQ0FBa0M7SUFDbEMsYUFBYTtJQUNiLGtCQUFrQjtJQUNsQiwrQkFBK0I7QUFDbkM7O0FBRUk7O1FBRUksWUFBWTtRQUNaLFVBQVU7SUFDZDs7QUFFQTs7UUFFSSxnQkFBZ0I7UUFDaEIscUJBQXFCO1FBQ3JCLDZCQUE2QjtJQUNqQzs7QUFFQTs7UUFFSSx5QkFBeUI7UUFDekIsWUFBWTtRQUNaLFVBQVU7SUFDZDs7QUFFSTs7WUFFSSxjQUFjO1lBQ2QsdUJBQXVCO1lBQ3ZCLHlCQUF5QjtZQUN6QixtQ0FBMkI7b0JBQTNCLDJCQUEyQjtZQUMzQiw4QkFBOEI7UUFDbEM7O0FBRUE7O1lBRUksOEJBQThCO1lBQzlCLGtDQUEwQjtvQkFBMUIsMEJBQTBCO1FBQzlCOztBQUVSOztJQUVJLG1CQUFtQjtBQUN2Qjs7QUFFQTs7SUFFSSxZQUFZO0FBQ2hCIiwiZmlsZSI6InNyYy9hcHAvYWxsLXZpZGVvcy9hbGwtdmlkZW9zLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyJib2R5XG57XG4gICAgbWFyZ2luLWJvdHRvbTogMTByZW07XG59XG5cbi5yb3dcbntcbiAgICBtYXJnaW4tYm90dG9tOiAxcmVtO1xufVxuXG4jaW1hZ2Utd3JhcHBlclxue1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIG1pbi1oZWlnaHQ6IDY1MHB4O1xuICAgIGJhY2tncm91bmQtcG9zaXRpb246IGNlbnRlcjtcbiAgICBiYWNrZ3JvdW5kLXJlcGVhdDogbm8tcmVwZWF0O1xuICAgIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIGJhY2tncm91bmQtaW1hZ2U6IHVybChcImh0dHBzOi8vd2FsbHBhcGVyY2F2ZS5jb20vd3Avd3AxOTgwNzc4LmpwZ1wiKTtcbn1cblxuI2hvbWVUZXh0XG57XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGJvdHRvbTogMHB4O1xuICAgIG1hcmdpbi1sZWZ0OiAzMDBweDtcbiAgICBtYXJnaW4tYm90dG9tOiAxMDBweDtcbiAgICB6LWluZGV4OiAyO1xuICAgIGJhY2tncm91bmQ6IHJnYmEoMTI4LDEyOCwxMjgsIDAuNyk7XG4gICAgcGFkZGluZzogMTVweDtcbiAgICBib3JkZXItcmFkaXVzOiA4cHg7XG4gICAgYm94LXNoYWRvdzogMTBweCAxMHB4IDVweCBibGFjaztcbn1cblxuICAgICNob21lVGV4dCBoMywgcFxuICAgIHtcbiAgICAgICAgY29sb3I6IHdoaXRlO1xuICAgICAgICBvcGFjaXR5OiAxO1xuICAgIH1cblxuICAgICNob21lVGV4dCBhXG4gICAge1xuICAgICAgICBjb2xvcjogbGlnaHRibHVlO1xuICAgICAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6IHRyYW5zcGFyZW50O1xuICAgIH1cblxuICAgICNob21lVGV4dCBidXR0b25cbiAgICB7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICM2ZDdmY2M7XG4gICAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICAgICAgb3BhY2l0eTogMTtcbiAgICB9XG5cbiAgICAgICAgI2hvbWVUZXh0IGJ1dHRvbjpob3ZlclxuICAgICAgICB7XG4gICAgICAgICAgICBjb2xvcjogIzZkN2ZjYztcbiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6IHdoaXRlO1xuICAgICAgICAgICAgYm9yZGVyOiAxcHggc29saWQgIzZkN2ZjYztcbiAgICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgtM3B4KTtcbiAgICAgICAgICAgIGJveC1zaGFkb3c6IDNweCAzcHggMTBweCBibGFjaztcbiAgICAgICAgfVxuXG4gICAgICAgICNob21lVGV4dCBidXR0b246YWN0aXZlXG4gICAgICAgIHtcbiAgICAgICAgICAgIGJveC1zaGFkb3c6IDNweCAzcHggMTBweCBibGFjaztcbiAgICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgycHgpO1xuICAgICAgICB9XG5cbiN2aWRlb0NhcmRzUm93XG57XG4gICAgbWFyZ2luLWJvdHRvbTogMXJlbTtcbn1cblxuLmNhcmQtYm9keSBwXG57XG4gICAgY29sb3I6IGJsYWNrO1xufSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/all-videos/all-videos.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/all-videos/all-videos.component.ts ***!
+  \****************************************************/
+/*! exports provided: AllVideosComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AllVideosComponent", function() { return AllVideosComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
+
+
+let AllVideosComponent = class AllVideosComponent {
+    constructor(_httpService, router) {
+        this._httpService = _httpService;
+        this.router = router;
+        this.seasons = [];
+        this.dropdownOpen = false;
+        this.clearSeason = {
+            _id: null,
+            name: "Clear season",
+            number: 0,
+            videos: [],
+        };
+        this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
+    }
+    ngOnInit() {
+        this.checkSession();
+        this.receiveMessage(this.session);
+        this.getAllSeasons();
+    }
+    toggleDropdown() {
+        this.dropdownOpen = !this.dropdownOpen;
+        console.log(this.dropdownOpen);
+    }
+    getAllSeasons() {
+        console.log("We are getting all the season's data!");
+        let observable = this._httpService.getSeasons();
+        observable.subscribe(data => {
+            if (data['success'] == false) {
+                console.log("We didn't get the data we wanted!");
+            }
+            else {
+                this.seasons = data['seasons'];
+                this.seasons.push(this.clearSeason);
+                console.log(this.seasons);
+            }
+        });
+    }
+    activeSeason(seasonNumber) {
+        if (seasonNumber == 0) {
+            this.activeSeasonNumber = null;
+        }
+        this.activeSeasonNumber = seasonNumber;
+        console.log(seasonNumber);
+    }
+    receiveMessage(session) {
+        this.session = session;
+    }
+    checkSession() {
+        let observable = this._httpService.checkSession();
+        observable.subscribe(data => {
+            if (data['success'] == false) {
+                console.log("No session found!");
+            }
+            else {
+                this.session = data['user'];
+                this._httpService.send(this.session);
+            }
+        });
+    }
+};
+AllVideosComponent.ctorParameters = () => [
+    { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] }
+];
+AllVideosComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-all-videos',
+        template: __webpack_require__(/*! raw-loader!./all-videos.component.html */ "./node_modules/raw-loader/index.js!./src/app/all-videos/all-videos.component.html"),
+        styles: [__webpack_require__(/*! ./all-videos.component.css */ "./src/app/all-videos/all-videos.component.css")]
+    })
+], AllVideosComponent);
+
+
+
+/***/ }),
+
 /***/ "./src/app/app-routing.module.ts":
 /*!***************************************!*\
   !*** ./src/app/app-routing.module.ts ***!
@@ -406,6 +522,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _marathons_page_marathons_page_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./marathons-page/marathons-page.component */ "./src/app/marathons-page/marathons-page.component.ts");
 /* harmony import */ var _myriathon_page_myriathon_page_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./myriathon-page/myriathon-page.component */ "./src/app/myriathon-page/myriathon-page.component.ts");
 /* harmony import */ var _about_page_about_page_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./about-page/about-page.component */ "./src/app/about-page/about-page.component.ts");
+/* harmony import */ var _all_videos_all_videos_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./all-videos/all-videos.component */ "./src/app/all-videos/all-videos.component.ts");
+
 
 
 
@@ -423,6 +541,7 @@ const routes = [
     { path: 'marathons', component: _marathons_page_marathons_page_component__WEBPACK_IMPORTED_MODULE_6__["MarathonsPageComponent"] },
     { path: 'rescue', component: _myriathon_page_myriathon_page_component__WEBPACK_IMPORTED_MODULE_7__["MyriathonPageComponent"] },
     { path: 'about', component: _about_page_about_page_component__WEBPACK_IMPORTED_MODULE_8__["AboutPageComponent"] },
+    { path: 'videos', component: _all_videos_all_videos_component__WEBPACK_IMPORTED_MODULE_9__["AllVideosComponent"] },
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
@@ -555,6 +674,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _myriathon_page_myriathon_page_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./myriathon-page/myriathon-page.component */ "./src/app/myriathon-page/myriathon-page.component.ts");
 /* harmony import */ var _about_page_about_page_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./about-page/about-page.component */ "./src/app/about-page/about-page.component.ts");
 /* harmony import */ var _carousel_carousel_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./carousel/carousel.component */ "./src/app/carousel/carousel.component.ts");
+/* harmony import */ var _all_videos_all_videos_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./all-videos/all-videos.component */ "./src/app/all-videos/all-videos.component.ts");
+
 
 
 
@@ -584,6 +705,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _myriathon_page_myriathon_page_component__WEBPACK_IMPORTED_MODULE_13__["MyriathonPageComponent"],
             _about_page_about_page_component__WEBPACK_IMPORTED_MODULE_14__["AboutPageComponent"],
             _carousel_carousel_component__WEBPACK_IMPORTED_MODULE_15__["CarouselComponent"],
+            _all_videos_all_videos_component__WEBPACK_IMPORTED_MODULE_16__["AllVideosComponent"],
         ],
         schemas: [
             _angular_core__WEBPACK_IMPORTED_MODULE_2__["CUSTOM_ELEMENTS_SCHEMA"],
@@ -802,6 +924,9 @@ let HttpService = class HttpService {
     }
     addVideo(newVideo) {
         return this._http.post('myriathon/new/video', { newVideo: newVideo });
+    }
+    getSeasons() {
+        return this._http.get('/myriathon/all/seasons');
     }
     send(session) {
         this._stream$.next(session);

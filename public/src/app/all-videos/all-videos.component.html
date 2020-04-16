@@ -1,0 +1,46 @@
+<head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class = "container-fluid">
+            <div class = "row">
+                <div align = "center" id = "image-wrapper">
+                    <div class="d-none d-lg-block" id="homeText">
+                        <h3>Recent Video</h3>
+                        <p>Placeholder text goes here</p>
+                        <a herf="#">
+                            <button class="btn">Link Here</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "col">
+                    <div class="dropdown">
+                        <button [attr.aria-expanded] = "dropdownOpen" (click) = "toggleDropdown()" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown button
+                        </button>
+                        <div [ngClass] = "{'show': dropdownOpen }" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a *ngFor = "let season of seasons" (click) = "activeSeason(season.number)" class="dropdown-item" >{{season.name}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id = "videoCardsRow" class = "row">
+                <div *ngIf = "activeSeasonNumber">
+                    <div *ngFor = "let video of seasons[activeSeasonNumber-1].videos" class = "col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{video.img}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{video.title}}</h5>
+                                <p class="card-text">{{video.description}}</p>
+                                <a [routerLink] = "[video.title]" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    
