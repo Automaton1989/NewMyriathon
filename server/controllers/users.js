@@ -1,5 +1,4 @@
 var mongoose = require('mongoose')
-var bcrypt = require("bcrypt");
 var bcryptjs = require("bcryptjs");
     User = mongoose.model('User')
     Video = mongoose.model('Video')
