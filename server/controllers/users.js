@@ -17,7 +17,8 @@ module.exports = {
             var user = new User({username: req.body.newUser.newUsername, email: req.body.newUser.newEmail, password: hashed_password});
             user.save(function(err, user) {
                 if(err) {
-                    res.json({success : false})
+                    console.log(err);
+                    res.json({success : false});
                 }
                 else {
                     req.session.email = req.body.newUser.newEmail;
