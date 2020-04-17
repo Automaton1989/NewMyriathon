@@ -2,7 +2,6 @@ var express = require('express')
 var mongoose = require('mongoose')
 var bodyParser = require('body-parser')
 var session = require('express-session');
-var bcrypt = require("bcrypt");
 var bcryptjs = require("bcryptjs");
 var chartjs = require("chart.js");
 var app = express();
