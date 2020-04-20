@@ -29,6 +29,10 @@ module.exports = function(app) {
     {
         myriathon.getAllSeasons(req, res)
     })
+    app.get('/myriathon/single/:title', function(req, res)
+    {
+        myriathon.getVideoDetails(req, res)
+    })
     app.get('/myriathon/session', function(req, res) 
     {
         myriathon.checkSession(req, res)

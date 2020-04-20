@@ -170,6 +170,24 @@ module.exports = {
         })
     },
 
+    //GET SINGLE VIDEO DETAILS
+    getVideoDetails: function(req, res)
+    {
+        console.log("We are in the users.js file now!");
+        Video.find({title: req.params.title}, function(err, video)
+        {
+            if(err)
+            {
+                console.log(err);
+                res.json({success : false, msg: "Something went wrong!"});
+            }
+            else
+            {
+                res.json({success : true, video: video});
+            }
+        })
+    },
+
     //CHECK IF USER IS ADMIN
     checkAdmin: function(req, res) 
     {

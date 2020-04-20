@@ -63,7 +63,7 @@ module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<head>\n        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n    </head>\n    <body>\n        <div class = \"container-fluid\">\n            <div class = \"row\">\n                <div align = \"center\" id = \"image-wrapper\">\n                    <div class=\"d-none d-lg-block\" id=\"homeText\">\n                        <h3>Recent Video</h3>\n                        <p>Placeholder text goes here</p>\n                        <a herf=\"#\">\n                            <button class=\"btn\">Link Here</button>\n                        </a>\n                    </div>\n                </div>\n            </div>\n            <div class = \"row\">\n                <div class = \"col\">\n                    <div class=\"dropdown\">\n                        <button [attr.aria-expanded] = \"dropdownOpen\" (click) = \"toggleDropdown()\" class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                            Dropdown button\n                        </button>\n                        <div [ngClass] = \"{'show': dropdownOpen }\" class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n                            <a *ngFor = \"let season of seasons\" (click) = \"activeSeason(season.number)\" class=\"dropdown-item\" >{{season.name}}</a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <div id = \"videoCardsRow\" class = \"row\">\n                <div *ngIf = \"activeSeasonNumber\">\n                    <div *ngFor = \"let video of seasons[activeSeasonNumber-1].videos\" class = \"col\">\n                        <div class=\"card\" style=\"width: 18rem;\">\n                            <img src=\"{{video.img}}\" class=\"card-img-top\" alt=\"...\">\n                            <div class=\"card-body\">\n                                <h5 class=\"card-title\">{{video.title}}</h5>\n                                <p class=\"card-text\">{{video.description}}</p>\n                                <a [routerLink] = \"[video.title]\" class=\"btn btn-primary\">Go somewhere</a>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </body>\n    "
+module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div class = \"row\">\n            <div align = \"center\" id = \"image-wrapper\">\n                <div class=\"d-none d-lg-block\" id=\"homeText\">\n                    <h3>Recent Video</h3>\n                    <p>Placeholder text goes here</p>\n                    <a herf=\"#\">\n                        <button class=\"btn\">Link Here</button>\n                    </a>\n                </div>\n            </div>\n        </div>\n        <div class = \"row\">\n            <div class = \"col\">\n                <div class=\"dropdown\">\n                    <button [attr.aria-expanded] = \"dropdownOpen\" (click) = \"toggleDropdown()\" class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                        Dropdown button\n                    </button>\n                    <div [ngClass] = \"{'show': dropdownOpen }\" class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n                        <a *ngFor = \"let season of seasons\" (click) = \"activeSeason(season.number)\" class=\"dropdown-item\" >{{season.name}}</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div id = \"videoCardsRow\" class = \"row\">\n            <div *ngIf = \"activeSeasonNumber\">\n                <div *ngFor = \"let video of seasons[activeSeasonNumber-1].videos\" class = \"col\">\n                    <div class=\"card\" style=\"width: 18rem;\">\n                        <img src=\"{{video.img}}\" class=\"card-img-top\" alt=\"...\">\n                        <div class=\"card-body\">\n                            <h5 class=\"card-title\">{{video.title}}</h5>\n                            <p class=\"card-text\">{{video.description}}</p>\n                            <a [routerLink] = \"[video.title]\" class=\"btn btn-primary\">Go somewhere</a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n"
 
 /***/ }),
 
@@ -119,6 +119,17 @@ module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.
 /***/ (function(module, exports) {
 
 module.exports = "<head>\n        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n    </head>\n    <body>\n        <p>myriathon-page-module works!</p>\n    </body>\n    \n    "
+
+/***/ }),
+
+/***/ "./node_modules/raw-loader/index.js!./src/app/single-video/single-video.component.html":
+/*!************************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/single-video/single-video.component.html ***!
+  \************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div class = \"row\">\n            <div class = \"col\">\n                <div id = \"jumboPackage\" >\n                    <div class = \"text-center container\">\n                        <h3 id = \"leadText\">{{singleVideo.title}}</h3>\n                        <p>{{singleVideo.description}}</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class = \"row\">\n            <div class = \"d-none d-sm-none d-md-none d-lg-block col-12\">\n                <iframe \n                id = \"iframeLarge\"\n                width=\"100%\" \n                height=\"100%\" \n                style = \"height: 500px;\"\n                [src]=\"url\"\n                frameborder=\"0\" \n                allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" \n                allowfullscreen>\n                </iframe>\n            </div>\n            <div class = \"d-block d-sm-block d-md-block d-lg-none d-xl-none col-12\">\n                <iframe \n                id = \"iframeSmall\"\n                width=\"100%\" \n                height=\"100%\" \n                style = \"height: 250px;\"\n                [src]=\"url\"\n                frameborder=\"0\" \n                allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" \n                allowfullscreen>\n                </iframe>\n            </div>\n        </div>\n        <div class = \"row\">\n            <div class = \"d-flex justify-content-start col\">\n                <button class = \"btn btn-primary\"> << Previous Video</button>\n            </div>\n            <div class = \"d-flex justify-content-end col\">\n                <button class = \"btn btn-primary\">Next Video >> </button>\n            </div>\n        </div>\n    </div>\n</body>"
 
 /***/ }),
 
@@ -523,6 +534,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _myriathon_page_myriathon_page_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./myriathon-page/myriathon-page.component */ "./src/app/myriathon-page/myriathon-page.component.ts");
 /* harmony import */ var _about_page_about_page_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./about-page/about-page.component */ "./src/app/about-page/about-page.component.ts");
 /* harmony import */ var _all_videos_all_videos_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./all-videos/all-videos.component */ "./src/app/all-videos/all-videos.component.ts");
+/* harmony import */ var _single_video_single_video_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./single-video/single-video.component */ "./src/app/single-video/single-video.component.ts");
+
 
 
 
@@ -542,6 +555,7 @@ const routes = [
     { path: 'rescue', component: _myriathon_page_myriathon_page_component__WEBPACK_IMPORTED_MODULE_7__["MyriathonPageComponent"] },
     { path: 'about', component: _about_page_about_page_component__WEBPACK_IMPORTED_MODULE_8__["AboutPageComponent"] },
     { path: 'videos', component: _all_videos_all_videos_component__WEBPACK_IMPORTED_MODULE_9__["AllVideosComponent"] },
+    { path: 'videos/:title', component: _single_video_single_video_component__WEBPACK_IMPORTED_MODULE_10__["SingleVideoComponent"] },
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
@@ -675,6 +689,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _about_page_about_page_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./about-page/about-page.component */ "./src/app/about-page/about-page.component.ts");
 /* harmony import */ var _carousel_carousel_component__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./carousel/carousel.component */ "./src/app/carousel/carousel.component.ts");
 /* harmony import */ var _all_videos_all_videos_component__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./all-videos/all-videos.component */ "./src/app/all-videos/all-videos.component.ts");
+/* harmony import */ var _single_video_single_video_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./single-video/single-video.component */ "./src/app/single-video/single-video.component.ts");
+
 
 
 
@@ -706,6 +722,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _about_page_about_page_component__WEBPACK_IMPORTED_MODULE_14__["AboutPageComponent"],
             _carousel_carousel_component__WEBPACK_IMPORTED_MODULE_15__["CarouselComponent"],
             _all_videos_all_videos_component__WEBPACK_IMPORTED_MODULE_16__["AllVideosComponent"],
+            _single_video_single_video_component__WEBPACK_IMPORTED_MODULE_17__["SingleVideoComponent"],
         ],
         schemas: [
             _angular_core__WEBPACK_IMPORTED_MODULE_2__["CUSTOM_ELEMENTS_SCHEMA"],
@@ -928,6 +945,9 @@ let HttpService = class HttpService {
     getSeasons() {
         return this._http.get('/myriathon/all/seasons');
     }
+    getVideoDetails(title) {
+        return this._http.get('/myriathon/single/' + title);
+    }
     send(session) {
         this._stream$.next(session);
     }
@@ -1096,6 +1116,98 @@ MyriathonPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [__webpack_require__(/*! ./myriathon-page.component.css */ "./src/app/myriathon-page/myriathon-page.component.css")]
     })
 ], MyriathonPageComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/single-video/single-video.component.css":
+/*!*********************************************************!*\
+  !*** ./src/app/single-video/single-video.component.css ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "#jumboPackage\n{\n    background-color: #e9ecef;\n    height: 100px;\n    width: 100%;\n    margin-bottom: 1rem;\n}\n\n#leadText\n{\n    padding-top: 1rem;\n}\n\n#iframeLarge\n{\n    padding: 0rem 2rem 0rem 2rem;\n    \n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2luZ2xlLXZpZGVvL3NpbmdsZS12aWRlby5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztJQUVJLHlCQUF5QjtJQUN6QixhQUFhO0lBQ2IsV0FBVztJQUNYLG1CQUFtQjtBQUN2Qjs7QUFFQTs7SUFFSSxpQkFBaUI7QUFDckI7O0FBRUE7O0lBRUksNEJBQTRCOztBQUVoQyIsImZpbGUiOiJzcmMvYXBwL3NpbmdsZS12aWRlby9zaW5nbGUtdmlkZW8uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIiNqdW1ib1BhY2thZ2VcbntcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZTllY2VmO1xuICAgIGhlaWdodDogMTAwcHg7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgbWFyZ2luLWJvdHRvbTogMXJlbTtcbn1cblxuI2xlYWRUZXh0XG57XG4gICAgcGFkZGluZy10b3A6IDFyZW07XG59XG5cbiNpZnJhbWVMYXJnZVxue1xuICAgIHBhZGRpbmc6IDByZW0gMnJlbSAwcmVtIDJyZW07XG4gICAgXG59Il19 */"
+
+/***/ }),
+
+/***/ "./src/app/single-video/single-video.component.ts":
+/*!********************************************************!*\
+  !*** ./src/app/single-video/single-video.component.ts ***!
+  \********************************************************/
+/*! exports provided: SingleVideoComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SingleVideoComponent", function() { return SingleVideoComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+
+
+
+
+
+let SingleVideoComponent = class SingleVideoComponent {
+    constructor(_httpService, router, route, sanitizer) {
+        this._httpService = _httpService;
+        this.router = router;
+        this.route = route;
+        this.sanitizer = sanitizer;
+        this.title = "";
+        this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
+    }
+    ngOnInit() {
+        this.checkSession();
+        this.receiveMessage(this.session);
+        this.route.params.subscribe((params) => {
+            this.getSingleVideoTitle(params['title']);
+        });
+    }
+    getSingleVideoTitle(title) {
+        let observable = this._httpService.getVideoDetails(title);
+        observable.subscribe(data => {
+            this.singleVideo = data['video'][0];
+            this.getSafeUrl(this.singleVideo.videoURL);
+            console.log(this.singleVideo);
+        });
+    }
+    getSafeUrl(url) {
+        this.url = this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    }
+    receiveMessage(session) {
+        this.session = session;
+    }
+    checkSession() {
+        let observable = this._httpService.checkSession();
+        observable.subscribe(data => {
+            if (data['success'] == false) {
+                console.log("No session found!");
+            }
+            else {
+                this.session = data['user'];
+                this._httpService.send(this.session);
+            }
+        });
+    }
+};
+SingleVideoComponent.ctorParameters = () => [
+    { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] },
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["DomSanitizer"] }
+];
+SingleVideoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-single-video',
+        template: __webpack_require__(/*! raw-loader!./single-video.component.html */ "./node_modules/raw-loader/index.js!./src/app/single-video/single-video.component.html"),
+        styles: [__webpack_require__(/*! ./single-video.component.css */ "./src/app/single-video/single-video.component.css")]
+    })
+], SingleVideoComponent);
 
 
 

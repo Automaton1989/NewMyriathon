@@ -33,6 +33,10 @@ export class HttpService {
   {
     return this._http.get('/myriathon/all/seasons');
   }
+  getVideoDetails(title)
+  {
+    return this._http.get('/myriathon/single/' + title);
+  }
   send(session : any) 
   {
     this._stream$.next(session)

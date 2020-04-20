@@ -7,6 +7,7 @@ import { MarathonsPageComponent } from './marathons-page/marathons-page.componen
 import { MyriathonPageComponent } from './myriathon-page/myriathon-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { AllVideosComponent } from './all-videos/all-videos.component';
+import { SingleVideoComponent } from './single-video/single-video.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
 {path: 'rescue', component: MyriathonPageComponent},
 {path: 'about', component: AboutPageComponent},
 {path: 'videos', component: AllVideosComponent},
+{path: 'videos/:title', component: SingleVideoComponent},
 ];
 
 @NgModule({
