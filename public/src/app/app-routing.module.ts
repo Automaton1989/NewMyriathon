@@ -19,7 +19,8 @@ const routes: Routes = [
 {path: 'rescue', component: MyriathonPageComponent},
 {path: 'about', component: AboutPageComponent},
 {path: 'videos', component: AllVideosComponent},
-{path: 'videos/:title', component: SingleVideoComponent},
+{path: 'video/:title', component: SingleVideoComponent},
+{ path: '**', redirectTo: 'home' },
 ];
 
 @NgModule({
