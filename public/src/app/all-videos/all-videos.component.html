@@ -38,10 +38,15 @@
                 </div>
             </div>
         </div>
+        <div *ngIf = "activeSeasonNumber" id = "seasonTitle" class = "row">
+            <div class = "col">
+                <h3>{{seasons[activeSeasonNumber-1].name}}</h3>
+            </div>
+        </div>
         <div id = "videoCardsRow" class = "row">
-            <div *ngIf = "activeSeasonNumber">
-                <div *ngFor = "let video of seasons[activeSeasonNumber-1].videos" class = "col">
-                    <div class="card" style="width: 18rem;">
+            <div id = "activeSeasonBlock" *ngIf = "activeSeasonNumber">
+                <div *ngFor = "let video of seasons[activeSeasonNumber-1].videos" class = "col-sm-12 col-md-6 col-lg-4 col-xl-3 cardBlock">
+                    <div class="card" style="width: 100%;">
                         <img src="{{video.img}}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{video.title}}</h5>
