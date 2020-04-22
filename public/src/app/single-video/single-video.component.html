@@ -40,11 +40,11 @@
                 </iframe>
             </div>
         </div>
-        <div class = "row">
-            <div class = "d-flex justify-content-start col">
+        <div id = "buttonRow" class = "row">
+            <div *ngIf = "previousVideo" class = "d-flex justify-content-start col">
                 <button class = "btn btn-primary"> << Previous Video</button>
             </div>
-            <div class = "d-flex justify-content-end col">
+            <div *ngIf = "nextVideo" class = "d-flex justify-content-end col">
                 <button class = "btn btn-primary">Next Video >> </button>
             </div>
         </div>

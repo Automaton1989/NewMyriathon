@@ -14,6 +14,8 @@ export class SingleVideoComponent implements OnInit {
 
   session: any;
   singleVideo: any;
+  nextVideo: any;
+  previousVideo: any;
   url;
   title = "";
 
@@ -31,6 +33,26 @@ export class SingleVideoComponent implements OnInit {
     })
   }
 
+  getPreviousVideo(singleVideoTitle)
+  {
+    let observable = this._httpService.getPreviousVideoDetails(singleVideoTitle);
+    observable.subscribe(data => 
+      {
+        console.log("We got the previous video data!", data);
+        this.previousVideo = data['video'];
+      })
+  }
+
+  getNextVideo(singleVideoTitle)
+  {
+    let observable = this._httpService.getNextVideoDetails(singleVideoTitle);
+    observable.subscribe(data => 
+      {
+        console.log("We got the next video data!", data);
+        this.nextVideo = data['video'];
+      })
+  }
+
   getSingleVideoTitle(title: string)
   {
     let observable = this._httpService.getVideoDetails(title);
@@ -38,7 +60,8 @@ export class SingleVideoComponent implements OnInit {
       {
         this.singleVideo = data['video'][0];
         this.getSafeUrl(this.singleVideo.videoURL);
-        console.log(this.singleVideo);
+        this.getNextVideo(this.singleVideo.title);
+        this.getPreviousVideo(this.singleVideo.title);
       })
   }
 

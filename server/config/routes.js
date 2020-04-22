@@ -33,6 +33,14 @@ module.exports = function(app) {
     {
         myriathon.getVideoDetails(req, res)
     })
+    app.get('/myriathon/prev/video/:title', function(req, res)
+    {
+        myriathon.getPreviousVideoDetails(req, res)
+    })
+    app.get('/myriathon/next/video/:title', function(req, res)
+    {
+        myriathon.getNextVideoDetails(req, res)
+    })
     app.get('/myriathon/session', function(req, res) 
     {
         myriathon.checkSession(req, res)

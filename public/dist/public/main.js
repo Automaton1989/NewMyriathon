@@ -129,7 +129,7 @@ module.exports = "<head>\n        <link rel=\"stylesheet\" href=\"https://stackp
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div class = \"row\">\n            <div class = \"col\">\n                <div id = \"jumboPackage\" >\n                    <div class = \"text-center container\">\n                        <h3 id = \"leadText\">{{singleVideo.title}}</h3>\n                        <p>{{singleVideo.description}}</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class = \"row\">\n            <div class = \"d-none d-sm-none d-md-none d-lg-block col-12\">\n                <iframe \n                id = \"iframeLarge\"\n                width=\"100%\" \n                height=\"100%\" \n                style = \"height: 500px;\"\n                [src]=\"url\"\n                frameborder=\"0\" \n                allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" \n                allowfullscreen>\n                </iframe>\n            </div>\n            <div class = \"d-block d-sm-block d-md-block d-lg-none d-xl-none col-12\">\n                <iframe \n                id = \"iframeSmall\"\n                width=\"100%\" \n                height=\"100%\" \n                style = \"height: 250px;\"\n                [src]=\"url\"\n                frameborder=\"0\" \n                allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" \n                allowfullscreen>\n                </iframe>\n            </div>\n        </div>\n        <div class = \"row\">\n            <div class = \"d-flex justify-content-start col\">\n                <button class = \"btn btn-primary\"> << Previous Video</button>\n            </div>\n            <div class = \"d-flex justify-content-end col\">\n                <button class = \"btn btn-primary\">Next Video >> </button>\n            </div>\n        </div>\n    </div>\n</body>"
+module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div class = \"row\">\n            <div class = \"col\">\n                <div id = \"jumboPackage\" >\n                    <div class = \"text-center container\">\n                        <h3 id = \"leadText\">{{singleVideo.title}}</h3>\n                        <p>{{singleVideo.description}}</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class = \"row\">\n            <div class = \"d-none d-sm-none d-md-none d-lg-block col-12\">\n                <iframe \n                id = \"iframeLarge\"\n                width=\"100%\" \n                height=\"100%\" \n                style = \"height: 500px;\"\n                [src]=\"url\"\n                frameborder=\"0\" \n                allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" \n                allowfullscreen>\n                </iframe>\n            </div>\n            <div class = \"d-block d-sm-block d-md-block d-lg-none d-xl-none col-12\">\n                <iframe \n                id = \"iframeSmall\"\n                width=\"100%\" \n                height=\"100%\" \n                style = \"height: 250px;\"\n                [src]=\"url\"\n                frameborder=\"0\" \n                allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" \n                allowfullscreen>\n                </iframe>\n            </div>\n        </div>\n        <div id = \"buttonRow\" class = \"row\">\n            <div *ngIf = \"previousVideo\" class = \"d-flex justify-content-start col\">\n                <button class = \"btn btn-primary\"> << Previous Video</button>\n            </div>\n            <div *ngIf = \"nextVideo\" class = \"d-flex justify-content-end col\">\n                <button class = \"btn btn-primary\">Next Video >> </button>\n            </div>\n        </div>\n    </div>\n</body>"
 
 /***/ }),
 
@@ -949,6 +949,12 @@ let HttpService = class HttpService {
     getVideoDetails(title) {
         return this._http.get('/myriathon/single/' + title);
     }
+    getPreviousVideoDetails(singleVideoTitle) {
+        return this._http.get('/myriathon/prev/video/' + singleVideoTitle);
+    }
+    getNextVideoDetails(singleVideoTitle) {
+        return this._http.get('/myriathon/next/video/' + singleVideoTitle);
+    }
     send(session) {
         this._stream$.next(session);
     }
@@ -1129,7 +1135,7 @@ MyriathonPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "#jumboPackage\n{\n    background-color: #e9ecef;\n    height: 100px;\n    width: 100%;\n    margin-bottom: 1rem;\n}\n\n#leadText\n{\n    padding-top: 1rem;\n}\n\n#iframeLarge\n{\n    padding: 0rem 2rem 0rem 2rem;\n    \n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2luZ2xlLXZpZGVvL3NpbmdsZS12aWRlby5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztJQUVJLHlCQUF5QjtJQUN6QixhQUFhO0lBQ2IsV0FBVztJQUNYLG1CQUFtQjtBQUN2Qjs7QUFFQTs7SUFFSSxpQkFBaUI7QUFDckI7O0FBRUE7O0lBRUksNEJBQTRCOztBQUVoQyIsImZpbGUiOiJzcmMvYXBwL3NpbmdsZS12aWRlby9zaW5nbGUtdmlkZW8uY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIiNqdW1ib1BhY2thZ2VcbntcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZTllY2VmO1xuICAgIGhlaWdodDogMTAwcHg7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgbWFyZ2luLWJvdHRvbTogMXJlbTtcbn1cblxuI2xlYWRUZXh0XG57XG4gICAgcGFkZGluZy10b3A6IDFyZW07XG59XG5cbiNpZnJhbWVMYXJnZVxue1xuICAgIHBhZGRpbmc6IDByZW0gMnJlbSAwcmVtIDJyZW07XG4gICAgXG59Il19 */"
+module.exports = "#jumboPackage\n{\n    background-color: #e9ecef;\n    height: 100px;\n    width: 100%;\n    margin-bottom: 1rem;\n}\n\n#leadText\n{\n    padding-top: 1rem;\n}\n\n#iframeLarge\n{\n    padding: 0rem 2rem 0rem 2rem;\n    \n}\n\n#buttonRow\n{\n    margin-bottom: 5rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc2luZ2xlLXZpZGVvL3NpbmdsZS12aWRlby5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztJQUVJLHlCQUF5QjtJQUN6QixhQUFhO0lBQ2IsV0FBVztJQUNYLG1CQUFtQjtBQUN2Qjs7QUFFQTs7SUFFSSxpQkFBaUI7QUFDckI7O0FBRUE7O0lBRUksNEJBQTRCOztBQUVoQzs7QUFFQTs7SUFFSSxtQkFBbUI7QUFDdkIiLCJmaWxlIjoic3JjL2FwcC9zaW5nbGUtdmlkZW8vc2luZ2xlLXZpZGVvLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIjanVtYm9QYWNrYWdlXG57XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2U5ZWNlZjtcbiAgICBoZWlnaHQ6IDEwMHB4O1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIG1hcmdpbi1ib3R0b206IDFyZW07XG59XG5cbiNsZWFkVGV4dFxue1xuICAgIHBhZGRpbmctdG9wOiAxcmVtO1xufVxuXG4jaWZyYW1lTGFyZ2VcbntcbiAgICBwYWRkaW5nOiAwcmVtIDJyZW0gMHJlbSAycmVtO1xuICAgIFxufVxuXG4jYnV0dG9uUm93XG57XG4gICAgbWFyZ2luLWJvdHRvbTogNXJlbTtcbn0iXX0= */"
 
 /***/ }),
 
@@ -1169,12 +1175,27 @@ let SingleVideoComponent = class SingleVideoComponent {
             this.getSingleVideoTitle(params['title']);
         });
     }
+    getPreviousVideo(singleVideoTitle) {
+        let observable = this._httpService.getPreviousVideoDetails(singleVideoTitle);
+        observable.subscribe(data => {
+            console.log("We got the previous video data!", data);
+            this.previousVideo = data['video'];
+        });
+    }
+    getNextVideo(singleVideoTitle) {
+        let observable = this._httpService.getNextVideoDetails(singleVideoTitle);
+        observable.subscribe(data => {
+            console.log("We got the next video data!", data);
+            this.nextVideo = data['video'];
+        });
+    }
     getSingleVideoTitle(title) {
         let observable = this._httpService.getVideoDetails(title);
         observable.subscribe(data => {
             this.singleVideo = data['video'][0];
             this.getSafeUrl(this.singleVideo.videoURL);
-            console.log(this.singleVideo);
+            this.getNextVideo(this.singleVideo.title);
+            this.getPreviousVideo(this.singleVideo.title);
         });
     }
     getSafeUrl(url) {

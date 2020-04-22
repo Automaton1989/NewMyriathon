@@ -37,6 +37,14 @@ export class HttpService {
   {
     return this._http.get('/myriathon/single/' + title);
   }
+  getPreviousVideoDetails(singleVideoTitle)
+  {
+    return this._http.get('/myriathon/prev/video/' + singleVideoTitle);
+  }
+  getNextVideoDetails(singleVideoTitle)
+  {
+    return this._http.get('/myriathon/next/video/' + singleVideoTitle);
+  }
   send(session : any) 
   {
     this._stream$.next(session)

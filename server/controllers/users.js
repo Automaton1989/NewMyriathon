@@ -188,6 +188,63 @@ module.exports = {
         })
     },
 
+    //GET NEXT VIDEO INFORMATION
+    getNextVideoDetails: function(req, res)
+    {
+        console.log("We are in the users.js file now for next video!");
+        Video.find({}, function(err, videos)
+        {
+            if(err)
+            {
+                console.log(err);
+                res.json({success : false, msg: "Something went wrong finding all videos"});
+            }
+            else
+            {
+                console.log("We are in the loop!");
+                for(i = 0; i < videos.length; i++)
+                {
+                    if(videos[i].title == req.params.title && videos[i] != videos[videos.length-1])
+                    {
+                        console.log("Found Video!")
+                        res.json({success : true, video : videos[i]});
+                    }
+                }
+                res.json({success : true, video : null});
+            }
+        })
+    },
+
+    //GET PREVIOUS VIDEO INFORMATION
+    getPreviousVideoDetails: function(req, res)
+    {
+        console.log("We are in the users.js file now for previous video!");
+        Video.find({}, function(err, videos)
+        {
+            if(err)
+            {
+                console.log(err);
+                res.json({success : false, msg: "Something went wrong finding all videos"});
+            }
+            else
+            {
+                var previous = null;
+                for(i = 0; i < videos.length; i++)
+                {
+                    console.log("We are in the loop!");
+                    if(videos[i].title == req.params.title)
+                    {
+                        res.json({success : true, video : previous});
+                    }
+                    else
+                    {
+                        previous = video;
+                    }
+                }
+            }
+        })
+    },
+
     //CHECK IF USER IS ADMIN
     checkAdmin: function(req, res) 
     {
