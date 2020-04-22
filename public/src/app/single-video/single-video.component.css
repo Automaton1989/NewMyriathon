@@ -3,7 +3,6 @@
     background-color: #e9ecef;
     height: 100px;
     width: 100%;
-    margin-bottom: 1rem;
 }
 
 #leadText
@@ -20,4 +19,14 @@
 #buttonRow
 {
     margin-bottom: 5rem;
+}
+
+.col
+{
+    padding: 0rem;
+}
+
+.videoBackground 
+{
+    background-color: black;
 }

@@ -235,3 +235,10 @@ a.article:hover {
 {
     position: static;
 }
+
+.icons:hover
+{
+    filter: none;
+    -webkit-filter: grayscale(100%);
+}
+
