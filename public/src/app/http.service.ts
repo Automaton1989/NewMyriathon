@@ -33,6 +33,10 @@ export class HttpService {
   {
     return this._http.get('/myriathon/all/seasons');
   }
+  getLastVideo()
+  {
+    return this._http.get('/myriathon/last/video');
+  }
   getVideoDetails(title)
   {
     return this._http.get('/myriathon/single/' + title);

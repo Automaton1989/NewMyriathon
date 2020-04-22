@@ -67,9 +67,63 @@ body
             transform: translateY(2px);
         }
 
+#homeSmallText
+{
+    position: absolute;
+    bottom: 0px;
+    margin-left: 50px;
+    margin-bottom: 150px;
+    z-index: 2;
+    background: rgba(128,128,128, 0.7);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 5px black;
+}
+
+    #homeSmallText h3, p
+    {
+        color: white;
+        opacity: 1;
+    }
+
+    #homeSmallText a
+    {
+        color: lightblue;
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+    #homeSmallText button
+    {
+        background-color: #6d7fcc;
+        color: white;
+        opacity: 1;
+    }
+
+        #homeSmallText button:hover
+        {
+            color: #6d7fcc;
+            background-color: white;
+            border: 1px solid #6d7fcc;
+            transform: translateY(-3px);
+            box-shadow: 3px 3px 10px black;
+        }
+
+        #homeSmallText button:active
+        {
+            box-shadow: 3px 3px 10px black;
+            transform: translateY(2px);
+        }
+
+#dropdownCol
+{
+    padding: 0rem;
+}
+
 #videoCardsRow
 {
     margin-bottom: 1rem;
+    margin-top: 6rem;
 }
 
 .card-body p

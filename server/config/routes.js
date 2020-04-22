@@ -29,6 +29,10 @@ module.exports = function(app) {
     {
         myriathon.getAllSeasons(req, res)
     })
+    app.get('/myriathon/last/video', function(req, res)
+    {
+        myriathon.getLastVideo(req, res)
+    })
     app.get('/myriathon/single/:title', function(req, res)
     {
         myriathon.getVideoDetails(req, res)

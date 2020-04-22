@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Router } from '@angular/router';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-all-videos',
@@ -13,6 +14,8 @@ export class AllVideosComponent implements OnInit {
   seasons = [];
   activeSeasonNumber: any;
   dropdownOpen = false;
+  recentVideo: any;
+  image;
 
   clearSeason = {
     _id: null,
@@ -20,8 +23,9 @@ export class AllVideosComponent implements OnInit {
     number: 0,
     videos: [],
   }
+  sanitization: any;
 
-  constructor(private _httpService: HttpService, private router : Router) 
+  constructor(private _httpService: HttpService, private router : Router, public sanitizer : DomSanitizer) 
   { 
     this._httpService.stream$.subscribe(this.receiveMessage.bind(this))
   }
@@ -30,8 +34,8 @@ export class AllVideosComponent implements OnInit {
     this.checkSession();
     this.receiveMessage(this.session);
     this.getAllSeasons();
+    this.getRecentVideo();
   }
-
 
 
   toggleDropdown()
@@ -56,6 +60,17 @@ export class AllVideosComponent implements OnInit {
           this.seasons.push(this.clearSeason)
           console.log(this.seasons)
         }
+      })
+  }
+
+  getRecentVideo()
+  {
+    console.log("We are getting the most recent video's data!");
+    let observable = this._httpService.getLastVideo();
+    observable.subscribe(data => 
+      {
+        console.log("Got the recent video's data!", data);
+        this.recentVideo = data['video'];
       })
   }
 

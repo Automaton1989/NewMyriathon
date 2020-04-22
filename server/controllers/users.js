@@ -170,6 +170,25 @@ module.exports = {
         })
     },
 
+    //GET LAST VIDEO DETAILS
+    getLastVideo: function(req, res)
+    {
+        console.log("We are in the users.js file for last video now!");
+        var lastVideo = null;
+        Video.find({}, function(err, videos)
+        {
+            if(err)
+            {
+                res.json({success : false, msg: "Something went wrong finding the video"});
+            }
+            else
+            {
+                lastVideo = videos[videos.length-1];
+                res.json({success : true, video : lastVideo});
+            }
+        })
+    },
+
     //GET SINGLE VIDEO DETAILS
     getVideoDetails: function(req, res)
     {

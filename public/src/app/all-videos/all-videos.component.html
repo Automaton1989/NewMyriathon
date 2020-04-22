@@ -6,20 +6,31 @@
     <div class = "container-fluid">
         <div class = "row">
             <div align = "center" id = "image-wrapper">
-                <div class="d-none d-lg-block" id="homeText">
-                    <h3>Recent Video</h3>
-                    <p>Placeholder text goes here</p>
-                    <a herf="#">
-                        <button class="btn">Link Here</button>
+                <div *ngIf = "recentVideo" class="d-none d-lg-block" id="homeText">
+                    
+                    <h3>{{recentVideo.title}}</h3>
+                    <p>{{recentVideo.description}}</p>
+                    <a [routerLink] = "['/', 'video', recentVideo.title]">
+                        <button class="btn">Watch Video</button>
                     </a>
+                    
+                </div>
+                <div *ngIf = "recentVideo" class="d-block d-sm-block d-md-block d-lg-none" id="homeSmallText">
+                    
+                    <h3>{{recentVideo.title}}</h3>
+                    <p>{{recentVideo.description}}</p>
+                    <a [routerLink] = "['/', 'video', recentVideo.title]">
+                        <button class="btn">Watch Video</button>
+                    </a>
+                    
                 </div>
             </div>
         </div>
         <div class = "row">
-            <div class = "col">
+            <div id = "dropdownCol" class = "col">
                 <div class="dropdown">
                     <button [attr.aria-expanded] = "dropdownOpen" (click) = "toggleDropdown()" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown button
+                        Choose Season
                     </button>
                     <div [ngClass] = "{'show': dropdownOpen }" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <a *ngFor = "let season of seasons" (click) = "activeSeason(season.number)" class="dropdown-item" >{{season.name}}</a>
@@ -35,7 +46,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{video.title}}</h5>
                             <p class="card-text">{{video.description}}</p>
-                            <a [routerLink] = "['/', 'video', video.title]" class="btn btn-primary">Go somewhere</a>
+                            <a [routerLink] = "['/', 'video', video.title]" class="btn btn-primary">Watch Video</a>
                         </div>
                     </div>
                 </div>
