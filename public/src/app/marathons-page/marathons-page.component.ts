@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class MarathonsPageComponent implements OnInit {
 
   session: any;
+  admin: any;
 
   slides = [
     {src: "https://wallpapercave.com/wp/wp1980778.jpg"},
@@ -25,6 +26,7 @@ export class MarathonsPageComponent implements OnInit {
   ngOnInit() 
   {
     this.checkSession();
+    this.checkAdmin();
     this.receiveMessage(this.session);
   }
 
@@ -47,6 +49,21 @@ export class MarathonsPageComponent implements OnInit {
           this._httpService.send(this.session);
         }
       })
+  }
+
+  checkAdmin() {
+    let observable = this._httpService.checkAdmin();
+    observable.subscribe(data => {
+      if(data['success'] == false)
+      {
+        console.log("Admin is false");
+      }
+      else
+      {
+        console.log("Admin is true");
+        this.admin = data['user'];
+      }
+    })
   }
 
 }

@@ -96,7 +96,7 @@ module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<head>\n        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n    </head>\n    <body>\n        <div class=\"container-fluid\">\n            <div class=\"row\">\n                <div align=\"center\" id = \"image-wrapper\">\n                    <div class=\"d-none d-lg-block\" id=\"homeText\">\n                        <h3>Myriathon</h3>\n                        <p>Placeholder text goes here</p>\n                        <a herf=\"#\">\n                            <button class=\"btn\">Link Here</button>\n                        </a>\n                    </div>\n                </div>\n            </div>\n            <div class = \"row\">\n                <div class=\"darken-pseudo\" id = \"values-wrapper\">\n                    <div id = \"image-values-wrapper\">\n                        <div align = \"center\" id = \"values-header-block\">\n                            <h3>Values</h3>\n                        </div>\n                        <div align = \"center\" id = \"values-content-block-first\">\n                            <p>\n                                    \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \n                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \n                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \n                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\n                            </p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <hr my-4>\n            <div class = \"row\">\n                <div id = \"impact-wrapper\">\n                    <div align = \"center\" id = \"impact-header-block\">\n                        <h3>Impact</h3>\n                    </div>\n                    <div align = \"center\" id = \"impact-amount-block\">\n                        <h3>$XXXXXX</h3>\n                        <h5>Raised for Charity</h5>\n                    </div>\n                    <div align = \"center\" id = \"impact-charities-block\">\n                        <h5>Charities we've supported: </h5>\n                        <div id = \"charity-logo-block\">\n                            <img src = \"assets/img/checkpoint.png\">\n                            <img src = \"assets/img/The_Exodus_Road.png\">\n                            <img src = \"assets/img/charity_water.png\">\n                            <img src = \"assets/img/extra_life.png\">\n                            <img src = \"assets/img/st_jude.png\">\n                            <img src = \"assets/img/world_vision.png\">\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </body>\n    "
+module.exports = "<head>\n        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n        <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n    </head>\n    <body>\n        <div class=\"container-fluid\">\n            <div *ngIf = \"admin\" class = \"row\">\n                <nav class=\"navbar navbar-light bg-light\">\n                    <span class=\"navbar-brand mb-0 h1\">Admin</span>\n                    <ul class = \"nav\">\n                        <li class = \"nav-item\">\n                            <a class = \"nav-link\" href = \"#\">Placeholder</a>\n                        </li>\n                    </ul>\n                </nav>\n            </div>\n            <div class=\"row\">\n                <div align=\"center\" id = \"image-wrapper\">\n                    <div class=\"d-none d-lg-block\" id=\"homeText\">\n                        <h3>Myriathon</h3>\n                        <p>Placeholder text goes here</p>\n                        <a herf=\"#\">\n                            <button class=\"btn\">Link Here</button>\n                        </a>\n                    </div>\n                </div>\n            </div>\n            <div class = \"row\">\n                <div class=\"darken-pseudo\" id = \"values-wrapper\">\n                    <div id = \"image-values-wrapper\">\n                        <div align = \"center\" id = \"values-header-block\">\n                            <h3>Values</h3>\n                        </div>\n                        <div align = \"center\" id = \"values-content-block-first\">\n                            <p>\n                                    \"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. \n                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \n                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. \n                                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\"\n                            </p>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <hr my-4>\n            <div class = \"row\">\n                <div id = \"impact-wrapper\">\n                    <div align = \"center\" id = \"impact-header-block\">\n                        <h3>Impact</h3>\n                    </div>\n                    <div align = \"center\" id = \"impact-amount-block\">\n                        <h3>$XXXXXX</h3>\n                        <h5>Raised for Charity</h5>\n                    </div>\n                    <div align = \"center\" id = \"impact-charities-block\">\n                        <h5>Charities we've supported: </h5>\n                        <div id = \"charity-logo-block\">\n                            <img src = \"assets/img/checkpoint.png\">\n                            <img src = \"assets/img/The_Exodus_Road.png\">\n                            <img src = \"assets/img/charity_water.png\">\n                            <img src = \"assets/img/extra_life.png\">\n                            <img src = \"assets/img/st_jude.png\">\n                            <img src = \"assets/img/world_vision.png\">\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </body>\n    "
 
 /***/ }),
 
@@ -170,6 +170,7 @@ let AboutPageComponent = class AboutPageComponent {
     }
     ngOnInit() {
         this.checkSession();
+        this.checkAdmin();
         this.receiveMessage(this.session);
     }
     receiveMessage(session) {
@@ -184,6 +185,18 @@ let AboutPageComponent = class AboutPageComponent {
             else {
                 this.session = data['user'];
                 this._httpService.send(this.session);
+            }
+        });
+    }
+    checkAdmin() {
+        let observable = this._httpService.checkAdmin();
+        observable.subscribe(data => {
+            if (data['success'] == false) {
+                console.log("Admin is false");
+            }
+            else {
+                console.log("Admin is true");
+                this.admin = data['user'];
             }
         });
     }
@@ -243,6 +256,7 @@ let AddVideoPageComponent = class AddVideoPageComponent {
         this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
     }
     ngOnInit() {
+        this.checkAdmin();
         this.newSeason = { newSeasonName: "", newSeasonNumber: null };
         this.newVideo = { newVideoTitle: "", newVideoDescription: "", newVideoImg: "", newVideoURL: "", newVideoSeason: null };
         this.displayFalseMessage = false;
@@ -277,6 +291,19 @@ let AddVideoPageComponent = class AddVideoPageComponent {
             else {
                 this.session = data['user'];
                 this._httpService.send(this.session);
+            }
+        });
+    }
+    checkAdmin() {
+        let observable = this._httpService.checkAdmin();
+        observable.subscribe(data => {
+            if (data['success'] == false) {
+                console.log("Admin is false");
+                this.router.navigateByUrl("home");
+            }
+            else {
+                console.log("Admin is true");
+                this.admin = data['user'];
             }
         });
     }
@@ -459,6 +486,7 @@ let AllVideosComponent = class AllVideosComponent {
     }
     ngOnInit() {
         this.checkSession();
+        this.checkAdmin();
         this.receiveMessage(this.session);
         this.getAllSeasons();
         this.getRecentVideo();
@@ -508,6 +536,18 @@ let AllVideosComponent = class AllVideosComponent {
             else {
                 this.session = data['user'];
                 this._httpService.send(this.session);
+            }
+        });
+    }
+    checkAdmin() {
+        let observable = this._httpService.checkAdmin();
+        observable.subscribe(data => {
+            if (data['success'] == false) {
+                console.log("Admin is false");
+            }
+            else {
+                console.log("Admin is true");
+                this.admin = data['user'];
             }
         });
     }
@@ -626,7 +666,7 @@ let AppComponent = class AppComponent {
     }
     ngOnInit() {
         this.checkSession();
-        //this.checkAdmin();
+        this.checkAdmin();
         this.receiveMessage(this.session);
     }
     toggleNavbar() {
@@ -642,12 +682,13 @@ let AppComponent = class AppComponent {
             this._httpService.send(this.session);
         });
     }
-    // checkAdmin() {
-    //   let observable = this._httpService.checkAdmin();
-    //   observable.subscribe(data => {
-    //     this.admin = data['user']
-    //   })
-    // }
+    checkAdmin() {
+        let observable = this._httpService.checkAdmin();
+        observable.subscribe(data => {
+            console.log("Admin is true", data);
+            this.admin = data['user'];
+        });
+    }
     receiveMessage(session) {
         this.session = session;
     }
@@ -891,7 +932,7 @@ let HomepageComponent = class HomepageComponent {
     }
     ngOnInit() {
         this.checkSession();
-        //this.checkAdmin();
+        this.checkAdmin();
         this.receiveMessage(this.session);
     }
     receiveMessage(session) {
@@ -902,6 +943,18 @@ let HomepageComponent = class HomepageComponent {
         observable.subscribe(data => {
             this.session = data['user'];
             this._httpService.send(this.session);
+        });
+    }
+    checkAdmin() {
+        let observable = this._httpService.checkAdmin();
+        observable.subscribe(data => {
+            if (data['success'] == false) {
+                console.log("Admin is false");
+            }
+            else {
+                console.log("Admin is true");
+                this.admin = data['user'];
+            }
         });
     }
 };
@@ -1041,6 +1094,7 @@ let MarathonsPageComponent = class MarathonsPageComponent {
     }
     ngOnInit() {
         this.checkSession();
+        this.checkAdmin();
         this.receiveMessage(this.session);
     }
     receiveMessage(session) {
@@ -1055,6 +1109,18 @@ let MarathonsPageComponent = class MarathonsPageComponent {
             else {
                 this.session = data['user'];
                 this._httpService.send(this.session);
+            }
+        });
+    }
+    checkAdmin() {
+        let observable = this._httpService.checkAdmin();
+        observable.subscribe(data => {
+            if (data['success'] == false) {
+                console.log("Admin is false");
+            }
+            else {
+                console.log("Admin is true");
+                this.admin = data['user'];
             }
         });
     }
@@ -1188,6 +1254,7 @@ let SingleVideoComponent = class SingleVideoComponent {
     }
     ngOnInit() {
         this.checkSession();
+        this.checkAdmin();
         this.receiveMessage(this.session);
         this.route.params.subscribe((params) => {
             this.getSingleVideoTitle(params['title']);
@@ -1231,6 +1298,18 @@ let SingleVideoComponent = class SingleVideoComponent {
             else {
                 this.session = data['user'];
                 this._httpService.send(this.session);
+            }
+        });
+    }
+    checkAdmin() {
+        let observable = this._httpService.checkAdmin();
+        observable.subscribe(data => {
+            if (data['success'] == false) {
+                console.log("Admin is false");
+            }
+            else {
+                console.log("Admin is true");
+                this.admin = data['user'];
             }
         });
     }

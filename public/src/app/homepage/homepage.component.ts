@@ -20,7 +20,7 @@ export class HomepageComponent implements OnInit {
 
   ngOnInit() {
     this.checkSession();
-    //this.checkAdmin();
+    this.checkAdmin();
     this.receiveMessage(this.session);
   }
   receiveMessage(session) {
@@ -33,10 +33,18 @@ export class HomepageComponent implements OnInit {
       this._httpService.send(this.session)
     })
   }
-  // checkAdmin() {
-  //   let observable = this._httpService.checkAdmin();
-  //   observable.subscribe(data => {
-  //     this.admin = data['user']
-  //   })
-  // }
+  checkAdmin() {
+    let observable = this._httpService.checkAdmin();
+    observable.subscribe(data => {
+      if(data['success'] == false)
+      {
+        console.log("Admin is false");
+      }
+      else
+      {
+        console.log("Admin is true");
+        this.admin = data['user'];
+      }
+    })
+  }
 }

@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class AboutPageComponent implements OnInit {
 
   session: any;
+  admin: any;
 
   constructor(private _httpService: HttpService, private router : Router) 
   {
@@ -19,6 +20,7 @@ export class AboutPageComponent implements OnInit {
   ngOnInit() 
   {
     this.checkSession();
+    this.checkAdmin();
     this.receiveMessage(this.session);
   }
 
@@ -41,6 +43,21 @@ export class AboutPageComponent implements OnInit {
           this._httpService.send(this.session);
         }
       })
+  }
+
+  checkAdmin() {
+    let observable = this._httpService.checkAdmin();
+    observable.subscribe(data => {
+      if(data['success'] == false)
+      {
+        console.log("Admin is false");
+      }
+      else
+      {
+        console.log("Admin is true");
+        this.admin = data['user'];
+      }
+    })
   }
 
 }

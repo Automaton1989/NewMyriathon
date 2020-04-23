@@ -13,6 +13,7 @@ export class SingleVideoComponent implements OnInit {
   [x: string]: any;
 
   session: any;
+  admin: any;
   singleVideo: any;
   nextVideo: any;
   previousVideo: any;
@@ -26,6 +27,7 @@ export class SingleVideoComponent implements OnInit {
 
   ngOnInit() {
     this.checkSession();
+    this.checkAdmin();
     this.receiveMessage(this.session);
     this.route.params.subscribe((params: Params) => 
     {
@@ -89,6 +91,21 @@ export class SingleVideoComponent implements OnInit {
           this._httpService.send(this.session);
         }
       })
+  }
+
+  checkAdmin() {
+    let observable = this._httpService.checkAdmin();
+    observable.subscribe(data => {
+      if(data['success'] == false)
+      {
+        console.log("Admin is false");
+      }
+      else
+      {
+        console.log("Admin is true");
+        this.admin = data['user'];
+      }
+    })
   }
 
 }

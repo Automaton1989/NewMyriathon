@@ -15,6 +15,7 @@ export class AddVideoPageComponent implements OnInit {
   displayFalseMessage = false;
   newSeason: any;
   newVideo: any;
+  admin: any
 
   constructor(private _httpService: HttpService, private router: Router) 
   { 
@@ -23,6 +24,7 @@ export class AddVideoPageComponent implements OnInit {
 
   ngOnInit() 
   {
+    this.checkAdmin();
     this.newSeason = {newSeasonName: "", newSeasonNumber: null};
     this.newVideo = {newVideoTitle: "", newVideoDescription: "", newVideoImg: "", newVideoURL: "", newVideoSeason: null};
     this.displayFalseMessage = false;
@@ -71,6 +73,22 @@ export class AddVideoPageComponent implements OnInit {
           this._httpService.send(this.session);
         }
       })
+  }
+
+  checkAdmin() {
+    let observable = this._httpService.checkAdmin();
+    observable.subscribe(data => {
+      if(data['success'] == false)
+      {
+        console.log("Admin is false");
+        this.router.navigateByUrl("home");
+      }
+      else
+      {
+        console.log("Admin is true");
+        this.admin = data['user'];
+      }
+    })
   }
 
 }

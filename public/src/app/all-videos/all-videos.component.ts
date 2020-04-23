@@ -11,6 +11,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class AllVideosComponent implements OnInit {
 
   session: any;
+  admin: any;
   seasons = [];
   activeSeasonNumber: any;
   dropdownOpen = false;
@@ -32,6 +33,7 @@ export class AllVideosComponent implements OnInit {
 
   ngOnInit() {
     this.checkSession();
+    this.checkAdmin();
     this.receiveMessage(this.session);
     this.getAllSeasons();
     this.getRecentVideo();
@@ -103,6 +105,21 @@ export class AllVideosComponent implements OnInit {
           this._httpService.send(this.session);
         }
       })
+  }
+
+  checkAdmin() {
+    let observable = this._httpService.checkAdmin();
+    observable.subscribe(data => {
+      if(data['success'] == false)
+      {
+        console.log("Admin is false");
+      }
+      else
+      {
+        console.log("Admin is true");
+        this.admin = data['user'];
+      }
+    })
   }
 
 }

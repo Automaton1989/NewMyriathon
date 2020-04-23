@@ -21,7 +21,7 @@ export class AppComponent {
   }
   ngOnInit() {
     this.checkSession();
-    //this.checkAdmin();
+    this.checkAdmin();
     this.receiveMessage(this.session);
   } 
 
@@ -41,12 +41,13 @@ export class AppComponent {
       this._httpService.send(this.session)
     })
   }
-  // checkAdmin() {
-  //   let observable = this._httpService.checkAdmin();
-  //   observable.subscribe(data => {
-  //     this.admin = data['user']
-  //   })
-  // }
+  checkAdmin() {
+    let observable = this._httpService.checkAdmin();
+    observable.subscribe(data => {
+      console.log("Admin is true", data);
+      this.admin = data['user']
+    })
+  }
   receiveMessage(session) {
     this.session = session;
   }
