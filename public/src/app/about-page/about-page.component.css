@@ -21,6 +21,24 @@ section{
     min-height: 550px;
 }
 
+#ABBackground
+{
+    top: 0px;
+    height: 50%;
+}
+
+#MSBackground
+{
+    top: 50px;
+    height: 37%;
+}
+
+#RSBackground
+{
+    top: 61px;
+    height: 45%;
+}
+
 #SPTBackground
 {
     top: 75px;
