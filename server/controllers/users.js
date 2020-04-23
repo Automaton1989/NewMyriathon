@@ -3,6 +3,9 @@ var bcryptjs = require("bcryptjs");
     User = mongoose.model('User')
     Video = mongoose.model('Video')
     Season = mongoose.model('Season')
+
+var SecretPassword = "Automa1Whale"
+
 module.exports = {
     index: function(req, res) {
         res.json({success : true})
@@ -11,25 +14,32 @@ module.exports = {
     //ADDING A NEW USER
     newUser: function(req, res) {
         console.log("We are in new user controller!");
-        console.log(req.body.newUser.newSecretMessage);
-        bcryptjs.hash(req.body.newUser.newPassword, 10)
-        .then(hashed_password => {
-            var user = new User({username: req.body.newUser.newUsername, email: req.body.newUser.newEmail, password: hashed_password});
-            user.save(function(err, user) {
-                if(err) {
-                    console.log(err);
-                    res.json({success : false});
-                }
-                else {
-                    req.session.email = req.body.newUser.newEmail;
-                    res.json({success : true, user : user })
-                }
+        if(req.body.newUser.newSecretMessage != SecretPassword)
+        {
+            console.log("SecretMessages don't match!");
+            res.json({success : false, msg: "You didn't put in the correct SecretMessage!!!"})
+        }
+        else
+        {
+            bcryptjs.hash(req.body.newUser.newPassword, 10)
+            .then(hashed_password => {
+                var user = new User({username: req.body.newUser.newUsername, email: req.body.newUser.newEmail, password: hashed_password});
+                user.save(function(err, user) {
+                    if(err) {
+                        console.log(err);
+                        res.json({success : false});
+                    }
+                    else {
+                        req.session.email = req.body.newUser.newEmail;
+                        res.json({success : true, user : user })
+                    }
+                })
             })
-        })
-        .catch(error => {
-            console.log(error)
-            res.json({success : false})
-        })
+            .catch(error => {
+                console.log(error)
+                res.json({success : false})
+            })
+        }
     },
 
     //LOGGING IN A USER

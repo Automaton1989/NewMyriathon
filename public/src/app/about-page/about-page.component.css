@@ -23,8 +23,14 @@ section{
 
 #ABBackground
 {
-    top: 0px;
+    top: 5px;
     height: 50%;
+}
+
+#JPBackground
+{
+    top: 50px;
+    height: 38%;
 }
 
 #MSBackground
@@ -37,6 +43,12 @@ section{
 {
     top: 61px;
     height: 45%;
+}
+
+#DJBackground
+{
+    top: 50px;
+    height: 36%;
 }
 
 #SPTBackground

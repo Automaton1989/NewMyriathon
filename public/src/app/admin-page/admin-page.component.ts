@@ -23,7 +23,7 @@ export class AdminPageComponent implements OnInit {
 
   ngOnInit() 
   {
-    this.newUser = {newUsername: "", newEmail: "", newPassword: "", newSecretMessage: ""}
+    this.newUser = {newUsername: "", newEmail: "", newPassword: "", conPassword: "", newSecretMessage: ""}
     this.loginUser = {email: "", password: ""}
     this.displayFalseMessage = false;
     this.checkSession();
@@ -42,14 +42,15 @@ export class AdminPageComponent implements OnInit {
         {
           this.displayFalseMessage = true;
           this.serverError = data['msg'];
+          this.loginUser = {email: "", password: ""};
         }
         else
         {
           console.log("Success!", data);
           this.session = data['user'];
+          this.loginUser = {email: "", password: ""};
+          this.router.navigateByUrl("home");
         }
-        this.loginUser = {email: "", password: ""};
-        this.router.navigateByUrl("home");
       })
   }
 
@@ -64,14 +65,15 @@ export class AdminPageComponent implements OnInit {
         {
           this.displayFalseMessage = true;
           this.serverError = data['msg'];
+          this.newUser = {newUsername: "", newEmail: "", newPassword: "", conPassword: "", newSecretMessage: ""};
         }
         else
         {
           console.log("Success!", data);
           this.session = data['user'];
+          this.newUser = {newUsername: "", newEmail: "", newPassword: "", conPassword: "", newSecretMessage: ""};
+          this.router.navigateByUrl('home');
         }
-        this.newUser = {newUsername: "", newEmail: "", newPassword: "", newSecretMessage: ""};
-        this.router.navigateByUrl('home');
       })
   }
 
