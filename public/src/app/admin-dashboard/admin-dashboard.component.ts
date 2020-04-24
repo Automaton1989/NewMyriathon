@@ -21,7 +21,7 @@ export class AdminDashboardComponent implements OnInit {
   ngOnInit() 
   {
     this.checkSession();
-    //this.checkAdmin();
+    this.checkAdmin();
     this.getAllUsers();
     this.receiveMessage(this.session);
   }

@@ -3,6 +3,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
+    <div class = "container-fluid">
+        <div *ngIf = "admin" class = "row">
+            <nav class="navbar navbar-light bg-light">
+                <span class="navbar-brand mb-0 h1">Admin</span>
+                <ul class = "nav">
+                    <li class = "nav-item">
+                        <a class = "nav-link" [routerLink] = "['/', 'admin', 'dashboard']">Admin Dash</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
     <div id = "carousel-container-wrapper" class="container">
         <div class="row">
             <div class = "container-carousel">

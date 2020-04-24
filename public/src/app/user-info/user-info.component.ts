@@ -23,7 +23,7 @@ export class UserInfoComponent implements OnInit {
   ngOnInit() 
   {
     this.checkSession();
-    //this.checkAdmin();
+    this.checkAdmin();
     this.receiveMessage(this.session);
     this.route.params.subscribe((params: Params) => 
     {
@@ -83,7 +83,6 @@ export class UserInfoComponent implements OnInit {
       if(data['success'] == false)
       {
         console.log("Admin is false");
-        this.router.navigateByUrl("home");
       }
       else
       {

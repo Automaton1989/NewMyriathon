@@ -24,11 +24,11 @@ export class AddVideoPageComponent implements OnInit {
 
   ngOnInit() 
   {
-    this.checkAdmin();
     this.newSeason = {newSeasonName: "", newSeasonNumber: null};
     this.newVideo = {newVideoTitle: "", newVideoDescription: "", newVideoImg: "", newVideoURL: "", newVideoSeason: null};
     this.displayFalseMessage = false;
     this.checkSession();
+    this.checkAdmin();
     this.receiveMessage(this.session);
   }
 
