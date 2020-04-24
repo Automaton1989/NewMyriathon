@@ -3,27 +3,39 @@ import { HttpService } from '../http.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-homepage',
-  templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.css']
+  selector: 'app-admin-dashboard',
+  templateUrl: './admin-dashboard.component.html',
+  styleUrls: ['./admin-dashboard.component.css']
 })
-export class HomepageComponent implements OnInit {
+export class AdminDashboardComponent implements OnInit {
+
   session: any;
-  teams: [];
-  orders: [];
-  shares: null;
-  team: any;
-  admin = false;
-  constructor(private _httpService: HttpService, private router: Router) { 
+  admin: any;
+  users : [];
+
+  constructor(private _httpService: HttpService, private router: Router) 
+  { 
     this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
   }
 
   ngOnInit() 
   {
     this.checkSession();
-    this.checkAdmin();
+    //this.checkAdmin();
+    this.getAllUsers();
     this.receiveMessage(this.session);
   }
+
+  getAllUsers()
+  {
+    let observable = this._httpService.getUsersData();
+    observable.subscribe(data => 
+      {
+        console.log("Got the user data!", data);
+        this.users = data['users'];
+      })
+  }
+
   receiveMessage(session) {
     this.session = session;
   }
@@ -40,6 +52,7 @@ export class HomepageComponent implements OnInit {
       if(data['success'] == false)
       {
         console.log("Admin is false");
+        this.router.navigateByUrl("home");
       }
       else
       {
@@ -48,4 +61,5 @@ export class HomepageComponent implements OnInit {
       }
     })
   }
+
 }

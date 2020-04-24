@@ -45,6 +45,22 @@ module.exports = function(app) {
     {
         myriathon.getNextVideoDetails(req, res)
     })
+    app.get('/myriathon/all/users', function(req, res)
+    {
+        myriathon.getAllUsersData(req, res);
+    })
+    app.get('/myriathon/user/data/:username', function(req, res)
+    {
+        myriathon.getUserData(req, res);
+    })
+    app.put('/myriathon/remove/admin/:username', function(req, res)
+    {
+        myriathon.removeAdminPrivilages(req, res);
+    })
+    app.put('/myriathon/add/admin/:username', function(req, res)
+    {
+        myriathon.addAdminPrivilages(req, res);
+    })
     app.get('/myriathon/session', function(req, res) 
     {
         myriathon.checkSession(req, res)

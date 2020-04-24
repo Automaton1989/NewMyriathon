@@ -8,6 +8,8 @@ import { MyriathonPageComponent } from './myriathon-page/myriathon-page.componen
 import { AboutPageComponent } from './about-page/about-page.component';
 import { AllVideosComponent } from './all-videos/all-videos.component';
 import { SingleVideoComponent } from './single-video/single-video.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { UserInfoComponent } from './user-info/user-info.component';
 
 
 const routes: Routes = [
@@ -20,7 +22,9 @@ const routes: Routes = [
 {path: 'about', component: AboutPageComponent},
 {path: 'videos', component: AllVideosComponent},
 {path: 'video/:title', component: SingleVideoComponent},
-{ path: '**', redirectTo: 'home' },
+{path: 'admin/dashboard', component: AdminDashboardComponent},
+{path: 'user/:username', component: UserInfoComponent},
+{path: '**', redirectTo: 'home'},
 ];
 
 @NgModule({

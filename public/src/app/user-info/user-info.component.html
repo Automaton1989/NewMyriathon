@@ -1,0 +1,22 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <div *ngIf = "user" class = "container-fluid">
+        <div class = "row">
+            <div class = "col">
+                <h3>{{user.username}}</h3>
+                <p>{{user.email}}</p>
+                <form *ngIf = "user.admin" (click) = "removeAdmin()">
+                    <input type = "hidden" value = "false" name = "updateFalseUser.admin" [(ngModel)] = "updateUser.admin" #updateUser = "ngModel"> 
+                    <button type = "submit" class = "btn btn-danger">Remove Admin</button>
+                </form>
+                <form *ngIf = "!user.admin" (click) = "addAdmin()">
+                    <input type = "hidden" value = "true" name = updateTrueUser.admin [(ngModel)] = "updateUser.admin" #updateUser = "ngModel">
+                    <button type = "submit" class = "btn btn-success">Add Admin</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

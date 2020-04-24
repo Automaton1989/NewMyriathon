@@ -292,8 +292,85 @@ module.exports = {
         }
     },
 
+    //GET ALL USERS DATA
+    getAllUsersData: function(req, res)
+    {
+        User.find({}, function(err, users)
+        {
+            if(err)
+            {
+                console.log(err);
+                res.json({success : false, msg : "There was an issue getting users data!"});
+            }
+            else
+            {
+                res.json({success : true, users : users});
+            }
+        })
+    },
+
+    //GET USER DATA
+    getUserData: function(req, res)
+    {
+        User.findOne({username: req.params.username}, function(err, user)
+        {
+            if(err)
+            {
+                console.log(err);
+                res.json({success : false, msg: "There was an issue getting the user data!"});
+            }
+            else
+            {
+                res.json({success : true, user : user});
+            }
+        })
+    },
+
+    //REMOVE ADMIN PRIVILAGES
+    removeAdminPrivilages: function(req, res)
+    {
+        User.findOne({username: req.params.username}, function(err, user)
+        {
+            user.admin = req.body.updateUser.admin;
+            user.save(function(err)
+            {
+                if(err)
+                {
+                    console.log(err);
+                    res.json({success : false, msg : "Something went wrong updating admin privilages!"});
+                }
+                else
+                {
+                    res.json({success : true, user : user});
+                }
+            })
+        })
+    },
+
+    //ADD ADMIN PRIVILAGES
+    addAdminPrivilages: function(req, res)
+    {
+        User.findOne({username: req.params.username}, function(err, user)
+        {
+            user.admin = req.body.updateUser.admin;
+            user.save(function(err)
+            {
+                if(err)
+                {
+                    console.log(err);
+                    res.json({success : false, msg : "Something went wrong updating admin privilages!"});
+                }
+                else
+                {
+                    res.json({success : true, user : user});
+                }
+            })
+        })
+    },
+
     //CHECK FOR SESSION COOKIE
-    checkSession: function(req, res) {
+    checkSession: function(req, res) 
+    {
         if(req.session.email) {
             User.findOne({email : req.session.email}, function(err, user) {
                 if(user == null) {

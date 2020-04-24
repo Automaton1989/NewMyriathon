@@ -16,6 +16,8 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { AllVideosComponent } from './all-videos/all-videos.component';
 import { SingleVideoComponent } from './single-video/single-video.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { UserInfoComponent } from './user-info/user-info.component';
 
 
 @NgModule({
@@ -30,6 +32,8 @@ import { SingleVideoComponent } from './single-video/single-video.component';
     CarouselComponent,
     AllVideosComponent,
     SingleVideoComponent,
+    AdminDashboardComponent,
+    UserInfoComponent,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

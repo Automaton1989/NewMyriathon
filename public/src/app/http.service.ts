@@ -49,6 +49,22 @@ export class HttpService {
   {
     return this._http.get('/myriathon/next/video/' + singleVideoTitle);
   }
+  getUsersData()
+  {
+    return this._http.get('/myriathon/all/users');
+  }
+  getUserData(username)
+  {
+    return this._http.get('/myriathon/user/data/' + username);
+  }
+  removeAdminPrivilages(username, updateUser)
+  {
+    return this._http.put('/myriathon/remove/admin/' + username, {updateUser : updateUser});
+  }
+  addAdminPrivilages(username, updateUser)
+  {
+    return this._http.put('/myriathon/add/admin/' + username, {updateUser : updateUser});
+  }
   send(session : any) 
   {
     this._stream$.next(session)

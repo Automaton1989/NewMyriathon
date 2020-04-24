@@ -57,6 +57,30 @@ section{
     height: 50%;
 }
 
+#ATBackground
+{
+    top: 50px;
+    height: 37%
+}
+
+#CDBackground
+{
+    top: 55px;
+    height: 37%;
+}
+
+#CDIcon
+{
+    height: 100px;
+    width: 100px;
+}
+
+#MKBackground
+{
+    top: 55px;
+    height: 37%;
+}
+
 /*Profile Card 3*/
 .profile-card-3 {
     font-family: 'Open Sans', Arial, sans-serif;
