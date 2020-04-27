@@ -18,17 +18,21 @@
             </nav>
         </div>
         <div *ngIf="displayFalseMessage" class = "container">
-            <div class = "row invalid">
-                <p>{{falseMessage}}</p>
+            <div class = "row d-flex justify-content-center invalid">
+                <div class = "col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                    <p>{{falseMessage}}</p>
+                </div>
             </div>
-            <div class = "row invalid">
-                <p>{{serverError}}</p>
+            <div class = "row d-flex justify-content-center invalid">
+                <div class = "col-sm-12 col-md-6 col-lg-4 col-xl-4">
+                    <p>{{serverError}}</p>
+                </div>
             </div>
         </div>
-        <div class = "row">
+        <div class = "row d-flex justify-content-center">
             <h3>Add New Season</h3>
         </div>
-        <div class = "row">
+        <div class = "row d-flex justify-content-center">
             <form (submit) = "createSeason()">
                 <div class = "form-group">
                     <label>Name: </label>
@@ -59,7 +63,7 @@
             </form>
         </div>
         <hr my-4>
-        <div class = "row">
+        <div class = "row d-flex justify-content-center">
             <form (submit) = "createVideo()">
                 <div class = "form-group">
                     <label>Title: </label>
