@@ -11,6 +11,9 @@
                     <li class = "nav-item">
                         <a class = "nav-link" [routerLink] = "['/', 'admin', 'dashboard']">Admin Dash</a>
                     </li>
+                    <li class = "nav-item">
+                        <a class = "nav-link" [routerLink] = "['/', 'addvideo']">Add Video/Season</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -52,10 +55,10 @@
         </div>
         <div id = "buttonRow" class = "row">
             <div *ngIf = "previousVideo" class = "d-flex justify-content-start col">
-                <button class = "btn btn-primary"> << Previous Video</button>
+                <a [routerLink] = "['/', 'video', previousVideo.title]" ><button class = "btn btn-primary"> << Previous Video</button></a>
             </div>
             <div *ngIf = "nextVideo" class = "d-flex justify-content-end col">
-                <button class = "btn btn-primary">Next Video >> </button>
+                    <a [routerLink] = "['/', 'video', nextVideo.title]" ><button class = "btn btn-primary">Next Video >> </button></a>
             </div>
         </div>
     </div>

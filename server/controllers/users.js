@@ -231,15 +231,24 @@ module.exports = {
             else
             {
                 console.log("We are in the loop!");
+                var nextVideo = null;
                 for(i = 0; i < videos.length; i++)
                 {
                     if(videos[i].title == req.params.title && videos[i] != videos[videos.length-1])
                     {
                         console.log("Found Video!")
-                        res.json({success : true, video : videos[i]});
+                        nextVideo = videos[i+1];
+                        res.json({success : true, video : nextVideo});
+                    }
+                    else if(videos[i].title == req.params.title && videos[i] == videos[videos.length-1])
+                    {
+                        res.json({success : true, video : null})
+                    }
+                    else
+                    {
+                        console.log("didn't find yet");
                     }
                 }
-                res.json({success : true, video : null});
             }
         })
     },
@@ -263,11 +272,13 @@ module.exports = {
                     console.log("We are in the loop!");
                     if(videos[i].title == req.params.title)
                     {
+                        console.log("We found a video!");
                         res.json({success : true, video : previous});
                     }
                     else
                     {
-                        previous = video;
+                        console.log("Didn't find yet");
+                        previous = videos[i];
                     }
                 }
             }
