@@ -1,0 +1,68 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <div class = "container-fluid">
+        <div class = "row d-flex justify-content-center">
+            <div class = "col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <form *ngIf = "singleVideo" (submit) = "updateSingleVideo()">
+                    <h3 class = "text-center">Update {{singleVideo.title}}</h3>
+                    <div class = "form-group">
+                        <label>Title: </label>
+                        <input 
+                        class = "form-control"
+                        type = "text"
+                        name = "updateVideo.title"
+                        required
+                        minlength = "3"
+                        [(ngModel)] = "updateVideo.title"
+                        #title = "ngModel"
+                        [value] = "singleVideo.title"
+                        />
+                    </div>
+                    <div class = "form-group">
+                        <label>Description: </label>
+                        <textarea
+                        class = "form-control"
+                        rows = "3"
+                        name = "updateVideo.description"
+                        [(ngModel)] = "updateVideo.description"
+                        #description = "ngModel"
+                        >{{singleVideo.description}}</textarea>
+                    </div>
+                    <div class = "form-group">
+                        <label>Img URL: </label>
+                        <input
+                        type = "text"
+                        class = "form-control"
+                        placeholder="Enter IMG URL"
+                        name = "updateVideo.img"
+                        required
+                        minlength="3"
+                        [(ngModel)] = "updateVideo.img"
+                        #img = "ngModel"
+                        [value] = "singleVideo.img"
+                        />
+                    </div>
+                    <div class = "form-group">
+                        <label>URL: </label>
+                        <input
+                        type = "text"
+                        class = "form-control"
+                        placeholder="Enter a Video URL"
+                        name = "updateVideo.videoURL"
+                        required
+                        minlength="3"
+                        [(ngModel)] = "updateVideo.videoURL"
+                        #videoURL = "ngModel"
+                        [value] = "singleVideo.videoURL"
+                        />
+                    </div>
+                    <button type = "submit" class = "btn btn-block btn-primary">Update</button>
+                    <button [routerLink] = "['home']" class = "btn btn-block btn-danger">Cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

@@ -217,6 +217,59 @@ module.exports = {
         })
     },
 
+    //UPDATE SINGLE VIDEO
+    updateVideoData: function(req, res)
+    {
+        console.log("We are in the users.js file for updating video now!");
+        Video.findOne({_id: req.params.id}, function(err, video)
+        {
+            if(err)
+            {
+                console.log(err);
+                res.json({success : false, msg: "Something went wrong!"});
+            }
+            else
+            {
+                //video.title = req.body.updateVideo.title;
+                //video.description = req.body.updateVideo.description;
+                //video.img = req.body.updateVideo.img;
+                //video.videoURL = req.body.updateVideo.videoURL
+                video.save(function(err)
+                {
+                    if(err)
+                    {
+                        console.log(err);
+                        res.json({success : false, msg: "Something went wrong saving video!"});
+                    }
+                    else
+                    {
+                        Season.find({}, function(err, seasons)
+                        {
+                            if(err)
+                            {
+                                res.json({success : false});
+                            }
+                            else
+                            {
+                                for(i = 0; i < seasons.length; i++)
+                                {
+                                    for(j = 0; j < seasons[i].videos.length; j++)
+                                    {
+                                        if(seasons[i].videos[j]._id.equals(video._id))
+                                        {
+                                            console.log("HERE");
+                                        }
+                                    }
+                                }
+                                res.json({success : true});
+                            }
+                        })
+                    }
+                })
+            }
+        })
+    },
+
     //GET NEXT VIDEO INFORMATION
     getNextVideoDetails: function(req, res)
     {

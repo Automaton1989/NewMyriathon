@@ -49,6 +49,11 @@ export class HttpService {
   {
     return this._http.get('/myriathon/next/video/' + singleVideoTitle);
   }
+  updateVideo(updateVideo)
+  {
+    console.log("HERE!");
+    return this._http.put('/myriathon/update/video/' + updateVideo._id, {updateVideo : updateVideo});
+  }
   getUsersData()
   {
     return this._http.get('/myriathon/all/users');

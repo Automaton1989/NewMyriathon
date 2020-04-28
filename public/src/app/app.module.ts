@@ -18,6 +18,7 @@ import { AllVideosComponent } from './all-videos/all-videos.component';
 import { SingleVideoComponent } from './single-video/single-video.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { UserInfoComponent } from './user-info/user-info.component';
+import { EditVideoComponent } from './edit-video/edit-video.component';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { UserInfoComponent } from './user-info/user-info.component';
     SingleVideoComponent,
     AdminDashboardComponent,
     UserInfoComponent,
+    EditVideoComponent,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

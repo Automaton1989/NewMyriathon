@@ -53,6 +53,10 @@ module.exports = function(app) {
     {
         myriathon.getUserData(req, res);
     })
+    app.put('/myriathon/update/video/:id', function(req, res)
+    {
+        myriathon.updateVideoData(req, res);
+    })
     app.put('/myriathon/remove/admin/:username', function(req, res)
     {
         myriathon.removeAdminPrivilages(req, res);

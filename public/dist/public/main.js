@@ -100,6 +100,17 @@ module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/edit-video/edit-video.component.html":
+/*!********************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/edit-video/edit-video.component.html ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div class = \"row d-flex justify-content-center\">\n            <div class = \"col-sm-12 col-md-6 col-lg-6 col-xl-6\">\n                <form *ngIf = \"singleVideo\" (submit) = \"updateSingleVideo()\">\n                    <h3 class = \"text-center\">Update {{singleVideo.title}}</h3>\n                    <div class = \"form-group\">\n                        <label>Title: </label>\n                        <input \n                        class = \"form-control\"\n                        type = \"text\"\n                        name = \"updateVideo.title\"\n                        required\n                        minlength = \"3\"\n                        [(ngModel)] = \"updateVideo.title\"\n                        #title = \"ngModel\"\n                        [value] = \"singleVideo.title\"\n                        />\n                    </div>\n                    <div class = \"form-group\">\n                        <label>Description: </label>\n                        <textarea\n                        class = \"form-control\"\n                        rows = \"3\"\n                        name = \"updateVideo.description\"\n                        [(ngModel)] = \"updateVideo.description\"\n                        #description = \"ngModel\"\n                        >{{singleVideo.description}}</textarea>\n                    </div>\n                    <div class = \"form-group\">\n                        <label>Img URL: </label>\n                        <input\n                        type = \"text\"\n                        class = \"form-control\"\n                        placeholder=\"Enter IMG URL\"\n                        name = \"updateVideo.img\"\n                        required\n                        minlength=\"3\"\n                        [(ngModel)] = \"updateVideo.img\"\n                        #img = \"ngModel\"\n                        [value] = \"singleVideo.img\"\n                        />\n                    </div>\n                    <div class = \"form-group\">\n                        <label>URL: </label>\n                        <input\n                        type = \"text\"\n                        class = \"form-control\"\n                        placeholder=\"Enter a Video URL\"\n                        name = \"updateVideo.videoURL\"\n                        required\n                        minlength=\"3\"\n                        [(ngModel)] = \"updateVideo.videoURL\"\n                        #videoURL = \"ngModel\"\n                        [value] = \"singleVideo.videoURL\"\n                        />\n                    </div>\n                    <button type = \"submit\" class = \"btn btn-block btn-primary\">Update</button>\n                    <button [routerLink] = \"['home']\" class = \"btn btn-block btn-danger\">Cancel</button>\n                </form>\n            </div>\n        </div>\n    </div>\n</body>"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/homepage/homepage.component.html":
 /*!****************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/homepage/homepage.component.html ***!
@@ -702,6 +713,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _single_video_single_video_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./single-video/single-video.component */ "./src/app/single-video/single-video.component.ts");
 /* harmony import */ var _admin_dashboard_admin_dashboard_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./admin-dashboard/admin-dashboard.component */ "./src/app/admin-dashboard/admin-dashboard.component.ts");
 /* harmony import */ var _user_info_user_info_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./user-info/user-info.component */ "./src/app/user-info/user-info.component.ts");
+/* harmony import */ var _edit_video_edit_video_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./edit-video/edit-video.component */ "./src/app/edit-video/edit-video.component.ts");
+
 
 
 
@@ -727,6 +740,7 @@ const routes = [
     { path: 'video/:title', component: _single_video_single_video_component__WEBPACK_IMPORTED_MODULE_10__["SingleVideoComponent"] },
     { path: 'admin/dashboard', component: _admin_dashboard_admin_dashboard_component__WEBPACK_IMPORTED_MODULE_11__["AdminDashboardComponent"] },
     { path: 'user/:username', component: _user_info_user_info_component__WEBPACK_IMPORTED_MODULE_12__["UserInfoComponent"] },
+    { path: 'video/edit/:title', component: _edit_video_edit_video_component__WEBPACK_IMPORTED_MODULE_13__["EditVideoComponent"] },
     { path: '**', redirectTo: 'home' },
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -865,6 +879,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _single_video_single_video_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./single-video/single-video.component */ "./src/app/single-video/single-video.component.ts");
 /* harmony import */ var _admin_dashboard_admin_dashboard_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./admin-dashboard/admin-dashboard.component */ "./src/app/admin-dashboard/admin-dashboard.component.ts");
 /* harmony import */ var _user_info_user_info_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./user-info/user-info.component */ "./src/app/user-info/user-info.component.ts");
+/* harmony import */ var _edit_video_edit_video_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./edit-video/edit-video.component */ "./src/app/edit-video/edit-video.component.ts");
+
 
 
 
@@ -902,6 +918,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _single_video_single_video_component__WEBPACK_IMPORTED_MODULE_17__["SingleVideoComponent"],
             _admin_dashboard_admin_dashboard_component__WEBPACK_IMPORTED_MODULE_18__["AdminDashboardComponent"],
             _user_info_user_info_component__WEBPACK_IMPORTED_MODULE_19__["UserInfoComponent"],
+            _edit_video_edit_video_component__WEBPACK_IMPORTED_MODULE_20__["EditVideoComponent"],
         ],
         schemas: [
             _angular_core__WEBPACK_IMPORTED_MODULE_2__["CUSTOM_ELEMENTS_SCHEMA"],
@@ -1011,6 +1028,118 @@ CarouselComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [__webpack_require__(/*! ./carousel.component.css */ "./src/app/carousel/carousel.component.css")]
     })
 ], CarouselComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/edit-video/edit-video.component.css":
+/*!*****************************************************!*\
+  !*** ./src/app/edit-video/edit-video.component.css ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2VkaXQtdmlkZW8vZWRpdC12aWRlby5jb21wb25lbnQuY3NzIn0= */"
+
+/***/ }),
+
+/***/ "./src/app/edit-video/edit-video.component.ts":
+/*!****************************************************!*\
+  !*** ./src/app/edit-video/edit-video.component.ts ***!
+  \****************************************************/
+/*! exports provided: EditVideoComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditVideoComponent", function() { return EditVideoComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
+
+
+let EditVideoComponent = class EditVideoComponent {
+    constructor(_httpService, router, route) {
+        this._httpService = _httpService;
+        this.router = router;
+        this.route = route;
+        this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
+    }
+    ngOnInit() {
+        this.checkSession();
+        this.checkAdmin();
+        this.receiveMessage(this.session);
+        this.route.params.subscribe((params) => {
+            this.getSingleVideoTitle(params['title']);
+        });
+    }
+    updateSingleVideo() {
+        console.log("You pressed the button!");
+        let observable = this._httpService.updateVideo(this.updateVideo);
+        observable.subscribe(data => {
+            console.log("We are getting new data", data);
+            if (data['success'] == false) {
+                console.log(data['success']);
+            }
+            else {
+                console.log(data['success']);
+                this.router.navigateByUrl('home');
+            }
+        });
+    }
+    getSingleVideoTitle(title) {
+        let observable = this._httpService.getVideoDetails(title);
+        observable.subscribe(data => {
+            console.log("We got the data!", data);
+            this.singleVideo = data['video'][0];
+            this.updateVideo = data['video'][0];
+        });
+    }
+    receiveMessage(session) {
+        this.session = session;
+    }
+    checkSession() {
+        let observable = this._httpService.checkSession();
+        observable.subscribe(data => {
+            if (data['success'] == false) {
+                console.log("No session found!");
+            }
+            else {
+                this.session = data['user'];
+                this._httpService.send(this.session);
+            }
+        });
+    }
+    checkAdmin() {
+        let observable = this._httpService.checkAdmin();
+        observable.subscribe(data => {
+            if (data['success'] == false) {
+                console.log("Admin is false");
+                //this.router.navigateByUrl('home');
+            }
+            else {
+                console.log("Admin is true");
+                this.admin = data['user'];
+            }
+        });
+    }
+};
+EditVideoComponent.ctorParameters = () => [
+    { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] }
+];
+EditVideoComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-edit-video',
+        template: __webpack_require__(/*! raw-loader!./edit-video.component.html */ "./node_modules/raw-loader/index.js!./src/app/edit-video/edit-video.component.html"),
+        styles: [__webpack_require__(/*! ./edit-video.component.css */ "./src/app/edit-video/edit-video.component.css")]
+    })
+], EditVideoComponent);
 
 
 
@@ -1147,6 +1276,10 @@ let HttpService = class HttpService {
     }
     getNextVideoDetails(singleVideoTitle) {
         return this._http.get('/myriathon/next/video/' + singleVideoTitle);
+    }
+    updateVideo(updateVideo) {
+        console.log("HERE!");
+        return this._http.put('/myriathon/update/video/' + updateVideo._id, { updateVideo: updateVideo });
     }
     getUsersData() {
         return this._http.get('/myriathon/all/users');

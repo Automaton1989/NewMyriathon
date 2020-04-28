@@ -10,6 +10,7 @@ import { AllVideosComponent } from './all-videos/all-videos.component';
 import { SingleVideoComponent } from './single-video/single-video.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { UserInfoComponent } from './user-info/user-info.component';
+import { EditVideoComponent } from './edit-video/edit-video.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
 {path: 'video/:title', component: SingleVideoComponent},
 {path: 'admin/dashboard', component: AdminDashboardComponent},
 {path: 'user/:username', component: UserInfoComponent},
+{path: 'video/edit/:title', component: EditVideoComponent},
 {path: '**', redirectTo: 'home'},
 ];
 
