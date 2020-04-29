@@ -111,7 +111,7 @@ module.exports = {
         {
             if(video == null)
             {
-                var video = new Video({title: req.body.newVideo.newVideoTitle, description: req.body.newVideo.newVideoDescription, img: req.body.newVideo.newVideoImg, videoURL: req.body.newVideo.newVideoURL})
+                var video = new Video({title: req.body.newVideo.newVideoTitle, description: req.body.newVideo.newVideoDescription, img: req.body.newVideo.newVideoImg, videoURL: req.body.newVideo.newVideoURL, seasonNumber: req.body.newVideo.newVideoSeason})
                 video.save(function(err, video) 
                 {
                     if(err)
@@ -230,10 +230,10 @@ module.exports = {
             }
             else
             {
-                //video.title = req.body.updateVideo.title;
-                //video.description = req.body.updateVideo.description;
-                //video.img = req.body.updateVideo.img;
-                //video.videoURL = req.body.updateVideo.videoURL
+                video.title = req.body.updateVideo.title;
+                video.description = req.body.updateVideo.description;
+                video.img = req.body.updateVideo.img;
+                video.videoURL = req.body.updateVideo.videoURL
                 video.save(function(err)
                 {
                     if(err)
@@ -243,7 +243,7 @@ module.exports = {
                     }
                     else
                     {
-                        Season.find({}, function(err, seasons)
+                        Season.findOne({number: video.seasonNumber}, function(err, season)
                         {
                             if(err)
                             {
@@ -251,17 +251,24 @@ module.exports = {
                             }
                             else
                             {
-                                for(i = 0; i < seasons.length; i++)
+                                for(i = 0; i < season.videos.length; i++)
                                 {
-                                    for(j = 0; j < seasons[i].videos.length; j++)
+                                    if(season.videos[i]._id.equals(video._id))
                                     {
-                                        if(seasons[i].videos[j]._id.equals(video._id))
+                                        season.videos[i] = video;
+                                        season.save(function(err)
                                         {
-                                            console.log("HERE");
-                                        }
+                                            if(err)
+                                            {
+                                                res.json({success : false});
+                                            }
+                                            else
+                                            {
+                                                res.json({success : true});
+                                            }
+                                        })
                                     }
                                 }
-                                res.json({success : true});
                             }
                         })
                     }

@@ -47,6 +47,11 @@ var MyriathonVideoSchema = new mongoose.Schema(
             type: String,
             required: [true, "You must have a URL to post this video!"]
         },
+        seasonNumber:
+        {
+            type: Number,
+            required: [true, "You must have a season chosen for a video!"]
+        },
     },
     {timestamps: true}
 );
