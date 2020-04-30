@@ -217,6 +217,54 @@ module.exports = {
         })
     },
 
+    //GET SEASON DETAILS
+    getSeasonDetails: function(req, res)
+    {
+        console.log("We are in the users.js file now for single season details!");
+        Season.findOne({name: req.params.name}, function(err, season)
+        {
+            if(err)
+            {
+                console.log(err);
+                res.json({success : false, msg: "Something went wrong!"});
+            }
+            else
+            {
+                res.json({success : true, season : season});
+            }
+        })
+    },
+
+    //UPDATE SEASON DATA
+    updateSeasonData: function(req, res)
+    {
+        console.log("We are in the users.js file now for updating a season!");
+        Season.findOne({_id: req.params.id}, function(err, season)
+        {
+            if(err)
+            {
+                console.log(err);
+                res.json({success : false, msg: "Something went wrong!"});
+            }
+            else
+            {
+                season.name = req.body.updateSeason.name;
+                season.save(function(err)
+                {
+                    if(err)
+                    {
+                        console.log(err);
+                        res.json({success : false, msg : "There was an error saving season!"});
+                    }
+                    else
+                    {
+                        res.json({success : true})
+                    }
+                })
+            }
+        })
+    },
+
     //UPDATE SINGLE VIDEO
     updateVideoData: function(req, res)
     {

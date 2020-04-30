@@ -1,0 +1,53 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <div class = "container-fluid">
+        <div class = "row d-flex justify-content-center">
+            <div class = "col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <form *ngIf = "singleSeason" (submit) = "updateSingleSeason()">
+                    <h3 class = "text-center">Update {{singleSeason.name}}</h3>
+                    <div class = "form-group">
+                        <label>Name: </label>
+                        <input
+                        class = "form-control"
+                        type = "text"
+                        name = "updateSeason.name"
+                        required
+                        minlength = "3"
+                        [(ngModel)] = "updateSeason.name"
+                        #name = "ngModel"
+                        [value] = "singleSeason.name"
+                        />
+                    </div>
+                    <button type = "submit" class = "btn btn-block btn-primary">Update</button>
+                    <button [routerLink] = "['home']" class = "btn btn-block btn-danger">Cancel</button>
+                </form>
+            </div>
+        </div>
+        <hr my-4>
+        <div *ngIf = "singleSeason" class = "row">
+            <div class = "col">
+                <table class="table table-fit table-responsive-md table-hover table-dark">
+                    <thead>
+                        <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col">Img URL</th>
+                        <th scope="col">Video URL</th>
+                        <th scope="col">Options</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor = "let video of singleSeason.videos">
+                        <th>{{video.title}}</th>
+                        <td>{{video.img}}</td>
+                        <td>{{video.videoURL}}</td>
+                        <td><button [routerLink] = "['/', 'video', 'edit', video.title]" class = "btn btn-primary">Edit</button></td>
+                        </tr>
+                    </tbody>
+                    </table>
+            </div>
+        </div>
+    </div>
+</body>

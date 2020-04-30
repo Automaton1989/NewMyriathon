@@ -19,6 +19,7 @@ import { SingleVideoComponent } from './single-video/single-video.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { EditVideoComponent } from './edit-video/edit-video.component';
+import { EditSeasonComponent } from './edit-season/edit-season.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { EditVideoComponent } from './edit-video/edit-video.component';
     AdminDashboardComponent,
     UserInfoComponent,
     EditVideoComponent,
+    EditSeasonComponent,
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

@@ -11,6 +11,7 @@ import { SingleVideoComponent } from './single-video/single-video.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { EditVideoComponent } from './edit-video/edit-video.component';
+import { EditSeasonComponent } from './edit-season/edit-season.component';
 
 
 const routes: Routes = [
@@ -26,6 +27,7 @@ const routes: Routes = [
 {path: 'admin/dashboard', component: AdminDashboardComponent},
 {path: 'user/:username', component: UserInfoComponent},
 {path: 'video/edit/:title', component: EditVideoComponent},
+{path: 'season/edit/:name', component: EditSeasonComponent},
 {path: '**', redirectTo: 'home'},
 ];
 

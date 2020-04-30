@@ -37,6 +37,10 @@ module.exports = function(app) {
     {
         myriathon.getVideoDetails(req, res)
     })
+    app.get('/myriathon/season/:name', function(req, res)
+    {
+        myriathon.getSeasonDetails(req, res)
+    })
     app.get('/myriathon/prev/video/:title', function(req, res)
     {
         myriathon.getPreviousVideoDetails(req, res)
@@ -56,6 +60,10 @@ module.exports = function(app) {
     app.put('/myriathon/update/video/:id', function(req, res)
     {
         myriathon.updateVideoData(req, res);
+    })
+    app.put('/myriathon/update/season/:id', function(req, res)
+    {
+        myriathon.updateSeasonData(req,res);
     })
     app.put('/myriathon/remove/admin/:username', function(req, res)
     {

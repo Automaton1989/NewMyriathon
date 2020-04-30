@@ -100,6 +100,17 @@ module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/edit-season/edit-season.component.html":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/edit-season/edit-season.component.html ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div class = \"row d-flex justify-content-center\">\n            <div class = \"col-sm-12 col-md-6 col-lg-6 col-xl-6\">\n                <form *ngIf = \"singleSeason\" (submit) = \"updateSingleSeason()\">\n                    <h3 class = \"text-center\">Update {{singleSeason.name}}</h3>\n                    <div class = \"form-group\">\n                        <label>Name: </label>\n                        <input\n                        class = \"form-control\"\n                        type = \"text\"\n                        name = \"updateSeason.name\"\n                        required\n                        minlength = \"3\"\n                        [(ngModel)] = \"updateSeason.name\"\n                        #name = \"ngModel\"\n                        [value] = \"singleSeason.name\"\n                        />\n                    </div>\n                    <button type = \"submit\" class = \"btn btn-block btn-primary\">Update</button>\n                    <button [routerLink] = \"['home']\" class = \"btn btn-block btn-danger\">Cancel</button>\n                </form>\n            </div>\n        </div>\n        <hr my-4>\n        <div *ngIf = \"singleSeason\" class = \"row\">\n            <div class = \"col\">\n                <table class=\"table table-fit table-responsive-md table-hover table-dark\">\n                    <thead>\n                        <tr>\n                        <th scope=\"col\">Title</th>\n                        <th scope=\"col\">Img URL</th>\n                        <th scope=\"col\">Video URL</th>\n                        <th scope=\"col\">Options</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr *ngFor = \"let video of singleSeason.videos\">\n                        <th>{{video.title}}</th>\n                        <td>{{video.img}}</td>\n                        <td>{{video.videoURL}}</td>\n                        <td><button [routerLink] = \"['/', 'video', 'edit', video.title]\" class = \"btn btn-primary\">Edit</button></td>\n                        </tr>\n                    </tbody>\n                    </table>\n            </div>\n        </div>\n    </div>\n</body>"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/edit-video/edit-video.component.html":
 /*!********************************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/edit-video/edit-video.component.html ***!
@@ -714,6 +725,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _admin_dashboard_admin_dashboard_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./admin-dashboard/admin-dashboard.component */ "./src/app/admin-dashboard/admin-dashboard.component.ts");
 /* harmony import */ var _user_info_user_info_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./user-info/user-info.component */ "./src/app/user-info/user-info.component.ts");
 /* harmony import */ var _edit_video_edit_video_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./edit-video/edit-video.component */ "./src/app/edit-video/edit-video.component.ts");
+/* harmony import */ var _edit_season_edit_season_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./edit-season/edit-season.component */ "./src/app/edit-season/edit-season.component.ts");
+
 
 
 
@@ -741,6 +754,7 @@ const routes = [
     { path: 'admin/dashboard', component: _admin_dashboard_admin_dashboard_component__WEBPACK_IMPORTED_MODULE_11__["AdminDashboardComponent"] },
     { path: 'user/:username', component: _user_info_user_info_component__WEBPACK_IMPORTED_MODULE_12__["UserInfoComponent"] },
     { path: 'video/edit/:title', component: _edit_video_edit_video_component__WEBPACK_IMPORTED_MODULE_13__["EditVideoComponent"] },
+    { path: 'season/edit/:name', component: _edit_season_edit_season_component__WEBPACK_IMPORTED_MODULE_14__["EditSeasonComponent"] },
     { path: '**', redirectTo: 'home' },
 ];
 let AppRoutingModule = class AppRoutingModule {
@@ -880,6 +894,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _admin_dashboard_admin_dashboard_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./admin-dashboard/admin-dashboard.component */ "./src/app/admin-dashboard/admin-dashboard.component.ts");
 /* harmony import */ var _user_info_user_info_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./user-info/user-info.component */ "./src/app/user-info/user-info.component.ts");
 /* harmony import */ var _edit_video_edit_video_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./edit-video/edit-video.component */ "./src/app/edit-video/edit-video.component.ts");
+/* harmony import */ var _edit_season_edit_season_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./edit-season/edit-season.component */ "./src/app/edit-season/edit-season.component.ts");
+
 
 
 
@@ -919,6 +935,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _admin_dashboard_admin_dashboard_component__WEBPACK_IMPORTED_MODULE_18__["AdminDashboardComponent"],
             _user_info_user_info_component__WEBPACK_IMPORTED_MODULE_19__["UserInfoComponent"],
             _edit_video_edit_video_component__WEBPACK_IMPORTED_MODULE_20__["EditVideoComponent"],
+            _edit_season_edit_season_component__WEBPACK_IMPORTED_MODULE_21__["EditSeasonComponent"],
         ],
         schemas: [
             _angular_core__WEBPACK_IMPORTED_MODULE_2__["CUSTOM_ELEMENTS_SCHEMA"],
@@ -1028,6 +1045,118 @@ CarouselComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         styles: [__webpack_require__(/*! ./carousel.component.css */ "./src/app/carousel/carousel.component.css")]
     })
 ], CarouselComponent);
+
+
+
+/***/ }),
+
+/***/ "./src/app/edit-season/edit-season.component.css":
+/*!*******************************************************!*\
+  !*** ./src/app/edit-season/edit-season.component.css ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".table td, .table th\n{\n    vertical-align: middle;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvZWRpdC1zZWFzb24vZWRpdC1zZWFzb24uY29tcG9uZW50LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7SUFFSSxzQkFBc0I7QUFDMUIiLCJmaWxlIjoic3JjL2FwcC9lZGl0LXNlYXNvbi9lZGl0LXNlYXNvbi5jb21wb25lbnQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnRhYmxlIHRkLCAudGFibGUgdGhcbntcbiAgICB2ZXJ0aWNhbC1hbGlnbjogbWlkZGxlO1xufSJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/edit-season/edit-season.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/edit-season/edit-season.component.ts ***!
+  \******************************************************/
+/*! exports provided: EditSeasonComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EditSeasonComponent", function() { return EditSeasonComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
+
+
+
+let EditSeasonComponent = class EditSeasonComponent {
+    constructor(_httpService, router, route) {
+        this._httpService = _httpService;
+        this.router = router;
+        this.route = route;
+        this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
+    }
+    ngOnInit() {
+        this.checkSession();
+        this.checkAdmin();
+        this.receiveMessage(this.session);
+        this.route.params.subscribe((params) => {
+            this.getSingleSeasonName(params['name']);
+        });
+    }
+    updateSingleSeason() {
+        console.log("You pressed the button!");
+        let observable = this._httpService.updateSeasonDetails(this.updateSeason);
+        observable.subscribe(data => {
+            console.log("We updated the data!", data);
+            if (data['success'] == false) {
+                console.log(data['success']);
+            }
+            else {
+                console.log(data['success']);
+                this.router.navigateByUrl('home');
+            }
+        });
+    }
+    getSingleSeasonName(name) {
+        let observable = this._httpService.getSeasonDetails(name);
+        observable.subscribe(data => {
+            console.log("We got the data!", data);
+            this.singleSeason = data['season'];
+            this.updateSeason = data['season'];
+        });
+    }
+    receiveMessage(session) {
+        this.session = session;
+    }
+    checkSession() {
+        let observable = this._httpService.checkSession();
+        observable.subscribe(data => {
+            if (data['success'] == false) {
+                console.log("No session found!");
+            }
+            else {
+                this.session = data['user'];
+                this._httpService.send(this.session);
+            }
+        });
+    }
+    checkAdmin() {
+        let observable = this._httpService.checkAdmin();
+        observable.subscribe(data => {
+            if (data['success'] == false) {
+                console.log("Admin is false");
+                //this.router.navigateByUrl('home');
+            }
+            else {
+                console.log("Admin is true");
+                this.admin = data['user'];
+            }
+        });
+    }
+};
+EditSeasonComponent.ctorParameters = () => [
+    { type: _http_service__WEBPACK_IMPORTED_MODULE_2__["HttpService"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"] },
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_3__["ActivatedRoute"] }
+];
+EditSeasonComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-edit-season',
+        template: __webpack_require__(/*! raw-loader!./edit-season.component.html */ "./node_modules/raw-loader/index.js!./src/app/edit-season/edit-season.component.html"),
+        styles: [__webpack_require__(/*! ./edit-season.component.css */ "./src/app/edit-season/edit-season.component.css")]
+    })
+], EditSeasonComponent);
 
 
 
@@ -1271,6 +1400,9 @@ let HttpService = class HttpService {
     getVideoDetails(title) {
         return this._http.get('/myriathon/single/' + title);
     }
+    getSeasonDetails(name) {
+        return this._http.get('/myriathon/season/' + name);
+    }
     getPreviousVideoDetails(singleVideoTitle) {
         return this._http.get('/myriathon/prev/video/' + singleVideoTitle);
     }
@@ -1278,8 +1410,10 @@ let HttpService = class HttpService {
         return this._http.get('/myriathon/next/video/' + singleVideoTitle);
     }
     updateVideo(updateVideo) {
-        console.log("HERE!");
         return this._http.put('/myriathon/update/video/' + updateVideo._id, { updateVideo: updateVideo });
+    }
+    updateSeasonDetails(updateSeason) {
+        return this._http.put('/myriathon/update/season/' + updateSeason._id, { updateSeason: updateSeason });
     }
     getUsersData() {
         return this._http.get('/myriathon/all/users');

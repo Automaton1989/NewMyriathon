@@ -41,6 +41,10 @@ export class HttpService {
   {
     return this._http.get('/myriathon/single/' + title);
   }
+  getSeasonDetails(name)
+  {
+    return this._http.get('/myriathon/season/' + name);
+  }
   getPreviousVideoDetails(singleVideoTitle)
   {
     return this._http.get('/myriathon/prev/video/' + singleVideoTitle);
@@ -51,8 +55,11 @@ export class HttpService {
   }
   updateVideo(updateVideo)
   {
-    console.log("HERE!");
     return this._http.put('/myriathon/update/video/' + updateVideo._id, {updateVideo : updateVideo});
+  }
+  updateSeasonDetails(updateSeason)
+  {
+    return this._http.put('/myriathon/update/season/' + updateSeason._id, {updateSeason : updateSeason});
   }
   getUsersData()
   {
