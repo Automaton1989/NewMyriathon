@@ -111,42 +111,45 @@ module.exports = {
         {
             if(video == null)
             {
-                var video = new Video({title: req.body.newVideo.newVideoTitle, description: req.body.newVideo.newVideoDescription, img: req.body.newVideo.newVideoImg, videoURL: req.body.newVideo.newVideoURL, seasonNumber: req.body.newVideo.newVideoSeason})
-                video.save(function(err, video) 
+                Season.findOne({number: req.body.newVideo.newVideoSeason}, function(err, season)
                 {
-                    if(err)
+                    if(season == null)
+                    {
+                        console.log("Season not found!");
+                        res.json({success : false, msg: "There is no season with that number in our database!"});
+                    }
+                    else if(err)
                     {
                         console.log(err);
-                        res.json({success : false, msg: "Something went wrong in the system!"});
+                        res.json({success : false, msg: "Something went wrong in the system!"})
                     }
                     else
                     {
-                        Season.findOne({number: req.body.newVideo.newVideoSeason}, function(err, season)
+                        var video = new Video({title: req.body.newVideo.newVideoTitle, description: req.body.newVideo.newVideoDescription, img: req.body.newVideo.newVideoImg, videoURL: req.body.newVideo.newVideoURL, seasonNumber: req.body.newVideo.newVideoSeason})
+                        season.videos.push(video);
+                        season.save(function(err, season)
                         {
-                            if(season == null)
+                            if(err)
                             {
-                                console.log("Season not found!");
-                                res.json({success : false, msg: "There is no season with that number in our database!"});
-                            }
-                            else if(err)
-                            {
-                                console.log(err);
-                                res.json({success : false, msg: "Something went wrong in the system!"})
+                                console.log(err)
+                                res.json({success : false, msg: "Something went wrong in the system!"});
                             }
                             else
                             {
-                                season.videos.push(video);
-                                season.save(function(err, season)
+                                video.save(function(err) 
                                 {
                                     if(err)
                                     {
-                                        console.log(err)
+                                        console.log(err);
                                         res.json({success : false, msg: "Something went wrong in the system!"});
+                                    }
+                                    else
+                                    {
+                                        res.json({success : true});
                                     }
                                 })
                             }
                         })
-                        res.json({success : true, video : video});
                     }
                 })
             }
@@ -158,7 +161,7 @@ module.exports = {
             else
             {
                 console.log("There's already a video in the database!");
-                res.json({success : false, msg: "There's already a video in the database!"});
+                res.json({success : false, msg: "There's already a video with that name in the database!"});
             }
         })
     },

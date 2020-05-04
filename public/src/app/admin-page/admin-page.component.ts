@@ -46,7 +46,6 @@ export class AdminPageComponent implements OnInit {
         }
         else
         {
-          console.log("Success!", data);
           this.session = data['user'];
           this.loginUser = {email: "", password: ""};
           this.router.navigateByUrl("home");

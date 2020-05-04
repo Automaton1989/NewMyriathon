@@ -34,24 +34,40 @@ export class AddVideoPageComponent implements OnInit {
 
   createSeason()
   {
-    console.log("We are creating a season now!");
     let observable = this._httpService.addSeason(this.newSeason);
     observable.subscribe(data => 
       {
-        console.log("We are returning with new season data", data);
+        if(data['success'] == false)
+        {
+          this.displayFalseMessage = true;
+          this.serverError = data['msg'];
+          this.newSeason = {newSeasonName: "", newSeasonNumber: null};
+        }
+        else
+        {
+          this.newSeason = {newSeasonName: "", newSeasonNumber: null};
+          this.router.navigateByUrl('home');
+        }
       })
-    this.newSeason = {newSeasonName: "", newSeasonNumber: null};
   }
 
   createVideo()
   {
-    console.log("We are creating a video now!");
     let observable = this._httpService.addVideo(this.newVideo);
     observable.subscribe(data =>
       {
-        console.log("We are returning with new video data", data);
+        if(data['success'] == false)
+        {
+          this.displayFalseMessage = true;
+          this.serverError = data['msg'];
+          this.newVideo = {newVideoTitle: "", newVideoDescription: "", newVideoImg: "", newVideoURL: "", newVideoSeason: null};
+        }
+        else
+        {
+          this.newVideo = {newVideoTitle: "", newVideoDescription: "", newVideoImg: "", newVideoURL: "", newVideoSeason: null};
+          this.router.navigateByUrl('home');
+        }
       })
-    this.newVideo = {newVideoTitle: "", newVideoDescription: "", newVideoImg: "", newVideoURL: "", newVideoSeason: null};
   }
 
   receiveMessage(session)
@@ -63,11 +79,7 @@ export class AddVideoPageComponent implements OnInit {
     let observable = this._httpService.checkSession();
     observable.subscribe(data => 
       {
-        if(data['success'] == false)
-        {
-          console.log("No session found!")
-        }
-        else
+        if(data['success'] == true)
         {
           this.session = data['user'];
           this._httpService.send(this.session);
@@ -80,12 +92,10 @@ export class AddVideoPageComponent implements OnInit {
     observable.subscribe(data => {
       if(data['success'] == false)
       {
-        console.log("Admin is false");
         this.router.navigateByUrl("home");
       }
       else
       {
-        console.log("Admin is true");
         this.admin = data['user'];
       }
     })

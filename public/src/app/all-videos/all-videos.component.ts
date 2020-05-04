@@ -35,8 +35,8 @@ export class AllVideosComponent implements OnInit {
     this.checkSession();
     this.checkAdmin();
     this.receiveMessage(this.session);
-    this.getAllSeasons();
     this.getRecentVideo();
+    this.getAllSeasons();
   }
 
 

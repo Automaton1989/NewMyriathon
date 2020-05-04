@@ -60,8 +60,8 @@ a:focus {
     background: #7386D5;
     color: #fff;
     transition: all 0.3s;
-    overflow-y: scroll;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
 #sidebar.active {
@@ -192,7 +192,7 @@ a.article:hover {
 
 #topNav
 {
-    /*width: 100%;*/
+    border: 1px solid black;
 }
 
 #sidebarNotCollapse

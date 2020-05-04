@@ -135,7 +135,13 @@ body
 .card
 {
     margin-bottom: 1rem;
+    min-height: 400px;
 }
+
+    .card img
+    {
+        min-height: 200px;
+    }
 
 .card-body p
 {
@@ -145,9 +151,30 @@ body
 .cardBlock
 {
     display: inline-block;
+    vertical-align: top;
 }
 
 #seasonTitle
 {
     margin-top: 5rem;
 }
+
+#dropdownMenuButton
+{
+    width: 200px;
+}
+
+    #dropdownMenuButton:hover
+    {
+        cursor: pointer;
+    }
+
+.dropdown-menu
+{
+    width: 200px;
+}
+
+    .dropdown-menu a:hover
+    {
+        cursor: pointer;
+    }
