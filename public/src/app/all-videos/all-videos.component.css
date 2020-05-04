@@ -124,6 +124,8 @@ body
 {
     margin-bottom: 1rem;
     margin-top: 1rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
     width: 100%;
 }
 
@@ -140,7 +142,7 @@ body
 
     .card img
     {
-        min-height: 200px;
+        height: 200px;
     }
 
 .card-body p
@@ -161,7 +163,8 @@ body
 
 #dropdownMenuButton
 {
-    width: 200px;
+    width: 335px;
+    border-radius: 0px;
 }
 
     #dropdownMenuButton:hover
@@ -171,10 +174,17 @@ body
 
 .dropdown-menu
 {
-    width: 200px;
+    width: 335px;
+    top: 96%;
+    border-radius: 0px;
 }
 
     .dropdown-menu a:hover
     {
         cursor: pointer;
     }
+
+.btn-block
+{
+    border-radius: 0px;
+}

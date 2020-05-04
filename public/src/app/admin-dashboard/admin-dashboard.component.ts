@@ -11,6 +11,7 @@ export class AdminDashboardComponent implements OnInit {
 
   session: any;
   admin: any;
+  seasons: [];
   users : [];
 
   constructor(private _httpService: HttpService, private router: Router) 
@@ -23,7 +24,24 @@ export class AdminDashboardComponent implements OnInit {
     this.checkSession();
     this.checkAdmin();
     this.getAllUsers();
+    this.getAllSeasons();
     this.receiveMessage(this.session);
+  }
+
+  getAllSeasons()
+  {
+    let observable = this._httpService.getSeasons();
+    observable.subscribe(data =>
+      {
+        if(data['success'] == false)
+        {
+          console.log("We didn't get the data we wanted!")
+        }
+        else
+        {
+          this.seasons = data['seasons'];
+        }
+      })
   }
 
   getAllUsers()

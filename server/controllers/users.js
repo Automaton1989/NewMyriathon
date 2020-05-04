@@ -332,32 +332,31 @@ module.exports = {
     getNextVideoDetails: function(req, res)
     {
         console.log("We are in the users.js file now for next video!");
-        Video.find({}, function(err, videos)
+        Season.findOne({number : req.params.number}, function(err, season)
         {
             if(err)
             {
                 console.log(err);
-                res.json({success : false, msg: "Something went wrong finding all videos"});
+                res.json({success : false, msg : "Something went wrong finding the season!"});
             }
             else
             {
-                console.log("We are in the loop!");
                 var nextVideo = null;
-                for(i = 0; i < videos.length; i++)
+                for(i = 0; i < season.videos.length; i++)
                 {
-                    if(videos[i].title == req.params.title && videos[i] != videos[videos.length-1])
+                    if(season.videos[i].title == req.params.title && season.videos[i] != season.videos[season.videos.length-1])
                     {
-                        console.log("Found Video!")
-                        nextVideo = videos[i+1];
+                        console.log("Found Video!");
+                        nextVideo = season.videos[i+1];
                         res.json({success : true, video : nextVideo});
                     }
-                    else if(videos[i].title == req.params.title && videos[i] == videos[videos.length-1])
+                    else if(season.videos[i].title == req.params.title && season.videos[i] == season.videos[season.videos.length-1])
                     {
-                        res.json({success : true, video : null})
+                        res.json({success : true, video : null});
                     }
                     else
                     {
-                        console.log("didn't find yet");
+                        console.log("didn't find anything!");
                     }
                 }
             }
@@ -368,28 +367,27 @@ module.exports = {
     getPreviousVideoDetails: function(req, res)
     {
         console.log("We are in the users.js file now for previous video!");
-        Video.find({}, function(err, videos)
+        Season.findOne({number : req.params.number}, function(err, season)
         {
             if(err)
             {
                 console.log(err);
-                res.json({success : false, msg: "Something went wrong finding all videos"});
+                res.json({success : false, msg : "Something went wrong finding the season!"});
             }
             else
             {
-                var previous = null;
-                for(i = 0; i < videos.length; i++)
+                var previousVideo = null;
+                for(i = 0; i < season.videos.length; i++)
                 {
-                    console.log("We are in the loop!");
-                    if(videos[i].title == req.params.title)
+                    if(season.videos[i].title == req.params.title)
                     {
-                        console.log("We found a video!");
-                        res.json({success : true, video : previous});
+                        console.log("Found Video!");
+                        res.json({success : true, video : previousVideo});
                     }
                     else
                     {
-                        console.log("Didn't find yet");
-                        previous = videos[i];
+                        console.log("Didn't find yet!");
+                        previousVideo = season.videos[i];
                     }
                 }
             }

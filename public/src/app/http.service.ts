@@ -45,13 +45,13 @@ export class HttpService {
   {
     return this._http.get('/myriathon/season/' + name);
   }
-  getPreviousVideoDetails(singleVideoTitle)
+  getPreviousVideoDetails(singleVideoTitle, singleSeasonNumber)
   {
-    return this._http.get('/myriathon/prev/video/' + singleVideoTitle);
+    return this._http.get('/myriathon/prev/video/' + singleVideoTitle + '/' + singleSeasonNumber);
   }
-  getNextVideoDetails(singleVideoTitle)
+  getNextVideoDetails(singleVideoTitle, singleSeasonNumber)
   {
-    return this._http.get('/myriathon/next/video/' + singleVideoTitle);
+    return this._http.get('/myriathon/next/video/' + singleVideoTitle + '/' + singleSeasonNumber);
   }
   updateVideo(updateVideo)
   {

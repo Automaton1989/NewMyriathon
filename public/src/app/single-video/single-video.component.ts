@@ -35,9 +35,9 @@ export class SingleVideoComponent implements OnInit {
     })
   }
 
-  getPreviousVideo(singleVideoTitle)
+  getPreviousVideo(singleVideoTitle, singleSeasonNumber)
   {
-    let observable = this._httpService.getPreviousVideoDetails(singleVideoTitle);
+    let observable = this._httpService.getPreviousVideoDetails(singleVideoTitle, singleSeasonNumber);
     observable.subscribe(data => 
       {
         console.log("We got the previous video data!", data);
@@ -45,9 +45,9 @@ export class SingleVideoComponent implements OnInit {
       })
   }
 
-  getNextVideo(singleVideoTitle)
+  getNextVideo(singleVideoTitle, singleSeasonNumber)
   {
-    let observable = this._httpService.getNextVideoDetails(singleVideoTitle);
+    let observable = this._httpService.getNextVideoDetails(singleVideoTitle, singleSeasonNumber);
     observable.subscribe(data => 
       {
         console.log("We got the next video data!", data);
@@ -62,8 +62,8 @@ export class SingleVideoComponent implements OnInit {
       {
         this.singleVideo = data['video'][0];
         this.getSafeUrl(this.singleVideo.videoURL);
-        this.getNextVideo(this.singleVideo.title);
-        this.getPreviousVideo(this.singleVideo.title);
+        this.getNextVideo(this.singleVideo.title, this.singleVideo.seasonNumber);
+        this.getPreviousVideo(this.singleVideo.title, this.singleVideo.seasonNumber);
       })
   }
 

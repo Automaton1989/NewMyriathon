@@ -41,11 +41,11 @@ module.exports = function(app) {
     {
         myriathon.getSeasonDetails(req, res)
     })
-    app.get('/myriathon/prev/video/:title', function(req, res)
+    app.get('/myriathon/prev/video/:title/:number', function(req, res)
     {
         myriathon.getPreviousVideoDetails(req, res)
     })
-    app.get('/myriathon/next/video/:title', function(req, res)
+    app.get('/myriathon/next/video/:title/:number', function(req, res)
     {
         myriathon.getNextVideoDetails(req, res)
     })
