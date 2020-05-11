@@ -8,6 +8,7 @@
     width: 100%;
     overflow: hidden;
     border-radius: 0.5em;
+    min-height: 550px;
     }
     
     .slide {
@@ -27,25 +28,28 @@
     
     .control {
     border: none;
-    background-color: transparent;
+    background-color: black;
     outline: 0; 
     position: absolute;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0.5em;
+    padding: 0.3em;
     color: white;
     font-weight: bold;
     font-size: 3em;
     user-select: none;
     height: 100%;
-    opacity: 80%;
+    opacity: 20%;
     transition: opacity 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
     }
     
-    .control:hover, .control:focus {
+
+
+    .control:hover {
         opacity: 1;
+        cursor: pointer;
     }
     
     /* Position the buttons */

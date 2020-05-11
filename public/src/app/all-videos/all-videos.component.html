@@ -51,7 +51,7 @@
                 </div>
             </div>
         </div>
-        <div *ngIf = "activeSeasonNumber" id = "seasonTitle" class = "row">
+        <div *ngIf = "activeSeasonNumber" id = "seasonTitle" class = "text-center row">
             <div class = "col">
                 <h3>{{seasons[activeSeasonNumber-1].name}}</h3>
             </div>
@@ -62,7 +62,7 @@
                     <div class="card" style="width: 100%;">
                         <img src="{{video.img}}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">{{video.title}}</h5>
+                            <h5 class="card-title text-center">{{video.title}}</h5>
                             <p class="card-text">{{video.description}}</p>
                         </div>
                         <a [routerLink] = "['/', 'video', video.title]" class="btn btn-block btn-primary">Watch Video</a>
