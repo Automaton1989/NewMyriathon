@@ -20,7 +20,8 @@ import { trigger, transition, style, animate } from "@angular/animations";
 
 export class CarouselComponent implements OnInit {
 
-  @Input() slides;
+  @Input() bigSlides;
+  @Input() littleSlides;
   
   txt = [
     "This is test text for src 1",
@@ -48,7 +49,11 @@ export class CarouselComponent implements OnInit {
 
   preloadImages()
   {
-    for (const slide of this.slides)
+    for (const slide of this.bigSlides)
+    {
+      new Image().src = slide.src;
+    }
+    for (const slide of this.littleSlides)
     {
       new Image().src = slide.src;
     }
@@ -59,7 +64,7 @@ export class CarouselComponent implements OnInit {
     const previousSlide = this.currentSlide - 1;
     const previousText = this.currentText - 1;
     const previousTitle = this.currentTitle - 1;
-    this.currentSlide = previousSlide < 0 ? this.slides.length - 1: previousSlide;
+    this.currentSlide = previousSlide < 0 ? this.bigSlides.length - 1: previousSlide;
     this.currentText = previousText < 0 ? this.txt.length - 1: previousText;
     this.currentTitle = previousTitle < 0 ? this.title.length - 1: previousTitle;
   }
@@ -70,7 +75,7 @@ export class CarouselComponent implements OnInit {
     const nextText = this.currentText + 1;
     const nextTitle = this.currentTitle + 1;
     this.currentText = nextText === this.txt.length ? 0 : nextText;
-    this.currentSlide = nextSlide === this.slides.length ? 0 : nextSlide;
+    this.currentSlide = nextSlide === this.bigSlides.length ? 0 : nextSlide;
     this.currentTitle = nextTitle === this.title.length ? 0 : nextTitle;
   }
 

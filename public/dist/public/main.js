@@ -96,7 +96,7 @@ module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<!-- carousel -->\n<div *ngFor = \"let slide of slides; let i = index\" class = \"row justify-content-center\">\n    <p \n    *ngIf = \"i === currentTitle\"\n    >\n    {{title[i]}}\n    </p>\n</div>\n<div class=\" carousel\">\n    <ng-container *ngFor=\"let slide of slides; let i = index\">\n        <img\n        *ngIf = \"i === currentSlide\"\n        [src]=\"slide.src\"\n        class=\"darken-psuedo slide\"\n        @carouselAnimation\n        />\n    </ng-container>\n    \n    <!-- controls -->\n    <button class=\"control prev\" (click) = \"onPreviousClick()\">\n        <span class=\"arrow left\"></span>\n    </button>\n    <button class=\"control next\" (click) = \"onNextClick()\">\n        <span class=\"arrow right\"></span>\n    </button>\n</div>\n<hr my-4>\n<div id = \"carousel-text\" *ngFor = \"let slide of slides; let i = index\" class = \"justify-content-center row\">\n    <p\n    *ngIf = \"i === currentText\"\n    >{{txt[i]}}\n    </p>\n</div>"
+module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<!-- carousel -->\n<div *ngFor = \"let slide of bigSlides; let i = index\" class = \"row justify-content-center\">\n    <p \n    *ngIf = \"i === currentTitle\"\n    >\n    {{title[i]}}\n    </p>\n</div>\n<div class= \"d-none d-sm-none d-md-block carousel\">\n    <ng-container *ngFor=\"let slide of bigSlides; let i = index\">\n        <img\n        *ngIf = \"i === currentSlide\"\n        [src]=\"slide.src\"\n        class=\"darken-psuedo slide\"\n        @carouselAnimation\n        />\n    </ng-container>\n    \n    <!-- controls -->\n    <button class=\"control prev\" (click) = \"onPreviousClick()\">\n        <span class=\"arrow left\"></span>\n    </button>\n    <button class=\"control next\" (click) = \"onNextClick()\">\n        <span class=\"arrow right\"></span>\n    </button>\n</div>\n\n<div class= \"d-block d-sm-block d-md-none carousel\">\n    <ng-container *ngFor=\"let slide of littleSlides; let i = index\">\n        <img\n        *ngIf = \"i === currentSlide\"\n        [src]=\"slide.src\"\n        class=\"darken-psuedo slide\"\n        @carouselAnimation\n        />\n    </ng-container>\n    \n    <!-- controls -->\n    <button class=\"control prev\" (click) = \"onPreviousClick()\">\n        <span class=\"arrow left\"></span>\n    </button>\n    <button class=\"control next\" (click) = \"onNextClick()\">\n        <span class=\"arrow right\"></span>\n    </button>\n</div>\n\n<hr my-4>\n<div id = \"carousel-text\" *ngFor = \"let slide of bigSlides; let i = index\" class = \"justify-content-center row\">\n    <p\n    *ngIf = \"i === currentText\"\n    >{{txt[i]}}\n    </p>\n</div>"
 
 /***/ }),
 
@@ -140,7 +140,7 @@ module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div *ngIf = \"admin\" class = \"row\">\n            <nav class=\"navbar navbar-light bg-light\">\n                <span class=\"navbar-brand mb-0 h1\">Admin</span>\n                <ul class = \"nav\">\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'admin', 'dashboard']\">Admin Dash</a>\n                    </li>\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'addvideo']\">Add Video/Season</a>\n                    </li>\n                </ul>\n            </nav>\n        </div>\n    </div>\n    <div id = \"carousel-container-wrapper\">\n        <div class=\"row\" id = \"carousel-row\">\n            <div class = \"container-carousel\">\n                <app-carousel [slides] = \"slides\"></app-carousel>\n            </div>\n        </div>\n    </div>\n</body>\n    "
+module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div *ngIf = \"admin\" class = \"row\">\n            <nav class=\"navbar navbar-light bg-light\">\n                <span class=\"navbar-brand mb-0 h1\">Admin</span>\n                <ul class = \"nav\">\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'admin', 'dashboard']\">Admin Dash</a>\n                    </li>\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'addvideo']\">Add Video/Season</a>\n                    </li>\n                </ul>\n            </nav>\n        </div>\n    </div>\n    <div id = \"carousel-container-wrapper\">\n        <div class=\"row\" id = \"carousel-row\">\n            <div class = \"container-carousel\">\n                <app-carousel [littleSlides] = \"littleSlides\" [bigSlides] = \"bigSlides\"></app-carousel>\n            </div>\n        </div>\n    </div>\n</body>\n    "
 
 /***/ }),
 
@@ -1021,7 +1021,10 @@ let CarouselComponent = class CarouselComponent {
         this.preloadImages();
     }
     preloadImages() {
-        for (const slide of this.slides) {
+        for (const slide of this.bigSlides) {
+            new Image().src = slide.src;
+        }
+        for (const slide of this.littleSlides) {
             new Image().src = slide.src;
         }
     }
@@ -1029,7 +1032,7 @@ let CarouselComponent = class CarouselComponent {
         const previousSlide = this.currentSlide - 1;
         const previousText = this.currentText - 1;
         const previousTitle = this.currentTitle - 1;
-        this.currentSlide = previousSlide < 0 ? this.slides.length - 1 : previousSlide;
+        this.currentSlide = previousSlide < 0 ? this.bigSlides.length - 1 : previousSlide;
         this.currentText = previousText < 0 ? this.txt.length - 1 : previousText;
         this.currentTitle = previousTitle < 0 ? this.title.length - 1 : previousTitle;
     }
@@ -1038,13 +1041,16 @@ let CarouselComponent = class CarouselComponent {
         const nextText = this.currentText + 1;
         const nextTitle = this.currentTitle + 1;
         this.currentText = nextText === this.txt.length ? 0 : nextText;
-        this.currentSlide = nextSlide === this.slides.length ? 0 : nextSlide;
+        this.currentSlide = nextSlide === this.bigSlides.length ? 0 : nextSlide;
         this.currentTitle = nextTitle === this.title.length ? 0 : nextTitle;
     }
 };
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
-], CarouselComponent.prototype, "slides", void 0);
+], CarouselComponent.prototype, "bigSlides", void 0);
+tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Input"])()
+], CarouselComponent.prototype, "littleSlides", void 0);
 CarouselComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-carousel',
@@ -1504,8 +1510,13 @@ let MarathonsPageComponent = class MarathonsPageComponent {
     constructor(_httpService, router) {
         this._httpService = _httpService;
         this.router = router;
-        this.slides = [
-            { src: "https://wallpapercave.com/wp/wp1980778.jpg" },
+        this.bigSlides = [
+            { src: "/assets/img/M_Pure_Large.jpg" },
+            { src: "/assets/img/myriathon_background.jpg" },
+            { src: "https://thumbs.dreamstime.com/b/autumn-oak-leaf-fantastic-beautiful-spray-bubbles-blue-background-magic-autumn-blue-background-yellow-oak-leaf-158238643.jpg" },
+        ];
+        this.littleSlides = [
+            { src: "/assets/img/M_Pure_Small.png" },
             { src: "/assets/img/myriathon_background.jpg" },
             { src: "https://thumbs.dreamstime.com/b/autumn-oak-leaf-fantastic-beautiful-spray-bubbles-blue-background-magic-autumn-blue-background-yellow-oak-leaf-158238643.jpg" },
         ];

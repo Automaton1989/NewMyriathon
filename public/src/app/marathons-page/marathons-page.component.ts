@@ -12,11 +12,17 @@ export class MarathonsPageComponent implements OnInit {
   session: any;
   admin: any;
 
-  slides = [
-    {src: "https://wallpapercave.com/wp/wp1980778.jpg"},
+  bigSlides = [
+    {src: "/assets/img/M_Pure_Large.jpg"},
     {src: "/assets/img/myriathon_background.jpg"},
     {src: "https://thumbs.dreamstime.com/b/autumn-oak-leaf-fantastic-beautiful-spray-bubbles-blue-background-magic-autumn-blue-background-yellow-oak-leaf-158238643.jpg"},
   ];
+
+  littleSlides = [
+    {src: "/assets/img/M_Pure_Small.png"},
+    {src: "/assets/img/myriathon_background.jpg"},
+    {src: "https://thumbs.dreamstime.com/b/autumn-oak-leaf-fantastic-beautiful-spray-bubbles-blue-background-magic-autumn-blue-background-yellow-oak-leaf-158238643.jpg"},
+  ]
 
   constructor(private _httpService: HttpService, private router : Router) 
   { 

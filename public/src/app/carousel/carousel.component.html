@@ -3,15 +3,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <!-- carousel -->
-<div *ngFor = "let slide of slides; let i = index" class = "row justify-content-center">
+<div *ngFor = "let slide of bigSlides; let i = index" class = "row justify-content-center">
     <p 
     *ngIf = "i === currentTitle"
     >
     {{title[i]}}
     </p>
 </div>
-<div class=" carousel">
-    <ng-container *ngFor="let slide of slides; let i = index">
+<div class= "d-none d-sm-none d-md-block carousel">
+    <ng-container *ngFor="let slide of bigSlides; let i = index">
         <img
         *ngIf = "i === currentSlide"
         [src]="slide.src"
@@ -28,8 +28,28 @@
         <span class="arrow right"></span>
     </button>
 </div>
+
+<div class= "d-block d-sm-block d-md-none carousel">
+    <ng-container *ngFor="let slide of littleSlides; let i = index">
+        <img
+        *ngIf = "i === currentSlide"
+        [src]="slide.src"
+        class="darken-psuedo slide"
+        @carouselAnimation
+        />
+    </ng-container>
+    
+    <!-- controls -->
+    <button class="control prev" (click) = "onPreviousClick()">
+        <span class="arrow left"></span>
+    </button>
+    <button class="control next" (click) = "onNextClick()">
+        <span class="arrow right"></span>
+    </button>
+</div>
+
 <hr my-4>
-<div id = "carousel-text" *ngFor = "let slide of slides; let i = index" class = "justify-content-center row">
+<div id = "carousel-text" *ngFor = "let slide of bigSlides; let i = index" class = "justify-content-center row">
     <p
     *ngIf = "i === currentText"
     >{{txt[i]}}
