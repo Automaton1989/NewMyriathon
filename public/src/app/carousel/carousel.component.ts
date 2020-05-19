@@ -24,15 +24,17 @@ export class CarouselComponent implements OnInit {
   @Input() littleSlides;
   
   txt = [
-    "This is test text for src 1",
-    "This is test text again for src 2",
-    "this is test text another for src 3",
+    "Myriathon Assist ran in the summer of 2018, in support of Direct Relief.  We raised over $1,600 during the marathon!",
+    "Myriathon 1 Up ran in the winter of 2018, in support of Extra Life.  We raised over $1,300 during the marathon!",
+    "Myriathon Checkpoint ran in the summer of 2019, in support of Checkpoint Org.  We raised over $1,500 during the marathon!",
+    "Myriathon Home is an upcoming marathon slated for summer 2020, in support of Direct Relief.  The event will run from June 8th to June 14th."
   ];
 
   title = [
-    "This is the title for Slide 1",
-    "This is the title for Slide 2",
-    "This is the title for Slide 3"
+    "Myriathon Assist - Summer 2018",
+    "Myriathon 1-Up - Winter 2018",
+    "Myriathon Checkpoint - Summer 2019",
+    "Myriathon Home - Summer 2020"
   ];
 
   currentSlide = 0;

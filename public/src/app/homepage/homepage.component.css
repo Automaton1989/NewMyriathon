@@ -114,7 +114,7 @@
 {
     width: 100%;
     min-height: 700px;
-    padding: 2rem;
+    padding: 1rem;
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
@@ -149,8 +149,8 @@
 
     #values-wrapper #values-header-block
     {
-        margin: 1rem;
-        margin-top: 2rem;
+        margin: 0.5rem;
+        margin-top: 1rem;
         color: white;
     }
 

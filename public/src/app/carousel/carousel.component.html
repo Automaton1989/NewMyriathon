@@ -4,7 +4,7 @@
 </head>
 <!-- carousel -->
 <div *ngFor = "let slide of bigSlides; let i = index" class = "row justify-content-center">
-    <p 
+    <p class = "text-center"
     *ngIf = "i === currentTitle"
     >
     {{title[i]}}
@@ -50,7 +50,7 @@
 
 <hr my-4>
 <div id = "carousel-text" *ngFor = "let slide of bigSlides; let i = index" class = "justify-content-center row">
-    <p
+    <p class = text-center
     *ngIf = "i === currentText"
     >{{txt[i]}}
     </p>
