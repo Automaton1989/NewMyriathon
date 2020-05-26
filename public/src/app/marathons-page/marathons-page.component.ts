@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-marathons-page',
@@ -15,27 +16,32 @@ export class MarathonsPageComponent implements OnInit {
   bigSlides = [
     {src: "/assets/img/M_Assist_Large.jpg"},
     {src: "/assets/img/M_1UP_Large.jpg"},
-    {src: "https://thumbs.dreamstime.com/b/autumn-oak-leaf-fantastic-beautiful-spray-bubbles-blue-background-magic-autumn-blue-background-yellow-oak-leaf-158238643.jpg"},
+    {src: "/assets/img/M_Checkpoint_Large.png"},
     {src: "https://thumbs.dreamstime.com/b/autumn-oak-leaf-fantastic-beautiful-spray-bubbles-blue-background-magic-autumn-blue-background-yellow-oak-leaf-158238643.jpg"},
   ];
 
   littleSlides = [
     {src: "/assets/img/M_Assist_Small.png"},
     {src: "/assets/img/M_1UP_Small.png"},
-    {src: "https://thumbs.dreamstime.com/b/autumn-oak-leaf-fantastic-beautiful-spray-bubbles-blue-background-magic-autumn-blue-background-yellow-oak-leaf-158238643.jpg"},
+    {src: "/assets/img/M_Checkpoint_Small.png"},
     {src: "https://thumbs.dreamstime.com/b/autumn-oak-leaf-fantastic-beautiful-spray-bubbles-blue-background-magic-autumn-blue-background-yellow-oak-leaf-158238643.jpg"},
   ]
 
-  constructor(private _httpService: HttpService, private router : Router) 
+  constructor(private _httpService: HttpService, private router : Router, private titleService: Title) 
   { 
     this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
   }
 
   ngOnInit() 
   {
+    this.setTitle("Myriathon | Marathons");
     this.checkSession();
     this.checkAdmin();
     this.receiveMessage(this.session);
+  }
+
+  public setTitle( newTitle: string) {
+    this.titleService.setTitle( newTitle );
   }
 
   receiveMessage(session)

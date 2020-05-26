@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -14,7 +15,7 @@ export class AdminDashboardComponent implements OnInit {
   seasons: [];
   users : [];
 
-  constructor(private _httpService: HttpService, private router: Router) 
+  constructor(private _httpService: HttpService, private router: Router, private titleService: Title) 
   { 
     this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
   }
@@ -23,9 +24,14 @@ export class AdminDashboardComponent implements OnInit {
   {
     this.checkSession();
     this.checkAdmin();
+    this.setTitle("Myriathon | Admin Dashboard");
     this.getAllUsers();
     this.getAllSeasons();
     this.receiveMessage(this.session);
+  }
+
+  public setTitle( newTitle: string) {
+    this.titleService.setTitle( newTitle );
   }
 
   getAllSeasons()

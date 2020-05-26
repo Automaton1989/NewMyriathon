@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-admin-page',
@@ -16,7 +17,7 @@ export class AdminPageComponent implements OnInit {
   serverError = "";
   displayFalseMessage = false;
 
-  constructor(private _httpService: HttpService, private router: Router) 
+  constructor(private _httpService: HttpService, private router: Router, private titleService: Title) 
   { 
     this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
   }
@@ -26,8 +27,13 @@ export class AdminPageComponent implements OnInit {
     this.newUser = {newUsername: "", newEmail: "", newPassword: "", conPassword: "", newSecretMessage: ""}
     this.loginUser = {email: "", password: ""}
     this.displayFalseMessage = false;
+    this.setTitle("Myriathon | Admin");
     this.checkSession();
     this.receiveMessage(this.session);
+  }
+
+  public setTitle( newTitle: string) {
+    this.titleService.setTitle( newTitle );
   }
 
   onLogin()

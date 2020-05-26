@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-user-info',
@@ -15,7 +16,7 @@ export class UserInfoComponent implements OnInit {
   updateFalseUser = {admin : false};
   updateTrueUser = {admin : true};
 
-  constructor(private _httpService: HttpService, private router: Router, private route: ActivatedRoute) 
+  constructor(private _httpService: HttpService, private router: Router, private route: ActivatedRoute, private titleService: Title) 
   { 
     this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
   }
@@ -31,6 +32,10 @@ export class UserInfoComponent implements OnInit {
     })
   }
 
+  public setTitle( newTitle: string) {
+    this.titleService.setTitle( newTitle );
+  }
+
   getUserInfo(username)
   {
     let observable = this._httpService.getUserData(username)
@@ -40,6 +45,7 @@ export class UserInfoComponent implements OnInit {
         {
           console.log("Got the user data!", data);
           this.user = data['user'];
+          this.setTitle("Myriathon | User: " + this.user.username);
         }
         else
         {

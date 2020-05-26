@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-edit-season',
@@ -16,7 +17,7 @@ export class EditSeasonComponent implements OnInit {
   singleSeason;
   updateSeason;
 
-  constructor(private _httpService: HttpService, private router : Router, private route: ActivatedRoute) 
+  constructor(private _httpService: HttpService, private router : Router, private route: ActivatedRoute, private titleService: Title) 
   { 
     this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
   }
@@ -29,6 +30,10 @@ export class EditSeasonComponent implements OnInit {
     {
       this.getSingleSeasonName(params['name'])
     })
+  }
+
+  public setTitle( newTitle: string) {
+    this.titleService.setTitle( newTitle );
   }
 
   updateSingleSeason()
@@ -58,6 +63,7 @@ export class EditSeasonComponent implements OnInit {
         console.log("We got the data!", data);
         this.singleSeason = data['season'];
         this.updateSeason = data['season'];
+        this.setTitle("Myriathon | Edit Season: " + this.singleSeason.name);
       })
   }
 

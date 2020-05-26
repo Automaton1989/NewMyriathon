@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about-page',
@@ -12,16 +13,21 @@ export class AboutPageComponent implements OnInit {
   session: any;
   admin: any;
 
-  constructor(private _httpService: HttpService, private router : Router) 
+  constructor(private _httpService: HttpService, private router : Router, private titleService: Title) 
   {
     this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
   }
 
   ngOnInit() 
   {
+    this.setTitle("Myriathon | About Us");
     this.checkSession();
     this.checkAdmin();
     this.receiveMessage(this.session);
+  }
+
+  public setTitle( newTitle: string) {
+    this.titleService.setTitle( newTitle );
   }
 
   receiveMessage(session)

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-edit-video',
@@ -17,7 +17,7 @@ export class EditVideoComponent implements OnInit {
   singleVideo;
   updateVideo;
 
-  constructor(private _httpService: HttpService, private router : Router, private route: ActivatedRoute) 
+  constructor(private _httpService: HttpService, private router : Router, private route: ActivatedRoute, private titleService: Title) 
   { 
     this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
   }
@@ -30,6 +30,10 @@ export class EditVideoComponent implements OnInit {
     {
       this.getSingleVideoTitle(params['title'])
     })
+  }
+
+  public setTitle( newTitle: string) {
+    this.titleService.setTitle( newTitle );
   }
 
   updateSingleVideo()
@@ -59,6 +63,7 @@ export class EditVideoComponent implements OnInit {
         console.log("We got the data!", data);
         this.singleVideo = data['video'][0];
         this.updateVideo = data['video'][0];
+        this.setTitle("Myriathon | Edit Video: " + this.singleVideo.title);
       })
   }
 
@@ -89,7 +94,7 @@ export class EditVideoComponent implements OnInit {
       if(data['success'] == false)
       {
         console.log("Admin is false");
-        //this.router.navigateByUrl('home');
+        this.router.navigateByUrl('home');
       }
       else
       {
