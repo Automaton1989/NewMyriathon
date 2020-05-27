@@ -1,3 +1,9 @@
+/* 
+  ||--------------------------------||
+  || Marathon Component for Website ||
+  ||--------------------------------||
+*/
+
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Router } from '@angular/router';
@@ -32,6 +38,12 @@ export class MarathonsPageComponent implements OnInit {
     this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
   }
 
+/* 
+  ||--------------------------------||
+  ||       On Init Functions        ||
+  ||--------------------------------||
+*/
+
   ngOnInit() 
   {
     this.setTitle("Myriathon | Marathons");
@@ -40,14 +52,15 @@ export class MarathonsPageComponent implements OnInit {
     this.receiveMessage(this.session);
   }
 
+  /* Set Title for document header for browser */
+
   public setTitle( newTitle: string) {
     this.titleService.setTitle( newTitle );
   }
 
-  receiveMessage(session)
-  {
-    this.session = session;
-  }
+  /* This will check the user's session information.  If session is null from server, nothing will happen.  If session is available, then it'll store */
+
+
   checkSession()
   {
     let observable = this._httpService.checkSession();
@@ -65,6 +78,8 @@ export class MarathonsPageComponent implements OnInit {
       })
   }
 
+  /* This will check the session's data from the server, and if the data returned has the user admin equal to true, Angular will store admin as the user. */
+
   checkAdmin() {
     let observable = this._httpService.checkAdmin();
     observable.subscribe(data => {
@@ -78,6 +93,13 @@ export class MarathonsPageComponent implements OnInit {
         this.admin = data['user'];
       }
     })
+  }
+
+  /* This is for passing session data accross the angular components */
+
+  receiveMessage(session)
+  {
+    this.session = session;
   }
 
 }

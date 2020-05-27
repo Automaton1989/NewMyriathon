@@ -1,3 +1,9 @@
+/* 
+  ||--------------------------------||
+  ||   Main Component for Website   ||
+  ||--------------------------------||
+*/
+
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
@@ -22,6 +28,12 @@ export class EditVideoComponent implements OnInit {
     this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
   }
 
+/* 
+  ||--------------------------------||
+  ||       On Init Functions        ||
+  ||--------------------------------||
+*/
+
   ngOnInit() {
     this.checkSession();
     this.checkAdmin();
@@ -32,20 +44,26 @@ export class EditVideoComponent implements OnInit {
     })
   }
 
+  /* Set Title for document header for browser */
+
   public setTitle( newTitle: string) {
     this.titleService.setTitle( newTitle );
   }
 
+  /*
+  If the video data is processed by the form, then this function will run.
+  If there's no error from the server, then the video will update in the DB
+  and page will navigate to homepage
+  */
+
   updateSingleVideo()
   {
-    console.log("You pressed the button!");
     let observable = this._httpService.updateVideo(this.updateVideo);
     observable.subscribe(data =>
       {
-        console.log("We are getting new data", data);
         if(data['success'] == false)
         {
-          console.log(data['success']);
+          console.log("Fail");
         }
         else
         {
@@ -55,22 +73,24 @@ export class EditVideoComponent implements OnInit {
       })
   }
 
+  /*
+  Grab the url data to get the title of the video from the parameter,
+  then get the video's data from the database.  This will render the page
+  */
+
   getSingleVideoTitle(title: string)
   {
     let observable = this._httpService.getVideoDetails(title);
     observable.subscribe(data => 
       {
-        console.log("We got the data!", data);
         this.singleVideo = data['video'][0];
         this.updateVideo = data['video'][0];
         this.setTitle("Myriathon | Edit Video: " + this.singleVideo.title);
       })
   }
 
-  receiveMessage(session)
-  {
-    this.session = session;
-  }
+  /* This will check the user's session information.  If session is null from server, nothing will happen.  If session is available, then it'll store */
+
   checkSession()
   {
     let observable = this._httpService.checkSession();
@@ -78,7 +98,7 @@ export class EditVideoComponent implements OnInit {
       {
         if(data['success'] == false)
         {
-          console.log("No session found!")
+          console.log("Fail")
         }
         else
         {
@@ -88,20 +108,28 @@ export class EditVideoComponent implements OnInit {
       })
   }
 
+  /* This will check the session's data from the server, and if the data returned has the user admin equal to true, Angular will store admin as the user. */
+
   checkAdmin() {
     let observable = this._httpService.checkAdmin();
     observable.subscribe(data => {
       if(data['success'] == false)
       {
-        console.log("Admin is false");
+        /* If fail, kick the user out of this page, and return to home page */
         this.router.navigateByUrl('home');
       }
       else
       {
-        console.log("Admin is true");
         this.admin = data['user'];
       }
     })
+  }
+
+  /* This is for passing session data accross the angular components */
+
+  receiveMessage(session)
+  {
+    this.session = session;
   }
 
 }

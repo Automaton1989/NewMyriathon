@@ -1,3 +1,9 @@
+/* 
+  ||--------------------------------||
+  ||   Main Component for Website   ||
+  ||--------------------------------||
+*/
+
 import { Component, OnInit, Input } from '@angular/core';
 import { trigger, transition, style, animate } from "@angular/animations";
 
@@ -44,10 +50,20 @@ export class CarouselComponent implements OnInit {
 
   constructor() { }
 
+/* 
+  ||--------------------------------||
+  ||       On Init Functions        ||
+  ||--------------------------------||
+*/
+
   ngOnInit() 
   {
     this.preloadImages();
   }
+
+  /*
+  Load images into carousel for faster loading
+  */
 
   preloadImages()
   {
@@ -61,6 +77,11 @@ export class CarouselComponent implements OnInit {
     }
   }
 
+  /*
+  When the previous button is clicked on the carousel, go back 1 slide,
+  or return to last slide if on first slide
+  */
+
   onPreviousClick()
   {
     const previousSlide = this.currentSlide - 1;
@@ -70,6 +91,11 @@ export class CarouselComponent implements OnInit {
     this.currentText = previousText < 0 ? this.txt.length - 1: previousText;
     this.currentTitle = previousTitle < 0 ? this.title.length - 1: previousTitle;
   }
+
+  /*
+  When the next button is clicked on the carousel, go forward 1 slide,
+  or return the the first slide if on last slide
+  */
 
   onNextClick()
   {

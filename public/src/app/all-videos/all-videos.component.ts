@@ -1,3 +1,9 @@
+/* 
+  ||--------------------------------||
+  ||All Videos Component for Website||
+  ||--------------------------------||
+*/
+
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Router } from '@angular/router';
@@ -31,6 +37,12 @@ export class AllVideosComponent implements OnInit {
     this._httpService.stream$.subscribe(this.receiveMessage.bind(this))
   }
 
+/* 
+  ||--------------------------------||
+  ||       On Init Functions        ||
+  ||--------------------------------||
+*/
+
   ngOnInit() {
     this.setTitle("Myriathon | All Videos");
     this.checkSession();
@@ -40,15 +52,21 @@ export class AllVideosComponent implements OnInit {
     this.getAllSeasons();
   }
 
+  /* Set Title for document header for browser */
+
   public setTitle( newTitle: string) {
     this.titleService.setTitle( newTitle );
   }
+
+  /* Toggle the dropdown menu for seeing all the seasons */
 
   toggleDropdown()
   {
     this.dropdownOpen = !this.dropdownOpen;
     console.log(this.dropdownOpen);
   }
+
+  /* Grab all the seasons data from the server */
 
   getAllSeasons()
   {
@@ -69,6 +87,8 @@ export class AllVideosComponent implements OnInit {
       })
   }
 
+  /* Get the most recently updated video from our database */
+
   getRecentVideo()
   {
     console.log("We are getting the most recent video's data!");
@@ -80,6 +100,11 @@ export class AllVideosComponent implements OnInit {
       })
   }
 
+/* 
+  When a user clicks on a season in the dropdown, grab the season 
+  which the user grabbed and display all videos attributed to this season 
+*/
+
   activeSeason(seasonNumber)
   {
     if(seasonNumber == 0)
@@ -90,10 +115,8 @@ export class AllVideosComponent implements OnInit {
     console.log(seasonNumber);
   }
 
-  receiveMessage(session)
-  {
-    this.session = session;
-  }
+  /* This will check the user's session information.  If session is null from server, nothing will happen.  If session is available, then it'll store */
+
   checkSession()
   {
     let observable = this._httpService.checkSession();
@@ -111,6 +134,8 @@ export class AllVideosComponent implements OnInit {
       })
   }
 
+  /* This will check the session's data from the server, and if the data returned has the user admin equal to true, Angular will store admin as the user. */
+
   checkAdmin() {
     let observable = this._httpService.checkAdmin();
     observable.subscribe(data => {
@@ -124,6 +149,13 @@ export class AllVideosComponent implements OnInit {
         this.admin = data['user'];
       }
     })
+  }
+
+  /* This is for passing session data accross the angular components */
+
+  receiveMessage(session)
+  {
+    this.session = session;
   }
 
 }

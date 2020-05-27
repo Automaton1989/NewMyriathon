@@ -1,3 +1,9 @@
+/* 
+  ||------------------------------------||
+  || Single Video Component for Website ||
+  ||------------------------------------||
+*/
+
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
@@ -25,6 +31,12 @@ export class SingleVideoComponent implements OnInit {
     this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
   }
 
+/* 
+  ||--------------------------------||
+  ||       On Init Functions        ||
+  ||--------------------------------||
+*/
+
   ngOnInit() {
     this.checkSession();
     this.checkAdmin();
@@ -35,9 +47,17 @@ export class SingleVideoComponent implements OnInit {
     })
   }
 
+  /* Set Title for document header for browser */
+
   public setTitle( newTitle: string) {
     this.titleService.setTitle( newTitle );
   }
+
+  /* 
+  Grab the previous video from the selected video and season, 
+  and add a button to the HTML if it's true.  
+  If null, no button should show up 
+  */
 
   getPreviousVideo(singleVideoTitle, singleSeasonNumber)
   {
@@ -49,6 +69,12 @@ export class SingleVideoComponent implements OnInit {
       })
   }
 
+  /*
+  Get the next video from the selected video and season
+  and add a button to the HTML if it's true.
+  If null, no button should show up
+  */
+
   getNextVideo(singleVideoTitle, singleSeasonNumber)
   {
     let observable = this._httpService.getNextVideoDetails(singleVideoTitle, singleSeasonNumber);
@@ -57,7 +83,13 @@ export class SingleVideoComponent implements OnInit {
         console.log("We got the next video data!", data);
         this.nextVideo = data['video'];
       })
-  }
+  } 
+
+  /*
+  Get the current selected video's title, and grab all the video's
+  information from the database and server.  This will allow the page
+  to load properly
+  */
 
   getSingleVideoTitle(title: string)
   {
@@ -72,15 +104,15 @@ export class SingleVideoComponent implements OnInit {
       })
   }
 
+  /* Sanitize the youtube URL for embedding */
+
   getSafeUrl(url)
   {
     this.url = this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
-  receiveMessage(session)
-  {
-    this.session = session;
-  }
+  /* This will check the user's session information.  If session is null from server, nothing will happen.  If session is available, then it'll store */
+
   checkSession()
   {
     let observable = this._httpService.checkSession();
@@ -98,6 +130,8 @@ export class SingleVideoComponent implements OnInit {
       })
   }
 
+  /* This will check the session's data from the server, and if the data returned has the user admin equal to true, Angular will store admin as the user. */
+
   checkAdmin() {
     let observable = this._httpService.checkAdmin();
     observable.subscribe(data => {
@@ -111,6 +145,13 @@ export class SingleVideoComponent implements OnInit {
         this.admin = data['user'];
       }
     })
+  }
+
+  /* This is for passing session data accross the angular components */
+
+  receiveMessage(session)
+  {
+    this.session = session;
   }
 
 }

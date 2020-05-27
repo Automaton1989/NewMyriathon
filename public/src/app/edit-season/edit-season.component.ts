@@ -1,3 +1,9 @@
+/* 
+  ||--------------------------------||
+  ||   Main Component for Website   ||
+  ||--------------------------------||
+*/
+
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
@@ -22,6 +28,12 @@ export class EditSeasonComponent implements OnInit {
     this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
   }
 
+/* 
+  ||--------------------------------||
+  ||       On Init Functions        ||
+  ||--------------------------------||
+*/
+
   ngOnInit() {
     this.checkSession();
     this.checkAdmin();
@@ -32,9 +44,17 @@ export class EditSeasonComponent implements OnInit {
     })
   }
 
+  /* Set Title for document header for browser */
+
   public setTitle( newTitle: string) {
     this.titleService.setTitle( newTitle );
   }
+
+  /*
+  If data from the form is submitted, and it's new data, then the server will
+  check if the information is valid.  If true, then it will update the DB,
+  and navigate to home page.
+  */
 
   updateSingleSeason()
   {
@@ -55,6 +75,10 @@ export class EditSeasonComponent implements OnInit {
     })
   }
 
+  /*
+  Get the season data from the route parameter.  
+  */
+
   getSingleSeasonName(name: string)
   {
     let observable = this._httpService.getSeasonDetails(name);
@@ -67,10 +91,8 @@ export class EditSeasonComponent implements OnInit {
       })
   }
 
-  receiveMessage(session)
-  {
-    this.session = session;
-  }
+  /* This will check the user's session information.  If session is null from server, nothing will happen.  If session is available, then it'll store */
+
   checkSession()
   {
     let observable = this._httpService.checkSession();
@@ -88,6 +110,8 @@ export class EditSeasonComponent implements OnInit {
       })
   }
 
+  /* This will check the session's data from the server, and if the data returned has the user admin equal to true, Angular will store admin as the user. */
+
   checkAdmin() {
     let observable = this._httpService.checkAdmin();
     observable.subscribe(data => {
@@ -102,6 +126,13 @@ export class EditSeasonComponent implements OnInit {
         this.admin = data['user'];
       }
     })
+  }
+
+  /* This is for passing session data accross the angular components */
+
+  receiveMessage(session)
+  {
+    this.session = session;
   }
 
 }

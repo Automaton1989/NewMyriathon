@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div *ngIf = \"admin\" class = \"row\">\n            <nav class=\"navbar navbar-light bg-light\">\n                <span class=\"navbar-brand mb-0 h1\">Admin</span>\n                <ul class = \"nav\">\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'admin', 'dashboard']\">Admin Dash</a>\n                    </li>\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'addvideo']\">Add Video/Season</a>\n                    </li>\n                </ul>\n            </nav>\n        </div>\n        <div class = \"row\">\n            <div class=\"jumbotron jumbotron-fluid\">\n                <div class=\"text-center container\">\n                    <h1 class=\"display-4\">Gaming for Good</h1>\n                    <p class=\"lead\">We're a group of friends who play games and give to charity</p>\n                </div>\n            </div>\n        </div>\n        <div class = \"row\">\n            <div id = \"mission-text\">\n                <p>\n                    Myriathon was founded by Matt “abandon” Rossi in 2013 after being inspired by a number of online marathons \n                    and meeting with members of Team World Vision to support their efforts for clean water in third-world countries. \n                    Since then, the Myriathon team has expanded in both scope and size, continuing to work with new charities, \n                    welcoming new members to the community, and exploring new forms of media to foster an environment where everyone \n                    can share in fun activities during their big events and their off-season streams. \n                </p>\n            </div>\n        </div>\n        <div class = \"text-center justify-content-center row\">\n            <h3>Team</h3>\n        </div>\n        <section>\n            <div class=\"container-fluid\">\n                <div class=\"row\">\n                    <!--Abandon-->\n                    <div class=\"card-wrapper col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3\">\n                        <div class=\"card profile-card-3\">\n                            <div class=\"background-block\">\n                                <img id = \"ABBackground\" src=\"assets/img/AB_background.gif\" alt=\"profile-sample1\" class=\"background\"/>\n                            </div>\n                            <div class=\"profile-thumb-block\">\n                                <img src=\"assets/img/AB_icon.jpg\" alt=\"profile-image\" class=\"profile\"/>\n                            </div>\n                            <div class=\"card-content\">\n                            <h2>Abandon<small>Leader, Memer</small></h2>\n                            <div class=\"icon-block\">\n                                <a href=\"https://twitter.com/SnarkyTrad\" target = \"_blank\"> <i class=\"fa fa-twitter\"></i></a>\n                                <a href=\"https://www.twitch.tv/abandonthemyriad\" target = \"_blank\"> <i class=\"fa fa-twitch\"></i></a>\n                            </div>\n                            </div>\n                        </div>\n                    </div>\n                    <!--Erin-->\n                    <div class=\"card-wrapper col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3\">\n                        <div class=\"card profile-card-3\">\n                            <div class=\"background-block\">\n                                <img id = \"JPBackground\" src=\"assets/img/JP_background.jpg\" alt=\"profile-sample1\" class=\"background\"/>\n                            </div>\n                            <div class=\"profile-thumb-block\">\n                                <img src=\"assets/img/JP_icon.jpg\" alt=\"profile-image\" class=\"profile\"/>\n                            </div>\n                            <div class=\"card-content\">\n                            <h2>TheJediPikachu<small>Leader, Dreamer</small></h2>\n                            <div class=\"icon-block\">\n                                <a href=\"https://twitter.com/TheJediPikachu\" target = \"_blank\"> <i class=\"fa fa-twitter\"></i></a>\n                                <a href=\"https://www.twitch.tv/thejedipikachu\" target = \"_blank\"> <i class=\"fa fa-twitch\"></i></a>\n                            </div>\n                            </div>\n                        </div>\n                    </div>\n                    <!--Mason-->\n                    <div class=\"card-wrapper col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3\">\n                        <div class=\"card profile-card-3\">\n                            <div class=\"background-block\">\n                                <img id = \"MSBackground\" src=\"assets/img/MS_background.jpg\" alt=\"profile-sample1\" class=\"background\"/>\n                            </div>\n                            <div class=\"profile-thumb-block\">\n                                <img src=\"assets/img/MS_icon.jpg\" alt=\"profile-image\" class=\"profile\"/>\n                            </div>\n                            <div class=\"card-content\">\n                            <h2>Epicshiku<small>Leader, Tech</small></h2>\n                            <div class=\"icon-block\">\n                                <a href=\"https://twitter.com/EpicIshiku\" target = \"_blank\"> <i class=\"fa fa-twitter\"></i></a>\n                                <a href=\"https://www.twitch.tv/epicishiku\" target = \"_blank\"> <i class=\"fa fa-twitch\"></i></a>\n                            </div>\n                            </div>\n                        </div>\n                    </div>\n                    <!--Russell-->\n                    <div class=\"card-wrapper col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3\">\n                        <div class=\"card profile-card-3\">\n                            <div class=\"background-block\">\n                                <img id = \"RSBackground\" src=\"assets/img/RS_background.png\" alt=\"profile-sample1\" class=\"background\"/>\n                            </div>\n                            <div class=\"profile-thumb-block\">\n                                <img src=\"assets/img/RS_icon.png\" alt=\"profile-image\" class=\"profile\"/>\n                            </div>\n                            <div class=\"card-content\">\n                            <h2>Russty1123<small>Scheduler</small></h2>\n                            <div class=\"icon-block\">\n                                <a href=\"https://twitter.com/Russty1123\" target = \"_blank\"> <i class=\"fa fa-twitter\"></i></a>\n                            </div>\n                            </div>\n                        </div>\n                    </div>\n                    <!--Daj-->\n                    <div class=\"card-wrapper col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3\">\n                        <div class=\"card profile-card-3\">\n                            <div class=\"background-block\">\n                                <img id = \"DJBackground\" src=\"assets/img/DJ_background.png\" alt=\"profile-sample1\" class=\"background\"/>\n                            </div>\n                            <div class=\"profile-thumb-block\">\n                                <img src=\"assets/img/DJ_icon.gif\" alt=\"profile-image\" class=\"profile\"/>\n                            </div>\n                            <div class=\"card-content\">\n                            <h2>Dajman27<small>Graphics</small></h2>\n                            <div class=\"icon-block\">\n                                <a href=\"https://twitter.com/JonVanRyckeghem\" target = \"_blank\"> <i class=\"fa fa-twitter\"></i></a>\n                                <a href=\"https://www.twitch.tv/dajman27\" target = \"_blank\"> <i class=\"fa fa-twitch\"></i></a>\n                            </div>\n                            </div>\n                        </div>\n                    </div>\n                    <!--Spoon-->\n                    <div class=\"card-wrapper col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3\">\n                        <div class=\"card profile-card-3\">\n                            <div class=\"background-block\">\n                                <img id=\"SPTBackground\" src=\"assets/img/SPT_background.png\" alt=\"profile-sample1\" class=\"background\"/>\n                            </div>\n                            <div class=\"profile-thumb-block\">\n                                <img src=\"assets/img/SPT_icon.jpg\" alt=\"profile-image\" class=\"profile\"/>\n                            </div>\n                            <div class=\"card-content\">\n                            <h2>SPTspoon<small>Doctor</small></h2>\n                            <div class=\"icon-block\">\n                                <a href=\"https://twitter.com/sptspoon\" target = \"_blank\"> <i class=\"fa fa-twitter\"></i></a>\n                                <a href=\"https://www.twitch.tv/sptspoon\" target = \"_blank\"> <i class=\"fa fa-twitch\"></i></a>\n                            </div>\n                            </div>\n                        </div>\n                    </div>\n                    <!--Whale-->\n                    <div class=\"card-wrapper col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3\">\n                        <div class=\"card profile-card-3\">\n                            <div class=\"background-block\">\n                                <img id = \"ATBackground\" src=\"assets/img/Auto_background.gif\" alt=\"profile-sample1\" class=\"background\"/>\n                            </div>\n                            <div class=\"profile-thumb-block\">\n                                <img src=\"assets/img/logo_auto.jpeg\" alt=\"profile-image\" class=\"profile\"/>\n                            </div>\n                            <div class=\"card-content\">\n                            <h2>Automaton<small>Coder</small></h2>\n                            <div class=\"icon-block\">\n                                <a href=\"https://twitter.com/Automaton89\" target = \"_blank\"> <i class=\"fa fa-twitter\"></i></a>\n                                <a href=\"https://www.twitch.tv/automaton1989\" target = \"_blank\"> <i class=\"fa fa-twitch\"></i></a>\n                            </div>\n                            </div>\n                        </div>\n                    </div>\n                    <!--Deviant-->\n                    <div class=\"card-wrapper col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3\">\n                        <div class=\"card profile-card-3\">\n                            <div class=\"background-block\">\n                                <img id = \"CDBackground\" src=\"assets/img/CD_background.jpg\" alt=\"profile-sample1\" class=\"background\"/>\n                            </div>\n                            <div class=\"profile-thumb-block\">\n                                <img id = \"CDIcon\" src=\"assets/img/CD_icon.gif\" alt=\"profile-image\" class=\"profile\"/>\n                            </div>\n                            <div class=\"card-content\">\n                            <h2>Casual_Deviant<small>Member</small></h2>\n                            </div>\n                        </div>\n                    </div>\n                    <!--Waldens-->\n                    <div class=\"card-wrapper col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3\">\n                        <div class=\"card profile-card-3\">\n                            <div class=\"background-block\">\n                                <img id = \"WDBackground\" src=\"assets/img/WD_background.jpg\" alt=\"profile-sample1\" class=\"background\"/>\n                            </div>\n                            <div class=\"profile-thumb-block\">\n                                <img src=\"assets/img/WD_icon.jpg\" alt=\"profile-image\" class=\"profile\"/>\n                            </div>\n                            <div class=\"card-content\">\n                            <h2>Waldens<small>Member</small></h2>\n                            <div class=\"icon-block\">\n                                <a href=\"https://twitter.com/Waldens002\" target = \"_blank\"> <i class=\"fa fa-twitter\"></i></a>\n                            </div>\n                            </div>\n                        </div>\n                    </div>\n                    <!--Mikal-->\n                    <div class=\"card-wrapper col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3\">\n                        <div class=\"card profile-card-3\">\n                            <div class=\"background-block\">\n                                <img id = \"MKBackground\" src=\"assets/img/MK_background.jpeg\" alt=\"profile-sample1\" class=\"background\"/>\n                            </div>\n                            <div class=\"profile-thumb-block\">\n                                <img src=\"assets/img/MK_icon.jpg\" alt=\"profile-image\" class=\"profile\"/>\n                            </div>\n                            <div class=\"card-content\">\n                            <h2>Mikal<small>Member</small></h2>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </section>\n    </div>\n</body>\n    \n    "
+module.exports = "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"description\" content=\"Myriathon is a group of gamers who run bi-annual gaming marathons, raising money for a variety of charity organizations.\">\n    <meta name=\"keywords\" content=\"Charity, Gaming, Video Games, Games, Game Marathons, Myriathon, Marathon, Marathons, Raising Money, Fundraise, Fundraising\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div *ngIf = \"admin\" class = \"row\">\n            <nav class=\"navbar navbar-light bg-light\">\n                <span class=\"navbar-brand mb-0 h1\">Admin</span>\n                <ul class = \"nav\">\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'admin', 'dashboard']\">Admin Dash</a>\n                    </li>\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'addvideo']\">Add Video/Season</a>\n                    </li>\n                </ul>\n            </nav>\n        </div>\n        <div class = \"row\">\n            <div class=\"jumbotron jumbotron-fluid\">\n                <div class=\"text-center container\">\n                    <h1 class=\"display-4\">Gaming for Good</h1>\n                    <p class=\"lead\">We're a group of friends who play games and give to charity</p>\n                </div>\n            </div>\n        </div>\n        <div class = \"row\">\n            <div id = \"mission-text\">\n                <p>\n                    Myriathon was founded by Matt “abandon” Rossi in 2013 after being inspired by a number of online marathons \n                    and meeting with members of Team World Vision to support their efforts for clean water in third-world countries. \n                    Since then, the Myriathon team has expanded in both scope and size, continuing to work with new charities, \n                    welcoming new members to the community, and exploring new forms of media to foster an environment where everyone \n                    can share in fun activities during their big events and their off-season streams. \n                </p>\n            </div>\n        </div>\n        <div class = \"text-center justify-content-center row\">\n            <h3>Team</h3>\n        </div>\n        <section>\n            <div class=\"container-fluid\">\n                <div class=\"row\">\n                    <!--Abandon-->\n                    <div class=\"card-wrapper col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3\">\n                        <div class=\"card profile-card-3\">\n                            <div class=\"background-block\">\n                                <img id = \"ABBackground\" src=\"assets/img/AB_background.gif\" alt=\"Abandon's Background of a Dog Running\" class=\"background\"/>\n                            </div>\n                            <div class=\"profile-thumb-block\">\n                                <img src=\"assets/img/AB_icon.jpg\" alt=\"Abandon's Icon depicting a picture of his face\" class=\"profile\"/>\n                            </div>\n                            <div class=\"card-content\">\n                            <h2>Abandon<small>Leader, Memer</small></h2>\n                            <div class=\"icon-block\">\n                                <a href=\"https://twitter.com/SnarkyTrad\" target = \"_blank\"> <i class=\"fa fa-twitter\"></i></a>\n                                <a href=\"https://www.twitch.tv/abandonthemyriad\" target = \"_blank\"> <i class=\"fa fa-twitch\"></i></a>\n                            </div>\n                            </div>\n                        </div>\n                    </div>\n                    <!--Erin-->\n                    <div class=\"card-wrapper col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3\">\n                        <div class=\"card profile-card-3\">\n                            <div class=\"background-block\">\n                                <img id = \"JPBackground\" src=\"assets/img/JP_background.jpg\" alt=\"Background image of a person floating in the air\" class=\"background\"/>\n                            </div>\n                            <div class=\"profile-thumb-block\">\n                                <img src=\"assets/img/JP_icon.jpg\" alt=\"Icon depicting a cartoon person's face\" class=\"profile\"/>\n                            </div>\n                            <div class=\"card-content\">\n                            <h2>TheJediPikachu<small>Leader, Dreamer</small></h2>\n                            <div class=\"icon-block\">\n                                <a href=\"https://twitter.com/TheJediPikachu\" target = \"_blank\"> <i class=\"fa fa-twitter\"></i></a>\n                                <a href=\"https://www.twitch.tv/thejedipikachu\" target = \"_blank\"> <i class=\"fa fa-twitch\"></i></a>\n                            </div>\n                            </div>\n                        </div>\n                    </div>\n                    <!--Mason-->\n                    <div class=\"card-wrapper col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3\">\n                        <div class=\"card profile-card-3\">\n                            <div class=\"background-block\">\n                                <img id = \"MSBackground\" src=\"assets/img/MS_background.jpg\" alt=\"Background image of a circle with EpicIshiku's name in it\" class=\"background\"/>\n                            </div>\n                            <div class=\"profile-thumb-block\">\n                                <img src=\"assets/img/MS_icon.jpg\" alt=\"Icon of Epicshiku holding a duel disk from Yu-Gi-Oh\" class=\"profile\"/>\n                            </div>\n                            <div class=\"card-content\">\n                            <h2>Epicshiku<small>Leader, Tech</small></h2>\n                            <div class=\"icon-block\">\n                                <a href=\"https://twitter.com/EpicIshiku\" target = \"_blank\"> <i class=\"fa fa-twitter\"></i></a>\n                                <a href=\"https://www.twitch.tv/epicishiku\" target = \"_blank\"> <i class=\"fa fa-twitch\"></i></a>\n                            </div>\n                            </div>\n                        </div>\n                    </div>\n                    <!--Russell-->\n                    <div class=\"card-wrapper col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3\">\n                        <div class=\"card profile-card-3\">\n                            <div class=\"background-block\">\n                                <img id = \"RSBackground\" src=\"assets/img/RS_background.png\" alt=\"Background from the game Mario of some shi-guy's standing on stilts\" class=\"background\"/>\n                            </div>\n                            <div class=\"profile-thumb-block\">\n                                <img src=\"assets/img/RS_icon.png\" alt=\"Icon of Yoshi from the Mario game series\" class=\"profile\"/>\n                            </div>\n                            <div class=\"card-content\">\n                            <h2>Russty1123<small>Scheduler</small></h2>\n                            <div class=\"icon-block\">\n                                <a href=\"https://twitter.com/Russty1123\" target = \"_blank\"> <i class=\"fa fa-twitter\"></i></a>\n                            </div>\n                            </div>\n                        </div>\n                    </div>\n                    <!--Daj-->\n                    <div class=\"card-wrapper col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3\">\n                        <div class=\"card profile-card-3\">\n                            <div class=\"background-block\">\n                                <img id = \"DJBackground\" src=\"assets/img/DJ_background.png\" alt=\"Background of a manga with two girls yelling\" class=\"background\"/>\n                            </div>\n                            <div class=\"profile-thumb-block\">\n                                <img src=\"assets/img/DJ_icon.gif\" alt=\"Icon gif of a anime girl dancing\" class=\"profile\"/>\n                            </div>\n                            <div class=\"card-content\">\n                            <h2>Dajman27<small>Graphics</small></h2>\n                            <div class=\"icon-block\">\n                                <a href=\"https://twitter.com/JonVanRyckeghem\" target = \"_blank\"> <i class=\"fa fa-twitter\"></i></a>\n                                <a href=\"https://www.twitch.tv/dajman27\" target = \"_blank\"> <i class=\"fa fa-twitch\"></i></a>\n                            </div>\n                            </div>\n                        </div>\n                    </div>\n                    <!--Spoon-->\n                    <div class=\"card-wrapper col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3\">\n                        <div class=\"card profile-card-3\">\n                            <div class=\"background-block\">\n                                <img id=\"SPTBackground\" src=\"assets/img/SPT_background.png\" alt=\"Backgruond from Kingdom Hearts series showing all characters on a building posing\" class=\"background\"/>\n                            </div>\n                            <div class=\"profile-thumb-block\">\n                                <img src=\"assets/img/SPT_icon.jpg\" alt=\"Icon showing a picture of Yuri from the game Tales of Vesperia\" class=\"profile\"/>\n                            </div>\n                            <div class=\"card-content\">\n                            <h2>SPTspoon<small>Doctor</small></h2>\n                            <div class=\"icon-block\">\n                                <a href=\"https://twitter.com/sptspoon\" target = \"_blank\"> <i class=\"fa fa-twitter\"></i></a>\n                                <a href=\"https://www.twitch.tv/sptspoon\" target = \"_blank\"> <i class=\"fa fa-twitch\"></i></a>\n                            </div>\n                            </div>\n                        </div>\n                    </div>\n                    <!--Whale-->\n                    <div class=\"card-wrapper col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3\">\n                        <div class=\"card profile-card-3\">\n                            <div class=\"background-block\">\n                                <img id = \"ATBackground\" src=\"assets/img/Auto_background.gif\" alt=\"Background GIF of Megaman X looking at something\" class=\"background\"/>\n                            </div>\n                            <div class=\"profile-thumb-block\">\n                                <img src=\"assets/img/logo_auto.jpeg\" alt=\"Icon image of Automaton's brand logo, with robotic head and name under it\" class=\"profile\"/>\n                            </div>\n                            <div class=\"card-content\">\n                            <h2>Automaton<small>Coder</small></h2>\n                            <div class=\"icon-block\">\n                                <a href=\"https://twitter.com/Automaton89\" target = \"_blank\"> <i class=\"fa fa-twitter\"></i></a>\n                                <a href=\"https://www.twitch.tv/automaton1989\" target = \"_blank\"> <i class=\"fa fa-twitch\"></i></a>\n                            </div>\n                            </div>\n                        </div>\n                    </div>\n                    <!--Deviant-->\n                    <div class=\"card-wrapper col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3\">\n                        <div class=\"card profile-card-3\">\n                            <div class=\"background-block\">\n                                <img id = \"CDBackground\" src=\"assets/img/CD_background.jpg\" alt=\"Backgruond image from game Last Gaurdian showing a the guardian on a ledge\" class=\"background\"/>\n                            </div>\n                            <div class=\"profile-thumb-block\">\n                                <img id = \"CDIcon\" src=\"assets/img/CD_icon.gif\" alt=\"Icon of two pokemon, Unbreon and Sylveon nuzzling\" class=\"profile\"/>\n                            </div>\n                            <div class=\"card-content\">\n                            <h2>Casual_Deviant<small>Member</small></h2>\n                            </div>\n                        </div>\n                    </div>\n                    <!--Waldens-->\n                    <div class=\"card-wrapper col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3\">\n                        <div class=\"card profile-card-3\">\n                            <div class=\"background-block\">\n                                <img id = \"WDBackground\" src=\"assets/img/WD_background.jpg\" alt=\"Simple Background with a shape in the foreground\" class=\"background\"/>\n                            </div>\n                            <div class=\"profile-thumb-block\">\n                                <img src=\"assets/img/WD_icon.jpg\" alt=\"Icon showing a cat\" class=\"profile\"/>\n                            </div>\n                            <div class=\"card-content\">\n                            <h2>Waldens<small>Member</small></h2>\n                            <div class=\"icon-block\">\n                                <a href=\"https://twitter.com/Waldens002\" target = \"_blank\"> <i class=\"fa fa-twitter\"></i></a>\n                            </div>\n                            </div>\n                        </div>\n                    </div>\n                    <!--Mikal-->\n                    <div class=\"card-wrapper col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3\">\n                        <div class=\"card profile-card-3\">\n                            <div class=\"background-block\">\n                                <img id = \"MKBackground\" src=\"assets/img/MK_background.jpeg\" alt=\"Background showing a bunch of Kirby's on a stack\" class=\"background\"/>\n                            </div>\n                            <div class=\"profile-thumb-block\">\n                                <img src=\"assets/img/MK_icon.jpg\" alt=\"Icon of a game character using a drumset\" class=\"profile\"/>\n                            </div>\n                            <div class=\"card-content\">\n                            <h2>Mikal<small>Member</small></h2>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </section>\n    </div>\n</body>\n    \n    "
 
 /***/ }),
 
@@ -52,7 +52,7 @@ module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div class = \"row\">\n            <div class = \"col\">\n                <h3 class = \"text-center\">Users</h3>\n                <table class=\"table table-hover table-dark\">\n                    <thead>\n                        <tr>\n                        <th scope=\"col\">Username</th>\n                        <th scope=\"col\">Email</th>\n                        <th scope=\"col\">Status</th>\n                        <th scope=\"col\">Actions</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr *ngFor = \"let user of users\">\n                        <td>{{user.username}}</td>\n                        <td>{{user.email}}</td>\n                        <td>{{user.admin}}</td>\n                        <td>\n                            <a [routerLink] = \"['/', 'user', user.username]\">\n                                <button type = \"submit\" class = \"btn btn-primary\">User Page</button>\n                            </a>\n                        </td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n        </div>\n        <hr my-4>\n        <div class = \"row\">\n            <div class = \"col\">\n                <h3 class = \"text-center\">Seasons</h3>\n                <table class=\"table table-hover table-dark\">\n                    <thead>\n                        <tr>\n                        <th scope=\"col\">Name</th>\n                        <th scope=\"col\">Number</th>\n                        <th scope=\"col\">Actions</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr *ngFor = \"let season of seasons\">\n                        <td>{{season.name}}</td>\n                        <td>{{season.number}}</td>\n                        <td>\n                            <a [routerLink] = \"['/', 'season', 'edit', season.name]\">\n                                <button type = \"submit\" class = \"btn btn-primary\">Edit Season</button>\n                            </a>\n                        </td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n        </div>\n    </div>\n</body>\n"
+module.exports = "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"description\" content=\"Myriathon is a group of gamers who run bi-annual gaming marathons, raising money for a variety of charity organizations.\">\n    <meta name=\"keywords\" content=\"Charity, Gaming, Video Games, Games, Game Marathons, Myriathon, Marathon, Marathons, Raising Money, Fundraise, Fundraising\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div class = \"row\">\n            <div class = \"col\">\n                <h3 class = \"text-center\">Users</h3>\n                <table class=\"table table-hover table-dark\">\n                    <thead>\n                        <tr>\n                        <th scope=\"col\">Username</th>\n                        <th scope=\"col\">Email</th>\n                        <th scope=\"col\">Status</th>\n                        <th scope=\"col\">Actions</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr *ngFor = \"let user of users\">\n                        <td>{{user.username}}</td>\n                        <td>{{user.email}}</td>\n                        <td>{{user.admin}}</td>\n                        <td>\n                            <a [routerLink] = \"['/', 'user', user.username]\">\n                                <button type = \"submit\" class = \"btn btn-primary\">User Page</button>\n                            </a>\n                        </td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n        </div>\n        <hr my-4>\n        <div class = \"row\">\n            <div class = \"col\">\n                <h3 class = \"text-center\">Seasons</h3>\n                <table class=\"table table-hover table-dark\">\n                    <thead>\n                        <tr>\n                        <th scope=\"col\">Name</th>\n                        <th scope=\"col\">Number</th>\n                        <th scope=\"col\">Actions</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr *ngFor = \"let season of seasons\">\n                        <td>{{season.name}}</td>\n                        <td>{{season.number}}</td>\n                        <td>\n                            <a [routerLink] = \"['/', 'season', 'edit', season.name]\">\n                                <button type = \"submit\" class = \"btn btn-primary\">Edit Season</button>\n                            </a>\n                        </td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n        </div>\n    </div>\n</body>\n"
 
 /***/ }),
 
@@ -74,7 +74,7 @@ module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div *ngIf = \"admin\" class = \"row\">\n            <nav class=\"navbar navbar-light bg-light\">\n                <span class=\"navbar-brand mb-0 h1\">Admin</span>\n                <ul class = \"nav\">\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'admin', 'dashboard']\">Admin Dash</a>\n                    </li>\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'addvideo']\">Add Video/Season</a>\n                    </li>\n                </ul>\n            </nav>\n        </div>\n        <div class = \"row\">\n            <div align = \"center\" id = \"image-wrapper\">\n                <div *ngIf = \"recentVideo\" class=\"d-none d-lg-block\" id=\"homeText\">\n                    \n                    <h3>{{recentVideo.title}}</h3>\n                    <p>{{recentVideo.description}}</p>\n                    <a [routerLink] = \"['/', 'video', recentVideo.title]\">\n                        <button class=\"btn\">Watch Video</button>\n                    </a>\n                    \n                </div>\n                <div *ngIf = \"recentVideo\" class=\"d-block d-sm-block d-md-block d-lg-none\" id=\"homeSmallText\">\n                    \n                    <h3>{{recentVideo.title}}</h3>\n                    <p>{{recentVideo.description}}</p>\n                    <a [routerLink] = \"['/', 'video', recentVideo.title]\">\n                        <button class=\"btn\">Watch Video</button>\n                    </a>\n                    \n                </div>\n            </div>\n        </div>\n        <div class = \"row\">\n            <div id = \"dropdownCol\" class = \"col\">\n                <div class=\"dropdown\">\n                    <button [attr.aria-expanded] = \"dropdownOpen\" (click) = \"toggleDropdown()\" class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                        Choose Season\n                    </button>\n                    <div [ngClass] = \"{'show': dropdownOpen }\" class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n                        <a *ngFor = \"let season of seasons\" (click) = \"activeSeason(season.number)\" class=\"dropdown-item\" >{{season.name}}</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div *ngIf = \"activeSeasonNumber\" id = \"seasonTitle\" class = \"text-center row\">\n            <div class = \"col\">\n                <h3>{{seasons[activeSeasonNumber-1].name}}</h3>\n            </div>\n        </div>\n        <div id = \"videoCardsRow\" class = \"row\">\n            <div id = \"activeSeasonBlock\" *ngIf = \"activeSeasonNumber\">\n                <div *ngFor = \"let video of seasons[activeSeasonNumber-1].videos\" class = \"col-sm-12 col-md-6 col-lg-4 col-xl-3 cardBlock\">\n                    <div class=\"card\" style=\"width: 100%;\">\n                        <img src=\"{{video.img}}\" class=\"card-img-top\" alt=\"...\">\n                        <div class=\"card-body\">\n                            <h5 class=\"card-title text-center\">{{video.title}}</h5>\n                            <p class=\"card-text\">{{video.description}}</p>\n                        </div>\n                        <a [routerLink] = \"['/', 'video', video.title]\" class=\"btn btn-block btn-primary\">Watch Video</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n"
+module.exports = "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"description\" content=\"Myriathon is a group of gamers who run bi-annual gaming marathons, raising money for a variety of charity organizations.\">\n    <meta name=\"keywords\" content=\"Charity, Gaming, Video Games, Games, Game Marathons, Myriathon, Marathon, Marathons, Raising Money, Fundraise, Fundraising\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div *ngIf = \"admin\" class = \"row\">\n            <nav class=\"navbar navbar-light bg-light\">\n                <span class=\"navbar-brand mb-0 h1\">Admin</span>\n                <ul class = \"nav\">\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'admin', 'dashboard']\">Admin Dash</a>\n                    </li>\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'addvideo']\">Add Video/Season</a>\n                    </li>\n                </ul>\n            </nav>\n        </div>\n        <div class = \"row\">\n            <div align = \"center\" id = \"image-wrapper\">\n                <div *ngIf = \"recentVideo\" class=\"d-none d-lg-block\" id=\"homeText\">\n                    <h3>{{recentVideo.title}}</h3>\n                    <p>{{recentVideo.description}}</p>\n                    <a [routerLink] = \"['/', 'video', recentVideo.title]\">\n                        <button class=\"btn\">Watch Video</button>\n                    </a>\n                    \n                </div>\n                <div *ngIf = \"recentVideo\" class=\"d-block d-sm-block d-md-block d-lg-none\" id=\"homeSmallText\">\n                    \n                    <h3>{{recentVideo.title}}</h3>\n                    <p>{{recentVideo.description}}</p>\n                    <a [routerLink] = \"['/', 'video', recentVideo.title]\">\n                        <button class=\"btn\">Watch Video</button>\n                    </a>\n                    \n                </div>\n            </div>\n        </div>\n        <div class = \"row\">\n            <div id = \"dropdownCol\" class = \"col\">\n                <div class=\"dropdown\">\n                    <button [attr.aria-expanded] = \"dropdownOpen\" (click) = \"toggleDropdown()\" class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                        Choose Season\n                    </button>\n                    <div [ngClass] = \"{'show': dropdownOpen }\" class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n                        <a *ngFor = \"let season of seasons\" (click) = \"activeSeason(season.number)\" class=\"dropdown-item\" >{{season.name}}</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div *ngIf = \"activeSeasonNumber\" id = \"seasonTitle\" class = \"text-center row\">\n            <div class = \"col\">\n                <h3>{{seasons[activeSeasonNumber-1].name}}</h3>\n            </div>\n        </div>\n        <div id = \"videoCardsRow\" class = \"row\">\n            <div id = \"activeSeasonBlock\" *ngIf = \"activeSeasonNumber\">\n                <div *ngFor = \"let video of seasons[activeSeasonNumber-1].videos\" class = \"col-sm-12 col-md-6 col-lg-4 col-xl-3 cardBlock\">\n                    <div class=\"card\" style=\"width: 100%;\">\n                        <img src=\"{{video.img}}\" class=\"card-img-top\" alt=\"Card image for the video\">\n                        <div class=\"card-body\">\n                            <h5 class=\"card-title text-center\">{{video.title}}</h5>\n                            <p class=\"card-text\">{{video.description}}</p>\n                        </div>\n                        <a [routerLink] = \"['/', 'video', video.title]\" class=\"btn btn-block btn-primary\">Watch Video</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n"
 
 /***/ }),
 
@@ -107,7 +107,7 @@ module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div class = \"row d-flex justify-content-center\">\n            <div class = \"col-sm-12 col-md-6 col-lg-6 col-xl-6\">\n                <form *ngIf = \"singleSeason\" (submit) = \"updateSingleSeason()\">\n                    <h3 class = \"text-center\">Update {{singleSeason.name}}</h3>\n                    <div class = \"form-group\">\n                        <label>Name: </label>\n                        <input\n                        class = \"form-control\"\n                        type = \"text\"\n                        name = \"updateSeason.name\"\n                        required\n                        minlength = \"3\"\n                        [(ngModel)] = \"updateSeason.name\"\n                        #name = \"ngModel\"\n                        [value] = \"singleSeason.name\"\n                        />\n                    </div>\n                    <button type = \"submit\" class = \"btn btn-block btn-primary\">Update</button>\n                    <button [routerLink] = \"['home']\" class = \"btn btn-block btn-danger\">Cancel</button>\n                </form>\n            </div>\n        </div>\n        <hr my-4>\n        <div *ngIf = \"singleSeason\" class = \"row\">\n            <div class = \"col\">\n                <table class=\"table table-fit table-responsive-md table-hover table-dark\">\n                    <thead>\n                        <tr>\n                        <th scope=\"col\">Title</th>\n                        <th scope=\"col\">Img URL</th>\n                        <th scope=\"col\">Video URL</th>\n                        <th scope=\"col\">Options</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr *ngFor = \"let video of singleSeason.videos\">\n                        <th>{{video.title}}</th>\n                        <td>{{video.img}}</td>\n                        <td>{{video.videoURL}}</td>\n                        <td><button [routerLink] = \"['/', 'video', 'edit', video.title]\" class = \"btn btn-primary\">Edit</button></td>\n                        </tr>\n                    </tbody>\n                    </table>\n            </div>\n        </div>\n    </div>\n</body>"
+module.exports = "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"description\" content=\"Myriathon is a group of gamers who run bi-annual gaming marathons, raising money for a variety of charity organizations.\">\n    <meta name=\"keywords\" content=\"Charity, Gaming, Video Games, Games, Game Marathons, Myriathon, Marathon, Marathons, Raising Money, Fundraise, Fundraising\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div class = \"row d-flex justify-content-center\">\n            <div class = \"col-sm-12 col-md-6 col-lg-6 col-xl-6\">\n                <form *ngIf = \"singleSeason\" (submit) = \"updateSingleSeason()\">\n                    <h3 class = \"text-center\">Update {{singleSeason.name}}</h3>\n                    <div class = \"form-group\">\n                        <label>Name: </label>\n                        <input\n                        class = \"form-control\"\n                        type = \"text\"\n                        name = \"updateSeason.name\"\n                        required\n                        minlength = \"3\"\n                        [(ngModel)] = \"updateSeason.name\"\n                        #name = \"ngModel\"\n                        [value] = \"singleSeason.name\"\n                        />\n                    </div>\n                    <button type = \"submit\" class = \"btn btn-block btn-primary\">Update</button>\n                    <button [routerLink] = \"['home']\" class = \"btn btn-block btn-danger\">Cancel</button>\n                </form>\n            </div>\n        </div>\n        <hr my-4>\n        <div *ngIf = \"singleSeason\" class = \"row\">\n            <div class = \"col\">\n                <table class=\"table table-fit table-responsive-md table-hover table-dark\">\n                    <thead>\n                        <tr>\n                        <th scope=\"col\">Title</th>\n                        <th scope=\"col\">Img URL</th>\n                        <th scope=\"col\">Video URL</th>\n                        <th scope=\"col\">Options</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr *ngFor = \"let video of singleSeason.videos\">\n                        <th>{{video.title}}</th>\n                        <td>{{video.img}}</td>\n                        <td>{{video.videoURL}}</td>\n                        <td><button [routerLink] = \"['/', 'video', 'edit', video.title]\" class = \"btn btn-primary\">Edit</button></td>\n                        </tr>\n                    </tbody>\n                    </table>\n            </div>\n        </div>\n    </div>\n</body>"
 
 /***/ }),
 
@@ -118,7 +118,7 @@ module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div class = \"row d-flex justify-content-center\">\n            <div class = \"col-sm-12 col-md-6 col-lg-6 col-xl-6\">\n                <form *ngIf = \"singleVideo\" (submit) = \"updateSingleVideo()\">\n                    <h3 class = \"text-center\">Update {{singleVideo.title}}</h3>\n                    <div class = \"form-group\">\n                        <label>Title: </label>\n                        <input \n                        class = \"form-control\"\n                        type = \"text\"\n                        name = \"updateVideo.title\"\n                        required\n                        minlength = \"3\"\n                        [(ngModel)] = \"updateVideo.title\"\n                        #title = \"ngModel\"\n                        [value] = \"singleVideo.title\"\n                        />\n                    </div>\n                    <div class = \"form-group\">\n                        <label>Description: </label>\n                        <textarea\n                        class = \"form-control\"\n                        rows = \"3\"\n                        name = \"updateVideo.description\"\n                        [(ngModel)] = \"updateVideo.description\"\n                        #description = \"ngModel\"\n                        >{{singleVideo.description}}</textarea>\n                    </div>\n                    <div class = \"form-group\">\n                        <label>Img URL: </label>\n                        <input\n                        type = \"text\"\n                        class = \"form-control\"\n                        placeholder=\"Enter IMG URL\"\n                        name = \"updateVideo.img\"\n                        required\n                        minlength=\"3\"\n                        [(ngModel)] = \"updateVideo.img\"\n                        #img = \"ngModel\"\n                        [value] = \"singleVideo.img\"\n                        />\n                    </div>\n                    <div class = \"form-group\">\n                        <label>URL: </label>\n                        <input\n                        type = \"text\"\n                        class = \"form-control\"\n                        placeholder=\"Enter a Video URL\"\n                        name = \"updateVideo.videoURL\"\n                        required\n                        minlength=\"3\"\n                        [(ngModel)] = \"updateVideo.videoURL\"\n                        #videoURL = \"ngModel\"\n                        [value] = \"singleVideo.videoURL\"\n                        />\n                    </div>\n                    <button type = \"submit\" class = \"btn btn-block btn-primary\">Update</button>\n                    <button [routerLink] = \"['home']\" class = \"btn btn-block btn-danger\">Cancel</button>\n                </form>\n            </div>\n        </div>\n    </div>\n</body>"
+module.exports = "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"description\" content=\"Myriathon is a group of gamers who run bi-annual gaming marathons, raising money for a variety of charity organizations.\">\n    <meta name=\"keywords\" content=\"Charity, Gaming, Video Games, Games, Game Marathons, Myriathon, Marathon, Marathons, Raising Money, Fundraise, Fundraising\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div class = \"row d-flex justify-content-center\">\n            <div class = \"col-sm-12 col-md-6 col-lg-6 col-xl-6\">\n                <form *ngIf = \"singleVideo\" (submit) = \"updateSingleVideo()\">\n                    <h3 class = \"text-center\">Update {{singleVideo.title}}</h3>\n                    <div class = \"form-group\">\n                        <label>Title: </label>\n                        <input \n                        class = \"form-control\"\n                        type = \"text\"\n                        name = \"updateVideo.title\"\n                        required\n                        minlength = \"3\"\n                        [(ngModel)] = \"updateVideo.title\"\n                        #title = \"ngModel\"\n                        [value] = \"singleVideo.title\"\n                        />\n                    </div>\n                    <div class = \"form-group\">\n                        <label>Description: </label>\n                        <textarea\n                        class = \"form-control\"\n                        rows = \"3\"\n                        name = \"updateVideo.description\"\n                        [(ngModel)] = \"updateVideo.description\"\n                        #description = \"ngModel\"\n                        >{{singleVideo.description}}</textarea>\n                    </div>\n                    <div class = \"form-group\">\n                        <label>Img URL: </label>\n                        <input\n                        type = \"text\"\n                        class = \"form-control\"\n                        placeholder=\"Enter IMG URL\"\n                        name = \"updateVideo.img\"\n                        required\n                        minlength=\"3\"\n                        [(ngModel)] = \"updateVideo.img\"\n                        #img = \"ngModel\"\n                        [value] = \"singleVideo.img\"\n                        />\n                    </div>\n                    <div class = \"form-group\">\n                        <label>URL: </label>\n                        <input\n                        type = \"text\"\n                        class = \"form-control\"\n                        placeholder=\"Enter a Video URL\"\n                        name = \"updateVideo.videoURL\"\n                        required\n                        minlength=\"3\"\n                        [(ngModel)] = \"updateVideo.videoURL\"\n                        #videoURL = \"ngModel\"\n                        [value] = \"singleVideo.videoURL\"\n                        />\n                    </div>\n                    <button type = \"submit\" class = \"btn btn-block btn-primary\">Update</button>\n                    <button [routerLink] = \"['home']\" class = \"btn btn-block btn-danger\">Cancel</button>\n                </form>\n            </div>\n        </div>\n    </div>\n</body>"
 
 /***/ }),
 
@@ -129,7 +129,7 @@ module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class=\"container-fluid\">\n        <div *ngIf = \"admin\" class = \"row\">\n            <nav class=\"navbar navbar-light bg-light\">\n                <span class=\"navbar-brand mb-0 h1\">Admin</span>\n                <ul class = \"nav\">\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'admin', 'dashboard']\">Admin Dash</a>\n                    </li>\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'addvideo']\">Add Video/Season</a>\n                    </li>\n                </ul>\n            </nav>\n        </div>\n        <div class=\"row\">\n            <div align=\"center\" id = \"image-wrapper\">\n                <div class=\"d-none d-md-block\" id=\"homeText\">\n                    <h3>Myriathon</h3>\n                    <p>Placeholder text goes here</p>\n                    <a herf=\"#\">\n                        <button class=\"btn\">Link Here</button>\n                    </a>\n                </div>\n                <div class=\"d-block d-md-none\" id=\"homeSmallText\">\n                    <h3>Myriathon</h3>\n                    <p>Placeholder text goes here</p>\n                    <a herf=\"#\">\n                        <button class=\"btn\">Link Here</button>\n                    </a>\n                </div>\n            </div>\n        </div>\n        <hr my-4>\n        <div class = \"row\">\n            <div class=\"darken-pseudo\" id = \"values-wrapper\">\n                <div id = \"image-values-wrapper\">\n                    <div align = \"center\" id = \"values-header-block\">\n                        <h3>Values</h3>\n                    </div>\n                    <div align = \"center\" id = \"values-content-block-first\">\n                        <p>\n                            We’re the Myriathon Team! Since our foundation in 2013, we’ve raised over $25,000 for various causes around the world. \n                            We’re here to provide family-friendly fun and entertainment while playing some of our favorite games, old and new alike!\n                        </p>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <hr my-4>\n        <div class = \"row\">\n            <div id = \"impact-wrapper\">\n                <div align = \"center\" id = \"impact-header-block\">\n                    <h3>Impact</h3>\n                </div>\n                <div align = \"center\" id = \"impact-amount-block\">\n                    <h3>$25,321</h3>\n                    <h5>Raised for Charity</h5>\n                </div>\n                <div align = \"center\" id = \"impact-charities-block\">\n                    <h5>Charities we've supported: </h5>\n                    <div id = \"charity-logo-block\">\n                        <img src = \"assets/img/checkpoint.png\">\n                        <img src = \"assets/img/The_Exodus_Road.png\">\n                        <img src = \"assets/img/charity_water.png\">\n                        <img src = \"assets/img/extra_life.png\">\n                        <img src = \"assets/img/st_jude.png\">\n                        <img src = \"assets/img/world_vision.png\">\n                        <img style = \"width: 250px\" src = \"assets/img/direct_relief.png\">\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n    "
+module.exports = "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"description\" content=\"Myriathon is a group of gamers who run bi-annual gaming marathons, raising money for a variety of charity organizations.\">\n    <meta name=\"keywords\" content=\"Charity, Gaming, Video Games, Games, Game Marathons, Myriathon, Marathon, Marathons, Raising Money, Fundraise, Fundraising\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class=\"container-fluid\">\n        <div *ngIf = \"admin\" class = \"row\">\n            <nav class=\"navbar navbar-light bg-light\">\n                <span class=\"navbar-brand mb-0 h1\">Admin</span>\n                <ul class = \"nav\">\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'admin', 'dashboard']\">Admin Dash</a>\n                    </li>\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'addvideo']\">Add Video/Season</a>\n                    </li>\n                </ul>\n            </nav>\n        </div>\n        <div class=\"row\">\n            <div align=\"center\" id = \"image-wrapper\">\n                <div class=\"d-none d-md-block\" id=\"homeText\">\n                    <h3>Myriathon</h3>\n                    <p>Placeholder text goes here</p>\n                    <a herf=\"#\">\n                        <button class=\"btn\">Link Here</button>\n                    </a>\n                </div>\n                <div class=\"d-block d-md-none\" id=\"homeSmallText\">\n                    <h3>Myriathon</h3>\n                    <p>Placeholder text goes here</p>\n                    <a herf=\"#\">\n                        <button class=\"btn\">Link Here</button>\n                    </a>\n                </div>\n            </div>\n        </div>\n        <hr my-4>\n        <div class = \"row\">\n            <div class=\"darken-pseudo\" id = \"values-wrapper\">\n                <div id = \"image-values-wrapper\">\n                    <div align = \"center\" id = \"values-header-block\">\n                        <h3>Values</h3>\n                    </div>\n                    <div align = \"center\" id = \"values-content-block-first\">\n                        <p>\n                            We’re the Myriathon Team! Since our foundation in 2013, we’ve raised over $25,000 for various causes around the world. \n                            We’re here to provide family-friendly fun and entertainment while playing some of our favorite games, old and new alike!\n                        </p>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <hr my-4>\n        <div class = \"row\">\n            <div id = \"impact-wrapper\">\n                <div align = \"center\" id = \"impact-header-block\">\n                    <h3>Impact</h3>\n                </div>\n                <div align = \"center\" id = \"impact-amount-block\">\n                    <h3>$25,321</h3>\n                    <h5>Raised for Charity</h5>\n                </div>\n                <div align = \"center\" id = \"impact-charities-block\">\n                    <h5>Charities we've supported: </h5>\n                    <div id = \"charity-logo-block\">\n                        <img src = \"assets/img/checkpoint.png\" alt = \"Checkpoint organization logo\">\n                        <img src = \"assets/img/The_Exodus_Road.png\" alt = \"Exodus Road organization logo\">\n                        <img src = \"assets/img/charity_water.png\" alt = \"Charity Water organization logo\">\n                        <img src = \"assets/img/extra_life.png\" alt = \"Extra Life organization logo\">\n                        <img src = \"assets/img/st_jude.png\" alt = \"St Jude organization logo\">\n                        <img src = \"assets/img/world_vision.png\" alt = \"World Vision organization logo\">\n                        <img style = \"width: 250px\" src = \"assets/img/direct_relief.png\" alt = \"Direct Relief organization logo\">\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n    "
 
 /***/ }),
 
@@ -140,7 +140,7 @@ module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div *ngIf = \"admin\" class = \"row\">\n            <nav class=\"navbar navbar-light bg-light\">\n                <span class=\"navbar-brand mb-0 h1\">Admin</span>\n                <ul class = \"nav\">\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'admin', 'dashboard']\">Admin Dash</a>\n                    </li>\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'addvideo']\">Add Video/Season</a>\n                    </li>\n                </ul>\n            </nav>\n        </div>\n    </div>\n    <div id = \"carousel-container-wrapper\">\n        <div class=\"row\" id = \"carousel-row\">\n            <div class = \"container-carousel\">\n                <app-carousel [littleSlides] = \"littleSlides\" [bigSlides] = \"bigSlides\"></app-carousel>\n            </div>\n        </div>\n    </div>\n</body>\n    "
+module.exports = "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"description\" content=\"Myriathon is a group of gamers who run bi-annual gaming marathons, raising money for a variety of charity organizations.\">\n    <meta name=\"keywords\" content=\"Charity, Gaming, Video Games, Games, Game Marathons, Myriathon, Marathon, Marathons, Raising Money, Fundraise, Fundraising\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div *ngIf = \"admin\" class = \"row\">\n            <nav class=\"navbar navbar-light bg-light\">\n                <span class=\"navbar-brand mb-0 h1\">Admin</span>\n                <ul class = \"nav\">\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'admin', 'dashboard']\">Admin Dash</a>\n                    </li>\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'addvideo']\">Add Video/Season</a>\n                    </li>\n                </ul>\n            </nav>\n        </div>\n    </div>\n    <div id = \"carousel-container-wrapper\">\n        <div class=\"row\" id = \"carousel-row\">\n            <div class = \"container-carousel\">\n                <app-carousel [littleSlides] = \"littleSlides\" [bigSlides] = \"bigSlides\"></app-carousel>\n            </div>\n        </div>\n    </div>\n</body>\n    "
 
 /***/ }),
 
@@ -162,7 +162,7 @@ module.exports = "<head>\n        <link rel=\"stylesheet\" href=\"https://stackp
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div *ngIf = \"admin\" class = \"row\">\n            <nav class=\"navbar navbar-light bg-light\">\n                <span class=\"navbar-brand mb-0 h1\">Admin</span>\n                <ul class = \"nav\">\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'admin', 'dashboard']\">Admin Dash</a>\n                    </li>\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'addvideo']\">Add Video/Season</a>\n                    </li>\n                </ul>\n            </nav>\n        </div>\n        <div class = \"row\">\n            <div class = \"col\">\n                <div id = \"jumboPackage\" >\n                    <div *ngIf = \"singleVideo\" class = \"text-center container\">\n                        <h3 id = \"leadText\">{{singleVideo.title}}</h3>\n                        <p>{{singleVideo.description}}</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class = \"row\">\n            <div  class = \"d-none d-sm-none d-md-none d-lg-block col-12 videoBackground\">\n                <iframe \n                id = \"iframeLarge\"\n                width=\"100%\" \n                height=\"100%\" \n                style = \"height: 500px;\"\n                [src]=\"url\"\n                frameborder=\"0\" \n                allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" \n                allowfullscreen>\n                </iframe>\n            </div>\n            <div class = \"d-block d-sm-block d-md-block d-lg-none d-xl-none col-12 videoBackground\">\n                <iframe \n                id = \"iframeSmall\"\n                width=\"100%\" \n                height=\"100%\" \n                style = \"height: 350px;\"\n                [src]=\"url\"\n                frameborder=\"0\" \n                allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" \n                allowfullscreen>\n                </iframe>\n            </div>\n        </div>\n        <div id = \"buttonRow\" class = \"row\">\n            <div *ngIf = \"previousVideo\" class = \"d-flex justify-content-start col\">\n                <a [routerLink] = \"['/', 'video', previousVideo.title]\" ><button class = \"btn btn-primary\"> << Previous Video</button></a>\n            </div>\n            <div *ngIf = \"nextVideo\" class = \"d-flex justify-content-end col\">\n                    <a [routerLink] = \"['/', 'video', nextVideo.title]\" ><button class = \"btn btn-primary\">Next Video >> </button></a>\n            </div>\n        </div>\n    </div>\n</body>"
+module.exports = "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"description\" content=\"Myriathon is a group of gamers who run bi-annual gaming marathons, raising money for a variety of charity organizations.\">\n    <meta name=\"keywords\" content=\"Charity, Gaming, Video Games, Games, Game Marathons, Myriathon, Marathon, Marathons, Raising Money, Fundraise, Fundraising\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div *ngIf = \"admin\" class = \"row\">\n            <nav class=\"navbar navbar-light bg-light\">\n                <span class=\"navbar-brand mb-0 h1\">Admin</span>\n                <ul class = \"nav\">\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'admin', 'dashboard']\">Admin Dash</a>\n                    </li>\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'addvideo']\">Add Video/Season</a>\n                    </li>\n                </ul>\n            </nav>\n        </div>\n        <div class = \"row\">\n            <div class = \"col\">\n                <div id = \"jumboPackage\" >\n                    <div *ngIf = \"singleVideo\" class = \"text-center container\">\n                        <h3 id = \"leadText\">{{singleVideo.title}}</h3>\n                        <p>{{singleVideo.description}}</p>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div class = \"row\">\n            <div  class = \"d-none d-sm-none d-md-none d-lg-block col-12 videoBackground\">\n                <iframe \n                id = \"iframeLarge\"\n                width=\"100%\" \n                height=\"100%\" \n                style = \"height: 500px;\"\n                [src]=\"url\"\n                frameborder=\"0\" \n                allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" \n                allowfullscreen>\n                </iframe>\n            </div>\n            <div class = \"d-block d-sm-block d-md-block d-lg-none d-xl-none col-12 videoBackground\">\n                <iframe \n                id = \"iframeSmall\"\n                width=\"100%\" \n                height=\"100%\" \n                style = \"height: 350px;\"\n                [src]=\"url\"\n                frameborder=\"0\" \n                allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" \n                allowfullscreen>\n                </iframe>\n            </div>\n        </div>\n        <div id = \"buttonRow\" class = \"row\">\n            <div *ngIf = \"previousVideo\" class = \"d-flex justify-content-start col\">\n                <a [routerLink] = \"['/', 'video', previousVideo.title]\" ><button class = \"btn btn-primary\"> << Previous Video</button></a>\n            </div>\n            <div *ngIf = \"nextVideo\" class = \"d-flex justify-content-end col\">\n                    <a [routerLink] = \"['/', 'video', nextVideo.title]\" ><button class = \"btn btn-primary\">Next Video >> </button></a>\n            </div>\n        </div>\n    </div>\n</body>"
 
 /***/ }),
 
@@ -173,7 +173,7 @@ module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div *ngIf = \"admin\" class = \"row\">\n            <nav class=\"navbar navbar-light bg-light\">\n                <span class=\"navbar-brand mb-0 h1\">Admin</span>\n                <ul class = \"nav\">\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'admin', 'dashboard']\">Admin Dash</a>\n                    </li>\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'addvideo']\">Add Video/Season</a>\n                    </li>\n                </ul>\n            </nav>\n        </div>\n        <div *ngIf = \"admin\" class = \"row\">\n            <div class = \"col\">\n                <h3>{{user.username}}</h3>\n                <p>{{user.email}}</p>\n                <form *ngIf = \"user.admin\" (click) = \"removeAdmin()\">\n                    <input type = \"hidden\" value = \"false\" name = \"updateFalseUser.admin\" [(ngModel)] = \"updateUser.admin\" #updateUser = \"ngModel\"> \n                    <button type = \"submit\" class = \"btn btn-danger\">Remove Admin</button>\n                </form>\n                <form *ngIf = \"!user.admin\" (click) = \"addAdmin()\">\n                    <input type = \"hidden\" value = \"true\" name = updateTrueUser.admin [(ngModel)] = \"updateUser.admin\" #updateUser = \"ngModel\">\n                    <button type = \"submit\" class = \"btn btn-success\">Add Admin</button>\n                </form>\n            </div>\n        </div>\n    </div>\n</body>\n"
+module.exports = "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"description\" content=\"Myriathon is a group of gamers who run bi-annual gaming marathons, raising money for a variety of charity organizations.\">\n    <meta name=\"keywords\" content=\"Charity, Gaming, Video Games, Games, Game Marathons, Myriathon, Marathon, Marathons, Raising Money, Fundraise, Fundraising\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div *ngIf = \"admin\" class = \"row\">\n            <nav class=\"navbar navbar-light bg-light\">\n                <span class=\"navbar-brand mb-0 h1\">Admin</span>\n                <ul class = \"nav\">\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'admin', 'dashboard']\">Admin Dash</a>\n                    </li>\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'addvideo']\">Add Video/Season</a>\n                    </li>\n                </ul>\n            </nav>\n        </div>\n        <div *ngIf = \"admin\" class = \"row\">\n            <div class = \"col\">\n                <h3>{{user.username}}</h3>\n                <p>{{user.email}}</p>\n                <form *ngIf = \"user.admin\" (click) = \"removeAdmin()\">\n                    <input type = \"hidden\" value = \"false\" name = \"updateFalseUser.admin\" [(ngModel)] = \"updateUser.admin\" #updateUser = \"ngModel\"> \n                    <button type = \"submit\" class = \"btn btn-danger\">Remove Admin</button>\n                </form>\n                <form *ngIf = \"!user.admin\" (click) = \"addAdmin()\">\n                    <input type = \"hidden\" value = \"true\" name = updateTrueUser.admin [(ngModel)] = \"updateUser.admin\" #updateUser = \"ngModel\">\n                    <button type = \"submit\" class = \"btn btn-success\">Add Admin</button>\n                </form>\n            </div>\n        </div>\n    </div>\n</body>\n"
 
 /***/ }),
 
@@ -203,6 +203,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/*
+  ||--------------------------------||
+  || About Us Component for Website ||
+  ||--------------------------------||
+*/
 
 
 
@@ -215,18 +220,22 @@ let AboutPageComponent = class AboutPageComponent {
         this.titleService = titleService;
         this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
     }
+    /*
+      ||--------------------------------||
+      ||       On Init Functions        ||
+      ||--------------------------------||
+    */
     ngOnInit() {
         this.setTitle("Myriathon | About Us");
         this.checkSession();
         this.checkAdmin();
         this.receiveMessage(this.session);
     }
+    /* Set Title for document header for browser */
     setTitle(newTitle) {
         this.titleService.setTitle(newTitle);
     }
-    receiveMessage(session) {
-        this.session = session;
-    }
+    /* This will check the user's session information.  If session is null from server, nothing will happen.  If session is available, then it'll store */
     checkSession() {
         let observable = this._httpService.checkSession();
         observable.subscribe(data => {
@@ -239,6 +248,7 @@ let AboutPageComponent = class AboutPageComponent {
             }
         });
     }
+    /* This will check the session's data from the server, and if the data returned has the user admin equal to true, Angular will store admin as the user. */
     checkAdmin() {
         let observable = this._httpService.checkAdmin();
         observable.subscribe(data => {
@@ -250,6 +260,10 @@ let AboutPageComponent = class AboutPageComponent {
                 this.admin = data['user'];
             }
         });
+    }
+    /* This is for passing session data accross the angular components */
+    receiveMessage(session) {
+        this.session = session;
     }
 };
 AboutPageComponent.ctorParameters = () => [
@@ -409,6 +423,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/*
+  ||--------------------------------||
+  ||Admin Dash Component for Website||
+  ||--------------------------------||
+*/
 
 
 
@@ -421,6 +440,11 @@ let AdminDashboardComponent = class AdminDashboardComponent {
         this.titleService = titleService;
         this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
     }
+    /*
+      ||--------------------------------||
+      ||       On Init Functions        ||
+      ||--------------------------------||
+    */
     ngOnInit() {
         this.checkSession();
         this.checkAdmin();
@@ -429,9 +453,14 @@ let AdminDashboardComponent = class AdminDashboardComponent {
         this.getAllSeasons();
         this.receiveMessage(this.session);
     }
+    /* Set Title for document header for browser */
     setTitle(newTitle) {
         this.titleService.setTitle(newTitle);
     }
+    /*
+    Get All the seasons data from database and server to display
+    On the page (table)
+    */
     getAllSeasons() {
         let observable = this._httpService.getSeasons();
         observable.subscribe(data => {
@@ -443,6 +472,10 @@ let AdminDashboardComponent = class AdminDashboardComponent {
             }
         });
     }
+    /*
+    Get all the users data from database and server to display
+    their information on a table
+    */
     getAllUsers() {
         let observable = this._httpService.getUsersData();
         observable.subscribe(data => {
@@ -450,9 +483,7 @@ let AdminDashboardComponent = class AdminDashboardComponent {
             this.users = data['users'];
         });
     }
-    receiveMessage(session) {
-        this.session = session;
-    }
+    /* This will check the user's session information.  If session is null from server, nothing will happen.  If session is available, then it'll store */
     checkSession() {
         let observable = this._httpService.checkSession();
         observable.subscribe(data => {
@@ -460,6 +491,7 @@ let AdminDashboardComponent = class AdminDashboardComponent {
             this._httpService.send(this.session);
         });
     }
+    /* This will check the session's data from the server, and if the data returned has the user admin equal to true, Angular will store admin as the user. */
     checkAdmin() {
         let observable = this._httpService.checkAdmin();
         observable.subscribe(data => {
@@ -472,6 +504,10 @@ let AdminDashboardComponent = class AdminDashboardComponent {
                 this.admin = data['user'];
             }
         });
+    }
+    /* This is for passing session data accross the angular components */
+    receiveMessage(session) {
+        this.session = session;
     }
 };
 AdminDashboardComponent.ctorParameters = () => [
@@ -517,6 +553,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/*
+  ||--------------------------------||
+  ||   Main Component for Website   ||
+  ||--------------------------------||
+*/
 
 
 
@@ -532,6 +573,11 @@ let AdminPageComponent = class AdminPageComponent {
         this.displayFalseMessage = false;
         this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
     }
+    /*
+      ||--------------------------------||
+      ||       On Init Functions        ||
+      ||--------------------------------||
+    */
     ngOnInit() {
         this.newUser = { newUsername: "", newEmail: "", newPassword: "", conPassword: "", newSecretMessage: "" };
         this.loginUser = { email: "", password: "" };
@@ -540,15 +586,17 @@ let AdminPageComponent = class AdminPageComponent {
         this.checkSession();
         this.receiveMessage(this.session);
     }
+    /* Set Title for document header for browser */
     setTitle(newTitle) {
         this.titleService.setTitle(newTitle);
     }
+    /*
+    Function for taking in form data, and if successful, log in the user to website.
+    Also has error checking in case something goes wrong
+    */
     onLogin() {
-        console.log("We are in the login function!");
-        console.log(this.loginUser);
         let observable = this._httpService.loginUser(this.loginUser);
         observable.subscribe(data => {
-            console.log("We are returning with login data!", data);
             if (data["success"] == false) {
                 this.displayFalseMessage = true;
                 this.serverError = data['msg'];
@@ -561,38 +609,36 @@ let AdminPageComponent = class AdminPageComponent {
             }
         });
     }
+    /*
+    Function for taking in form data, and if successful, register the user to the database
+    Also has error checking in case something goes wrong
+    */
     onRegister() {
-        console.log("We are in the register function!");
         let observable = this._httpService.addUser(this.newUser);
         observable.subscribe(data => {
-            console.log("We are returning with register data", data);
             if (data['success'] == false) {
                 this.displayFalseMessage = true;
                 this.serverError = data['msg'];
                 this.newUser = { newUsername: "", newEmail: "", newPassword: "", conPassword: "", newSecretMessage: "" };
             }
             else {
-                console.log("Success!", data);
                 this.session = data['user'];
                 this.newUser = { newUsername: "", newEmail: "", newPassword: "", conPassword: "", newSecretMessage: "" };
                 this.router.navigateByUrl('home');
             }
         });
     }
-    receiveMessage(session) {
-        this.session = session;
-    }
+    /* This will check the user's session information.  If session is null from server, nothing will happen.  If session is available, then it'll store */
     checkSession() {
         let observable = this._httpService.checkSession();
         observable.subscribe(data => {
-            if (data['success'] == false) {
-                console.log("No session found!");
-            }
-            else {
-                this.session = data['user'];
-                this._httpService.send(this.session);
-            }
+            this.session = data['user'];
+            this._httpService.send(this.session);
         });
+    }
+    /* This is for passing session data accross the angular components */
+    receiveMessage(session) {
+        this.session = session;
     }
 };
 AdminPageComponent.ctorParameters = () => [
@@ -638,6 +684,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/*
+  ||--------------------------------||
+  ||All Videos Component for Website||
+  ||--------------------------------||
+*/
 
 
 
@@ -659,6 +710,11 @@ let AllVideosComponent = class AllVideosComponent {
         };
         this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
     }
+    /*
+      ||--------------------------------||
+      ||       On Init Functions        ||
+      ||--------------------------------||
+    */
     ngOnInit() {
         this.setTitle("Myriathon | All Videos");
         this.checkSession();
@@ -667,13 +723,16 @@ let AllVideosComponent = class AllVideosComponent {
         this.getRecentVideo();
         this.getAllSeasons();
     }
+    /* Set Title for document header for browser */
     setTitle(newTitle) {
         this.titleService.setTitle(newTitle);
     }
+    /* Toggle the dropdown menu for seeing all the seasons */
     toggleDropdown() {
         this.dropdownOpen = !this.dropdownOpen;
         console.log(this.dropdownOpen);
     }
+    /* Grab all the seasons data from the server */
     getAllSeasons() {
         console.log("We are getting all the season's data!");
         let observable = this._httpService.getSeasons();
@@ -688,6 +747,7 @@ let AllVideosComponent = class AllVideosComponent {
             }
         });
     }
+    /* Get the most recently updated video from our database */
     getRecentVideo() {
         console.log("We are getting the most recent video's data!");
         let observable = this._httpService.getLastVideo();
@@ -696,6 +756,10 @@ let AllVideosComponent = class AllVideosComponent {
             this.recentVideo = data['video'];
         });
     }
+    /*
+      When a user clicks on a season in the dropdown, grab the season
+      which the user grabbed and display all videos attributed to this season
+    */
     activeSeason(seasonNumber) {
         if (seasonNumber == 0) {
             this.activeSeasonNumber = null;
@@ -703,9 +767,7 @@ let AllVideosComponent = class AllVideosComponent {
         this.activeSeasonNumber = seasonNumber;
         console.log(seasonNumber);
     }
-    receiveMessage(session) {
-        this.session = session;
-    }
+    /* This will check the user's session information.  If session is null from server, nothing will happen.  If session is available, then it'll store */
     checkSession() {
         let observable = this._httpService.checkSession();
         observable.subscribe(data => {
@@ -718,6 +780,7 @@ let AllVideosComponent = class AllVideosComponent {
             }
         });
     }
+    /* This will check the session's data from the server, and if the data returned has the user admin equal to true, Angular will store admin as the user. */
     checkAdmin() {
         let observable = this._httpService.checkAdmin();
         observable.subscribe(data => {
@@ -729,6 +792,10 @@ let AllVideosComponent = class AllVideosComponent {
                 this.admin = data['user'];
             }
         });
+    }
+    /* This is for passing session data accross the angular components */
+    receiveMessage(session) {
+        this.session = session;
     }
 };
 AllVideosComponent.ctorParameters = () => [
@@ -844,6 +911,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./http.service */ "./src/app/http.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/*
+  ||--------------------------------||
+  ||   Main Component for Website   ||
+  ||--------------------------------||
+*/
 
 
 
@@ -859,21 +931,30 @@ let AppComponent = class AppComponent {
         this.hamburgerOpen = false;
         this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
     }
+    /*
+      ||--------------------------------||
+      ||       On Init Functions        ||
+      ||--------------------------------||
+    */
     ngOnInit() {
         this.setTitle("Myriathon | Home");
         this.checkSession();
         this.checkAdmin();
         this.receiveMessage(this.session);
     }
+    /* Set Title for document header for browser */
     setTitle(newTitle) {
         this.titleService.setTitle(newTitle);
     }
+    /* This will toggle the side navbar for the browser */
     toggleNavbar() {
         this.navbarOpen = !this.navbarOpen;
     }
+    /* This will toggle the hamburger menu on smaller screens */
     toggleHamburger() {
         this.hamburgerOpen = !this.hamburgerOpen;
     }
+    /* This will check the user's session information.  If session is null from server, nothing will happen.  If session is available, then it'll store */
     checkSession() {
         let observable = this._httpService.checkSession();
         observable.subscribe(data => {
@@ -881,20 +962,21 @@ let AppComponent = class AppComponent {
             this._httpService.send(this.session);
         });
     }
+    /* This will check the session's data from the server, and if the data returned has the user admin equal to true, Angular will store admin as the user. */
     checkAdmin() {
         let observable = this._httpService.checkAdmin();
         observable.subscribe(data => {
-            console.log("Admin is true", data);
             this.admin = data['user'];
         });
     }
+    /* This is for passing session data accross the angular components */
     receiveMessage(session) {
         this.session = session;
     }
+    /* Logout function from Angular */
     logout() {
         let observable = this._httpService.logout();
         observable.subscribe(data => {
-            console.log("coming back", data);
             this.checkSession();
             this.admin = false;
             this._httpService.send(this.session);
@@ -1036,6 +1118,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/animations */ "./node_modules/@angular/animations/fesm2015/animations.js");
+/*
+  ||--------------------------------||
+  ||   Main Component for Website   ||
+  ||--------------------------------||
+*/
 
 
 
@@ -1057,9 +1144,17 @@ let CarouselComponent = class CarouselComponent {
         this.currentText = 0;
         this.currentTitle = 0;
     }
+    /*
+      ||--------------------------------||
+      ||       On Init Functions        ||
+      ||--------------------------------||
+    */
     ngOnInit() {
         this.preloadImages();
     }
+    /*
+    Load images into carousel for faster loading
+    */
     preloadImages() {
         for (const slide of this.bigSlides) {
             new Image().src = slide.src;
@@ -1068,6 +1163,10 @@ let CarouselComponent = class CarouselComponent {
             new Image().src = slide.src;
         }
     }
+    /*
+    When the previous button is clicked on the carousel, go back 1 slide,
+    or return to last slide if on first slide
+    */
     onPreviousClick() {
         const previousSlide = this.currentSlide - 1;
         const previousText = this.currentText - 1;
@@ -1076,6 +1175,10 @@ let CarouselComponent = class CarouselComponent {
         this.currentText = previousText < 0 ? this.txt.length - 1 : previousText;
         this.currentTitle = previousTitle < 0 ? this.title.length - 1 : previousTitle;
     }
+    /*
+    When the next button is clicked on the carousel, go forward 1 slide,
+    or return the the first slide if on last slide
+    */
     onNextClick() {
         const nextSlide = this.currentSlide + 1;
         const nextText = this.currentText + 1;
@@ -1140,6 +1243,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/*
+  ||--------------------------------||
+  ||   Main Component for Website   ||
+  ||--------------------------------||
+*/
 
 
 
@@ -1153,6 +1261,11 @@ let EditSeasonComponent = class EditSeasonComponent {
         this.titleService = titleService;
         this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
     }
+    /*
+      ||--------------------------------||
+      ||       On Init Functions        ||
+      ||--------------------------------||
+    */
     ngOnInit() {
         this.checkSession();
         this.checkAdmin();
@@ -1161,9 +1274,15 @@ let EditSeasonComponent = class EditSeasonComponent {
             this.getSingleSeasonName(params['name']);
         });
     }
+    /* Set Title for document header for browser */
     setTitle(newTitle) {
         this.titleService.setTitle(newTitle);
     }
+    /*
+    If data from the form is submitted, and it's new data, then the server will
+    check if the information is valid.  If true, then it will update the DB,
+    and navigate to home page.
+    */
     updateSingleSeason() {
         console.log("You pressed the button!");
         let observable = this._httpService.updateSeasonDetails(this.updateSeason);
@@ -1178,6 +1297,9 @@ let EditSeasonComponent = class EditSeasonComponent {
             }
         });
     }
+    /*
+    Get the season data from the route parameter.
+    */
     getSingleSeasonName(name) {
         let observable = this._httpService.getSeasonDetails(name);
         observable.subscribe(data => {
@@ -1187,9 +1309,7 @@ let EditSeasonComponent = class EditSeasonComponent {
             this.setTitle("Myriathon | Edit Season: " + this.singleSeason.name);
         });
     }
-    receiveMessage(session) {
-        this.session = session;
-    }
+    /* This will check the user's session information.  If session is null from server, nothing will happen.  If session is available, then it'll store */
     checkSession() {
         let observable = this._httpService.checkSession();
         observable.subscribe(data => {
@@ -1202,6 +1322,7 @@ let EditSeasonComponent = class EditSeasonComponent {
             }
         });
     }
+    /* This will check the session's data from the server, and if the data returned has the user admin equal to true, Angular will store admin as the user. */
     checkAdmin() {
         let observable = this._httpService.checkAdmin();
         observable.subscribe(data => {
@@ -1214,6 +1335,10 @@ let EditSeasonComponent = class EditSeasonComponent {
                 this.admin = data['user'];
             }
         });
+    }
+    /* This is for passing session data accross the angular components */
+    receiveMessage(session) {
+        this.session = session;
     }
 };
 EditSeasonComponent.ctorParameters = () => [
@@ -1260,6 +1385,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/*
+  ||--------------------------------||
+  ||   Main Component for Website   ||
+  ||--------------------------------||
+*/
 
 
 
@@ -1273,6 +1403,11 @@ let EditVideoComponent = class EditVideoComponent {
         this.titleService = titleService;
         this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
     }
+    /*
+      ||--------------------------------||
+      ||       On Init Functions        ||
+      ||--------------------------------||
+    */
     ngOnInit() {
         this.checkSession();
         this.checkAdmin();
@@ -1281,16 +1416,20 @@ let EditVideoComponent = class EditVideoComponent {
             this.getSingleVideoTitle(params['title']);
         });
     }
+    /* Set Title for document header for browser */
     setTitle(newTitle) {
         this.titleService.setTitle(newTitle);
     }
+    /*
+    If the video data is processed by the form, then this function will run.
+    If there's no error from the server, then the video will update in the DB
+    and page will navigate to homepage
+    */
     updateSingleVideo() {
-        console.log("You pressed the button!");
         let observable = this._httpService.updateVideo(this.updateVideo);
         observable.subscribe(data => {
-            console.log("We are getting new data", data);
             if (data['success'] == false) {
-                console.log(data['success']);
+                console.log("Fail");
             }
             else {
                 console.log(data['success']);
@@ -1298,23 +1437,24 @@ let EditVideoComponent = class EditVideoComponent {
             }
         });
     }
+    /*
+    Grab the url data to get the title of the video from the parameter,
+    then get the video's data from the database.  This will render the page
+    */
     getSingleVideoTitle(title) {
         let observable = this._httpService.getVideoDetails(title);
         observable.subscribe(data => {
-            console.log("We got the data!", data);
             this.singleVideo = data['video'][0];
             this.updateVideo = data['video'][0];
             this.setTitle("Myriathon | Edit Video: " + this.singleVideo.title);
         });
     }
-    receiveMessage(session) {
-        this.session = session;
-    }
+    /* This will check the user's session information.  If session is null from server, nothing will happen.  If session is available, then it'll store */
     checkSession() {
         let observable = this._httpService.checkSession();
         observable.subscribe(data => {
             if (data['success'] == false) {
-                console.log("No session found!");
+                console.log("Fail");
             }
             else {
                 this.session = data['user'];
@@ -1322,18 +1462,22 @@ let EditVideoComponent = class EditVideoComponent {
             }
         });
     }
+    /* This will check the session's data from the server, and if the data returned has the user admin equal to true, Angular will store admin as the user. */
     checkAdmin() {
         let observable = this._httpService.checkAdmin();
         observable.subscribe(data => {
             if (data['success'] == false) {
-                console.log("Admin is false");
+                /* If fail, kick the user out of this page, and return to home page */
                 this.router.navigateByUrl('home');
             }
             else {
-                console.log("Admin is true");
                 this.admin = data['user'];
             }
         });
+    }
+    /* This is for passing session data accross the angular components */
+    receiveMessage(session) {
+        this.session = session;
     }
 };
 EditVideoComponent.ctorParameters = () => [
@@ -1380,6 +1524,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/*
+  ||--------------------------------||
+  || Homepage Component for Website ||
+  ||--------------------------------||
+*/
 
 
 
@@ -1393,18 +1542,22 @@ let HomepageComponent = class HomepageComponent {
         this.admin = false;
         this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
     }
+    /*
+      ||--------------------------------||
+      ||       On Init Functions        ||
+      ||--------------------------------||
+    */
     ngOnInit() {
         this.setTitle("Myriathon | Home");
         this.checkSession();
         this.checkAdmin();
         this.receiveMessage(this.session);
     }
+    /* Set Title for document header for browser */
     setTitle(newTitle) {
         this.titleService.setTitle(newTitle);
     }
-    receiveMessage(session) {
-        this.session = session;
-    }
+    /* This will check the user's session information.  If session is null from server, nothing will happen.  If session is available, then it'll store */
     checkSession() {
         let observable = this._httpService.checkSession();
         observable.subscribe(data => {
@@ -1412,6 +1565,7 @@ let HomepageComponent = class HomepageComponent {
             this._httpService.send(this.session);
         });
     }
+    /* This will check the session's data from the server, and if the data returned has the user admin equal to true, Angular will store admin as the user. */
     checkAdmin() {
         let observable = this._httpService.checkAdmin();
         observable.subscribe(data => {
@@ -1423,6 +1577,10 @@ let HomepageComponent = class HomepageComponent {
                 this.admin = data['user'];
             }
         });
+    }
+    /* This is for passing session data accross the angular components */
+    receiveMessage(session) {
+        this.session = session;
     }
 };
 HomepageComponent.ctorParameters = () => [
@@ -1567,6 +1725,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/*
+  ||--------------------------------||
+  || Marathon Component for Website ||
+  ||--------------------------------||
+*/
 
 
 
@@ -1591,18 +1754,22 @@ let MarathonsPageComponent = class MarathonsPageComponent {
         ];
         this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
     }
+    /*
+      ||--------------------------------||
+      ||       On Init Functions        ||
+      ||--------------------------------||
+    */
     ngOnInit() {
         this.setTitle("Myriathon | Marathons");
         this.checkSession();
         this.checkAdmin();
         this.receiveMessage(this.session);
     }
+    /* Set Title for document header for browser */
     setTitle(newTitle) {
         this.titleService.setTitle(newTitle);
     }
-    receiveMessage(session) {
-        this.session = session;
-    }
+    /* This will check the user's session information.  If session is null from server, nothing will happen.  If session is available, then it'll store */
     checkSession() {
         let observable = this._httpService.checkSession();
         observable.subscribe(data => {
@@ -1615,6 +1782,7 @@ let MarathonsPageComponent = class MarathonsPageComponent {
             }
         });
     }
+    /* This will check the session's data from the server, and if the data returned has the user admin equal to true, Angular will store admin as the user. */
     checkAdmin() {
         let observable = this._httpService.checkAdmin();
         observable.subscribe(data => {
@@ -1626,6 +1794,10 @@ let MarathonsPageComponent = class MarathonsPageComponent {
                 this.admin = data['user'];
             }
         });
+    }
+    /* This is for passing session data accross the angular components */
+    receiveMessage(session) {
+        this.session = session;
     }
 };
 MarathonsPageComponent.ctorParameters = () => [
@@ -1742,6 +1914,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/*
+  ||------------------------------------||
+  || Single Video Component for Website ||
+  ||------------------------------------||
+*/
 
 
 
@@ -1757,6 +1934,11 @@ let SingleVideoComponent = class SingleVideoComponent {
         this.title = "";
         this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
     }
+    /*
+      ||--------------------------------||
+      ||       On Init Functions        ||
+      ||--------------------------------||
+    */
     ngOnInit() {
         this.checkSession();
         this.checkAdmin();
@@ -1765,9 +1947,15 @@ let SingleVideoComponent = class SingleVideoComponent {
             this.getSingleVideoTitle(params['title']);
         });
     }
+    /* Set Title for document header for browser */
     setTitle(newTitle) {
         this.titleService.setTitle(newTitle);
     }
+    /*
+    Grab the previous video from the selected video and season,
+    and add a button to the HTML if it's true.
+    If null, no button should show up
+    */
     getPreviousVideo(singleVideoTitle, singleSeasonNumber) {
         let observable = this._httpService.getPreviousVideoDetails(singleVideoTitle, singleSeasonNumber);
         observable.subscribe(data => {
@@ -1775,6 +1963,11 @@ let SingleVideoComponent = class SingleVideoComponent {
             this.previousVideo = data['video'];
         });
     }
+    /*
+    Get the next video from the selected video and season
+    and add a button to the HTML if it's true.
+    If null, no button should show up
+    */
     getNextVideo(singleVideoTitle, singleSeasonNumber) {
         let observable = this._httpService.getNextVideoDetails(singleVideoTitle, singleSeasonNumber);
         observable.subscribe(data => {
@@ -1782,6 +1975,11 @@ let SingleVideoComponent = class SingleVideoComponent {
             this.nextVideo = data['video'];
         });
     }
+    /*
+    Get the current selected video's title, and grab all the video's
+    information from the database and server.  This will allow the page
+    to load properly
+    */
     getSingleVideoTitle(title) {
         let observable = this._httpService.getVideoDetails(title);
         observable.subscribe(data => {
@@ -1792,12 +1990,11 @@ let SingleVideoComponent = class SingleVideoComponent {
             this.setTitle("Myriathon | " + this.singleVideo.title);
         });
     }
+    /* Sanitize the youtube URL for embedding */
     getSafeUrl(url) {
         this.url = this.sanitizer.bypassSecurityTrustResourceUrl(url);
     }
-    receiveMessage(session) {
-        this.session = session;
-    }
+    /* This will check the user's session information.  If session is null from server, nothing will happen.  If session is available, then it'll store */
     checkSession() {
         let observable = this._httpService.checkSession();
         observable.subscribe(data => {
@@ -1810,6 +2007,7 @@ let SingleVideoComponent = class SingleVideoComponent {
             }
         });
     }
+    /* This will check the session's data from the server, and if the data returned has the user admin equal to true, Angular will store admin as the user. */
     checkAdmin() {
         let observable = this._httpService.checkAdmin();
         observable.subscribe(data => {
@@ -1821,6 +2019,10 @@ let SingleVideoComponent = class SingleVideoComponent {
                 this.admin = data['user'];
             }
         });
+    }
+    /* This is for passing session data accross the angular components */
+    receiveMessage(session) {
+        this.session = session;
     }
 };
 SingleVideoComponent.ctorParameters = () => [

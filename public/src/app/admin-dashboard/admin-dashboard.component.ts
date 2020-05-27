@@ -1,3 +1,9 @@
+/* 
+  ||--------------------------------||
+  ||Admin Dash Component for Website||
+  ||--------------------------------||
+*/
+
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Router } from '@angular/router';
@@ -20,6 +26,12 @@ export class AdminDashboardComponent implements OnInit {
     this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
   }
 
+/* 
+  ||--------------------------------||
+  ||       On Init Functions        ||
+  ||--------------------------------||
+*/
+
   ngOnInit() 
   {
     this.checkSession();
@@ -30,9 +42,16 @@ export class AdminDashboardComponent implements OnInit {
     this.receiveMessage(this.session);
   }
 
+  /* Set Title for document header for browser */
+
   public setTitle( newTitle: string) {
     this.titleService.setTitle( newTitle );
   }
+
+  /* 
+  Get All the seasons data from database and server to display
+  On the page (table)
+  */
 
   getAllSeasons()
   {
@@ -50,6 +69,11 @@ export class AdminDashboardComponent implements OnInit {
       })
   }
 
+  /*
+  Get all the users data from database and server to display
+  their information on a table
+  */
+
   getAllUsers()
   {
     let observable = this._httpService.getUsersData();
@@ -60,17 +84,21 @@ export class AdminDashboardComponent implements OnInit {
       })
   }
 
-  receiveMessage(session) {
-    this.session = session;
-  }
-  checkSession() {
+  /* This will check the user's session information.  If session is null from server, nothing will happen.  If session is available, then it'll store */
+
+  checkSession() 
+  {
     let observable = this._httpService.checkSession();
     observable.subscribe(data => {
       this.session = data['user']
       this._httpService.send(this.session)
     })
   }
-  checkAdmin() {
+
+  /* This will check the session's data from the server, and if the data returned has the user admin equal to true, Angular will store admin as the user. */
+
+  checkAdmin() 
+  {
     let observable = this._httpService.checkAdmin();
     observable.subscribe(data => {
       if(data['success'] == false)
@@ -84,6 +112,13 @@ export class AdminDashboardComponent implements OnInit {
         this.admin = data['user'];
       }
     })
+  }
+
+  /* This is for passing session data accross the angular components */
+
+  receiveMessage(session) 
+  {
+    this.session = session;
   }
 
 }

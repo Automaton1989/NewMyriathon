@@ -1,4 +1,8 @@
 <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Myriathon is a group of gamers who run bi-annual gaming marathons, raising money for a variety of charity organizations.">
+    <meta name="keywords" content="Charity, Gaming, Video Games, Games, Game Marathons, Myriathon, Marathon, Marathons, Raising Money, Fundraise, Fundraising">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
@@ -20,7 +24,6 @@
         <div class = "row">
             <div align = "center" id = "image-wrapper">
                 <div *ngIf = "recentVideo" class="d-none d-lg-block" id="homeText">
-                    
                     <h3>{{recentVideo.title}}</h3>
                     <p>{{recentVideo.description}}</p>
                     <a [routerLink] = "['/', 'video', recentVideo.title]">
@@ -60,7 +63,7 @@
             <div id = "activeSeasonBlock" *ngIf = "activeSeasonNumber">
                 <div *ngFor = "let video of seasons[activeSeasonNumber-1].videos" class = "col-sm-12 col-md-6 col-lg-4 col-xl-3 cardBlock">
                     <div class="card" style="width: 100%;">
-                        <img src="{{video.img}}" class="card-img-top" alt="...">
+                        <img src="{{video.img}}" class="card-img-top" alt="Card image for the video">
                         <div class="card-body">
                             <h5 class="card-title text-center">{{video.title}}</h5>
                             <p class="card-text">{{video.description}}</p>
