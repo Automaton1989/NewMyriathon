@@ -64,7 +64,6 @@ export class SingleVideoComponent implements OnInit {
     let observable = this._httpService.getPreviousVideoDetails(singleVideoTitle, singleSeasonNumber);
     observable.subscribe(data => 
       {
-        console.log("We got the previous video data!", data);
         this.previousVideo = data['video'];
       })
   }
@@ -80,7 +79,6 @@ export class SingleVideoComponent implements OnInit {
     let observable = this._httpService.getNextVideoDetails(singleVideoTitle, singleSeasonNumber);
     observable.subscribe(data => 
       {
-        console.log("We got the next video data!", data);
         this.nextVideo = data['video'];
       })
   } 
@@ -120,7 +118,7 @@ export class SingleVideoComponent implements OnInit {
       {
         if(data['success'] == false)
         {
-          console.log("No session found!")
+          console.log(" ")
         }
         else
         {
@@ -137,11 +135,10 @@ export class SingleVideoComponent implements OnInit {
     observable.subscribe(data => {
       if(data['success'] == false)
       {
-        console.log("Admin is false");
+        console.log(" ");
       }
       else
       {
-        console.log("Admin is true");
         this.admin = data['user'];
       }
     })

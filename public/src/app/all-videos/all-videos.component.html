@@ -38,7 +38,6 @@
                     <a [routerLink] = "['/', 'video', recentVideo.title]">
                         <button class="btn">Watch Video</button>
                     </a>
-                    
                 </div>
             </div>
         </div>
@@ -49,19 +48,19 @@
                         Choose Season
                     </button>
                     <div [ngClass] = "{'show': dropdownOpen }" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a *ngFor = "let season of seasons" (click) = "activeSeason(season.number)" class="dropdown-item" >{{season.name}}</a>
+                        <a *ngFor = "let season of seasons" (click) = "getCurrentSeason(season.name)" class="dropdown-item" >{{season.name}}</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div *ngIf = "activeSeasonNumber" id = "seasonTitle" class = "text-center row">
+        <div *ngIf = "currentSeason" id = "seasonTitle" class = "text-center row">
             <div class = "col">
-                <h3>{{seasons[activeSeasonNumber-1].name}}</h3>
+                <h3>{{currentSeason.name}}</h3>
             </div>
         </div>
         <div id = "videoCardsRow" class = "row">
-            <div id = "activeSeasonBlock" *ngIf = "activeSeasonNumber">
-                <div *ngFor = "let video of seasons[activeSeasonNumber-1].videos" class = "col-sm-12 col-md-6 col-lg-4 col-xl-3 cardBlock">
+            <div id = "activeSeasonBlock" *ngIf = "currentSeason">
+                <div *ngFor = "let video of currentSeason.videos" class = "col-sm-12 col-md-6 col-lg-4 col-xl-3 cardBlock">
                     <div class="card" style="width: 100%;">
                         <img src="{{video.img}}" class="card-img-top" alt="Card image for the video">
                         <div class="card-body">

@@ -1,3 +1,9 @@
+/* 
+  ||---------------------------------||
+  || User Page Component for Website ||
+  ||---------------------------------||
+*/
+
 import { Component, OnInit } from '@angular/core';
 import { HttpService } from '../http.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
@@ -21,6 +27,12 @@ export class UserInfoComponent implements OnInit {
     this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
   }
 
+/* 
+  ||--------------------------------||
+  ||       On Init Functions        ||
+  ||--------------------------------||
+*/
+
   ngOnInit() 
   {
     this.checkSession();
@@ -32,9 +44,15 @@ export class UserInfoComponent implements OnInit {
     })
   }
 
+  /* Set Title for document header for browser */
+
   public setTitle( newTitle: string) {
     this.titleService.setTitle( newTitle );
   }
+
+  /*
+  Grab the parameter string and get a user's information from DB and server
+  */
 
   getUserInfo(username)
   {
@@ -43,47 +61,57 @@ export class UserInfoComponent implements OnInit {
       {
         if(data['success'] == true)
         {
-          console.log("Got the user data!", data);
           this.user = data['user'];
           this.setTitle("Myriathon | User: " + this.user.username);
         }
         else
         {
-          console.log("ERROR!");
           this.router.navigateByUrl('home');
         }
       })
   }
+
+  /*
+  Remove the admin privilages of the user
+  */
 
   removeAdmin()
   {
     let observable = this._httpService.removeAdminPrivilages(this.user.username, this.updateFalseUser);
     observable.subscribe(data =>
       {
-        console.log("User data updated: ", data);
+        this.router.navigateByUrl('home');
       })
   }
+
+  /*
+  Grant admin privilages to the user
+  */
 
   addAdmin()
   {
     let observable = this._httpService.addAdminPrivilages(this.user.username, this.updateTrueUser);
     observable.subscribe(data => 
       {
-        console.log("User data updated: ", data);
+        this.router.navigateByUrl('home');
       })
   }
 
-  receiveMessage(session) {
-    this.session = session;
-  }
-  checkSession() {
+  /* This will check the user's session information.  If session is null from server, nothing will happen.  If session is available, then it'll store */
+
+  checkSession() 
+  {
     let observable = this._httpService.checkSession();
     observable.subscribe(data => {
       this.session = data['user']
       this._httpService.send(this.session)
     })
   }
-  checkAdmin() {
+
+  /* This will check the session's data from the server, and if the data returned has the user admin equal to true, Angular will store admin as the user. */
+
+  checkAdmin() 
+  {
     let observable = this._httpService.checkAdmin();
     observable.subscribe(data => {
       if(data['success'] == false)
@@ -96,6 +124,13 @@ export class UserInfoComponent implements OnInit {
         this.admin = data['user'];
       }
     })
+  }
+
+  /* This is for passing session data accross the angular components */
+
+  receiveMessage(session) 
+  {
+    this.session = session;
   }
 
 

@@ -52,7 +52,7 @@ module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"description\" content=\"Myriathon is a group of gamers who run bi-annual gaming marathons, raising money for a variety of charity organizations.\">\n    <meta name=\"keywords\" content=\"Charity, Gaming, Video Games, Games, Game Marathons, Myriathon, Marathon, Marathons, Raising Money, Fundraise, Fundraising\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div class = \"row\">\n            <div class = \"col\">\n                <h3 class = \"text-center\">Users</h3>\n                <table class=\"table table-hover table-dark\">\n                    <thead>\n                        <tr>\n                        <th scope=\"col\">Username</th>\n                        <th scope=\"col\">Email</th>\n                        <th scope=\"col\">Status</th>\n                        <th scope=\"col\">Actions</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr *ngFor = \"let user of users\">\n                        <td>{{user.username}}</td>\n                        <td>{{user.email}}</td>\n                        <td>{{user.admin}}</td>\n                        <td>\n                            <a [routerLink] = \"['/', 'user', user.username]\">\n                                <button type = \"submit\" class = \"btn btn-primary\">User Page</button>\n                            </a>\n                        </td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n        </div>\n        <hr my-4>\n        <div class = \"row\">\n            <div class = \"col\">\n                <h3 class = \"text-center\">Seasons</h3>\n                <table class=\"table table-hover table-dark\">\n                    <thead>\n                        <tr>\n                        <th scope=\"col\">Name</th>\n                        <th scope=\"col\">Number</th>\n                        <th scope=\"col\">Actions</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr *ngFor = \"let season of seasons\">\n                        <td>{{season.name}}</td>\n                        <td>{{season.number}}</td>\n                        <td>\n                            <a [routerLink] = \"['/', 'season', 'edit', season.name]\">\n                                <button type = \"submit\" class = \"btn btn-primary\">Edit Season</button>\n                            </a>\n                        </td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n        </div>\n    </div>\n</body>\n"
+module.exports = "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"description\" content=\"Myriathon is a group of gamers who run bi-annual gaming marathons, raising money for a variety of charity organizations.\">\n    <meta name=\"keywords\" content=\"Charity, Gaming, Video Games, Games, Game Marathons, Myriathon, Marathon, Marathons, Raising Money, Fundraise, Fundraising\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div class = \"row\">\n            <div class = \"col\">\n                <h3 class = \"text-center\">Users</h3>\n                <table class=\"table table-hover table-dark\">\n                    <thead>\n                        <tr>\n                        <th scope=\"col\">Username</th>\n                        <th scope=\"col\">Email</th>\n                        <th scope=\"col\">Status</th>\n                        <th scope=\"col\">Actions</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr *ngFor = \"let user of users\">\n                        <td>{{user.username}}</td>\n                        <td>{{user.email}}</td>\n                        <td>{{user.admin}}</td>\n                        <td>\n                            <a [routerLink] = \"['/', 'user', user.username]\">\n                                <button type = \"submit\" class = \"btn btn-primary\">User Page</button>\n                            </a>\n                        </td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n        </div>\n        <hr my-4>\n        <div id = \"seasons_row\" class = \"row\">\n            <div class = \"col\">\n                <h3 class = \"text-center\">Seasons</h3>\n                <table class=\"table table-hover table-dark\">\n                    <thead>\n                        <tr>\n                        <th scope=\"col\">Name</th>\n                        <th scope=\"col\">Number</th>\n                        <th scope=\"col\">Actions</th>\n                        </tr>\n                    </thead>\n                    <tbody>\n                        <tr *ngFor = \"let season of seasons\">\n                        <td>{{season.name}}</td>\n                        <td>{{season.number}}</td>\n                        <td>\n                            <a [routerLink] = \"['/', 'season', 'edit', season.name]\">\n                                <button type = \"submit\" class = \"btn btn-primary\">Edit Season</button>\n                            </a>\n                        </td>\n                        </tr>\n                    </tbody>\n                </table>\n            </div>\n        </div>\n    </div>\n</body>\n"
 
 /***/ }),
 
@@ -74,7 +74,7 @@ module.exports = "<head>\n    <link rel=\"stylesheet\" href=\"https://stackpath.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"description\" content=\"Myriathon is a group of gamers who run bi-annual gaming marathons, raising money for a variety of charity organizations.\">\n    <meta name=\"keywords\" content=\"Charity, Gaming, Video Games, Games, Game Marathons, Myriathon, Marathon, Marathons, Raising Money, Fundraise, Fundraising\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div *ngIf = \"admin\" class = \"row\">\n            <nav class=\"navbar navbar-light bg-light\">\n                <span class=\"navbar-brand mb-0 h1\">Admin</span>\n                <ul class = \"nav\">\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'admin', 'dashboard']\">Admin Dash</a>\n                    </li>\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'addvideo']\">Add Video/Season</a>\n                    </li>\n                </ul>\n            </nav>\n        </div>\n        <div class = \"row\">\n            <div align = \"center\" id = \"image-wrapper\">\n                <div *ngIf = \"recentVideo\" class=\"d-none d-lg-block\" id=\"homeText\">\n                    <h3>{{recentVideo.title}}</h3>\n                    <p>{{recentVideo.description}}</p>\n                    <a [routerLink] = \"['/', 'video', recentVideo.title]\">\n                        <button class=\"btn\">Watch Video</button>\n                    </a>\n                    \n                </div>\n                <div *ngIf = \"recentVideo\" class=\"d-block d-sm-block d-md-block d-lg-none\" id=\"homeSmallText\">\n                    \n                    <h3>{{recentVideo.title}}</h3>\n                    <p>{{recentVideo.description}}</p>\n                    <a [routerLink] = \"['/', 'video', recentVideo.title]\">\n                        <button class=\"btn\">Watch Video</button>\n                    </a>\n                    \n                </div>\n            </div>\n        </div>\n        <div class = \"row\">\n            <div id = \"dropdownCol\" class = \"col\">\n                <div class=\"dropdown\">\n                    <button [attr.aria-expanded] = \"dropdownOpen\" (click) = \"toggleDropdown()\" class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                        Choose Season\n                    </button>\n                    <div [ngClass] = \"{'show': dropdownOpen }\" class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n                        <a *ngFor = \"let season of seasons\" (click) = \"activeSeason(season.number)\" class=\"dropdown-item\" >{{season.name}}</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div *ngIf = \"activeSeasonNumber\" id = \"seasonTitle\" class = \"text-center row\">\n            <div class = \"col\">\n                <h3>{{seasons[activeSeasonNumber-1].name}}</h3>\n            </div>\n        </div>\n        <div id = \"videoCardsRow\" class = \"row\">\n            <div id = \"activeSeasonBlock\" *ngIf = \"activeSeasonNumber\">\n                <div *ngFor = \"let video of seasons[activeSeasonNumber-1].videos\" class = \"col-sm-12 col-md-6 col-lg-4 col-xl-3 cardBlock\">\n                    <div class=\"card\" style=\"width: 100%;\">\n                        <img src=\"{{video.img}}\" class=\"card-img-top\" alt=\"Card image for the video\">\n                        <div class=\"card-body\">\n                            <h5 class=\"card-title text-center\">{{video.title}}</h5>\n                            <p class=\"card-text\">{{video.description}}</p>\n                        </div>\n                        <a [routerLink] = \"['/', 'video', video.title]\" class=\"btn btn-block btn-primary\">Watch Video</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n"
+module.exports = "<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"description\" content=\"Myriathon is a group of gamers who run bi-annual gaming marathons, raising money for a variety of charity organizations.\">\n    <meta name=\"keywords\" content=\"Charity, Gaming, Video Games, Games, Game Marathons, Myriathon, Marathon, Marathons, Raising Money, Fundraise, Fundraising\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css\" integrity=\"sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh\" crossorigin=\"anonymous\">\n    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\" integrity=\"sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN\" crossorigin=\"anonymous\">\n</head>\n<body>\n    <div class = \"container-fluid\">\n        <div *ngIf = \"admin\" class = \"row\">\n            <nav class=\"navbar navbar-light bg-light\">\n                <span class=\"navbar-brand mb-0 h1\">Admin</span>\n                <ul class = \"nav\">\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'admin', 'dashboard']\">Admin Dash</a>\n                    </li>\n                    <li class = \"nav-item\">\n                        <a class = \"nav-link\" [routerLink] = \"['/', 'addvideo']\">Add Video/Season</a>\n                    </li>\n                </ul>\n            </nav>\n        </div>\n        <div class = \"row\">\n            <div align = \"center\" id = \"image-wrapper\">\n                <div *ngIf = \"recentVideo\" class=\"d-none d-lg-block\" id=\"homeText\">\n                    <h3>{{recentVideo.title}}</h3>\n                    <p>{{recentVideo.description}}</p>\n                    <a [routerLink] = \"['/', 'video', recentVideo.title]\">\n                        <button class=\"btn\">Watch Video</button>\n                    </a>\n                    \n                </div>\n                <div *ngIf = \"recentVideo\" class=\"d-block d-sm-block d-md-block d-lg-none\" id=\"homeSmallText\">\n                    \n                    <h3>{{recentVideo.title}}</h3>\n                    <p>{{recentVideo.description}}</p>\n                    <a [routerLink] = \"['/', 'video', recentVideo.title]\">\n                        <button class=\"btn\">Watch Video</button>\n                    </a>\n                </div>\n            </div>\n        </div>\n        <div class = \"row\">\n            <div id = \"dropdownCol\" class = \"col\">\n                <div class=\"dropdown\">\n                    <button [attr.aria-expanded] = \"dropdownOpen\" (click) = \"toggleDropdown()\" class=\"btn btn-secondary dropdown-toggle\" type=\"button\" id=\"dropdownMenuButton\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">\n                        Choose Season\n                    </button>\n                    <div [ngClass] = \"{'show': dropdownOpen }\" class=\"dropdown-menu\" aria-labelledby=\"dropdownMenuButton\">\n                        <a *ngFor = \"let season of seasons\" (click) = \"getCurrentSeason(season.name)\" class=\"dropdown-item\" >{{season.name}}</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <div *ngIf = \"currentSeason\" id = \"seasonTitle\" class = \"text-center row\">\n            <div class = \"col\">\n                <h3>{{currentSeason.name}}</h3>\n            </div>\n        </div>\n        <div id = \"videoCardsRow\" class = \"row\">\n            <div id = \"activeSeasonBlock\" *ngIf = \"currentSeason\">\n                <div *ngFor = \"let video of currentSeason.videos\" class = \"col-sm-12 col-md-6 col-lg-4 col-xl-3 cardBlock\">\n                    <div class=\"card\" style=\"width: 100%;\">\n                        <img src=\"{{video.img}}\" class=\"card-img-top\" alt=\"Card image for the video\">\n                        <div class=\"card-body\">\n                            <h5 class=\"card-title text-center\">{{video.title}}</h5>\n                            <p class=\"card-text\">{{video.description}}</p>\n                        </div>\n                        <a [routerLink] = \"['/', 'video', video.title]\" class=\"btn btn-block btn-primary\">Watch Video</a>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</body>\n"
 
 /***/ }),
 
@@ -240,7 +240,7 @@ let AboutPageComponent = class AboutPageComponent {
         let observable = this._httpService.checkSession();
         observable.subscribe(data => {
             if (data['success'] == false) {
-                console.log("No session found!");
+                console.log(" ");
             }
             else {
                 this.session = data['user'];
@@ -253,10 +253,9 @@ let AboutPageComponent = class AboutPageComponent {
         let observable = this._httpService.checkAdmin();
         observable.subscribe(data => {
             if (data['success'] == false) {
-                console.log("Admin is false");
+                console.log(" ");
             }
             else {
-                console.log("Admin is true");
                 this.admin = data['user'];
             }
         });
@@ -404,7 +403,7 @@ AddVideoPageComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".table td, .table th\n{\n    vertical-align: middle;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRtaW4tZGFzaGJvYXJkL2FkbWluLWRhc2hib2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztJQUVJLHNCQUFzQjtBQUMxQiIsImZpbGUiOiJzcmMvYXBwL2FkbWluLWRhc2hib2FyZC9hZG1pbi1kYXNoYm9hcmQuY29tcG9uZW50LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi50YWJsZSB0ZCwgLnRhYmxlIHRoXG57XG4gICAgdmVydGljYWwtYWxpZ246IG1pZGRsZTtcbn0iXX0= */"
+module.exports = ".table td, .table th\n{\n    vertical-align: middle;\n}\n\n#seasons_row\n{\n    margin-bottom: 3rem;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvYWRtaW4tZGFzaGJvYXJkL2FkbWluLWRhc2hib2FyZC5jb21wb25lbnQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOztJQUVJLHNCQUFzQjtBQUMxQjs7QUFFQTs7SUFFSSxtQkFBbUI7QUFDdkIiLCJmaWxlIjoic3JjL2FwcC9hZG1pbi1kYXNoYm9hcmQvYWRtaW4tZGFzaGJvYXJkLmNvbXBvbmVudC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIudGFibGUgdGQsIC50YWJsZSB0aFxue1xuICAgIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG59XG5cbiNzZWFzb25zX3Jvd1xue1xuICAgIG1hcmdpbi1ib3R0b206IDNyZW07XG59Il19 */"
 
 /***/ }),
 
@@ -730,29 +729,25 @@ let AllVideosComponent = class AllVideosComponent {
     /* Toggle the dropdown menu for seeing all the seasons */
     toggleDropdown() {
         this.dropdownOpen = !this.dropdownOpen;
-        console.log(this.dropdownOpen);
     }
     /* Grab all the seasons data from the server */
     getAllSeasons() {
-        console.log("We are getting all the season's data!");
         let observable = this._httpService.getSeasons();
         observable.subscribe(data => {
             if (data['success'] == false) {
-                console.log("We didn't get the data we wanted!");
+                console.log(" ");
             }
             else {
                 this.seasons = data['seasons'];
                 this.seasons.push(this.clearSeason);
-                console.log(this.seasons);
+                //this.sortSeasons(this.seasons);
             }
         });
     }
     /* Get the most recently updated video from our database */
     getRecentVideo() {
-        console.log("We are getting the most recent video's data!");
         let observable = this._httpService.getLastVideo();
         observable.subscribe(data => {
-            console.log("Got the recent video's data!", data);
             this.recentVideo = data['video'];
         });
     }
@@ -760,19 +755,23 @@ let AllVideosComponent = class AllVideosComponent {
       When a user clicks on a season in the dropdown, grab the season
       which the user grabbed and display all videos attributed to this season
     */
-    activeSeason(seasonNumber) {
-        if (seasonNumber == 0) {
-            this.activeSeasonNumber = null;
+    getCurrentSeason(seasonName) {
+        if (seasonName == "Clear Season") {
+            this.currentSeason = null;
         }
-        this.activeSeasonNumber = seasonNumber;
-        console.log(seasonNumber);
+        else {
+            let observable = this._httpService.getSeasonDetails(seasonName);
+            observable.subscribe(data => {
+                this.currentSeason = data['season'];
+            });
+        }
     }
     /* This will check the user's session information.  If session is null from server, nothing will happen.  If session is available, then it'll store */
     checkSession() {
         let observable = this._httpService.checkSession();
         observable.subscribe(data => {
             if (data['success'] == false) {
-                console.log("No session found!");
+                console.log(" ");
             }
             else {
                 this.session = data['user'];
@@ -785,10 +784,9 @@ let AllVideosComponent = class AllVideosComponent {
         let observable = this._httpService.checkAdmin();
         observable.subscribe(data => {
             if (data['success'] == false) {
-                console.log("Admin is false");
+                console.log(" ");
             }
             else {
-                console.log("Admin is true");
                 this.admin = data['user'];
             }
         });
@@ -1570,10 +1568,9 @@ let HomepageComponent = class HomepageComponent {
         let observable = this._httpService.checkAdmin();
         observable.subscribe(data => {
             if (data['success'] == false) {
-                console.log("Admin is false");
+                console.log(" ");
             }
             else {
-                console.log("Admin is true");
                 this.admin = data['user'];
             }
         });
@@ -1774,7 +1771,7 @@ let MarathonsPageComponent = class MarathonsPageComponent {
         let observable = this._httpService.checkSession();
         observable.subscribe(data => {
             if (data['success'] == false) {
-                console.log("No session found!");
+                console.log(" ");
             }
             else {
                 this.session = data['user'];
@@ -1787,10 +1784,9 @@ let MarathonsPageComponent = class MarathonsPageComponent {
         let observable = this._httpService.checkAdmin();
         observable.subscribe(data => {
             if (data['success'] == false) {
-                console.log("Admin is false");
+                console.log(" ");
             }
             else {
-                console.log("Admin is true");
                 this.admin = data['user'];
             }
         });
@@ -1959,7 +1955,6 @@ let SingleVideoComponent = class SingleVideoComponent {
     getPreviousVideo(singleVideoTitle, singleSeasonNumber) {
         let observable = this._httpService.getPreviousVideoDetails(singleVideoTitle, singleSeasonNumber);
         observable.subscribe(data => {
-            console.log("We got the previous video data!", data);
             this.previousVideo = data['video'];
         });
     }
@@ -1971,7 +1966,6 @@ let SingleVideoComponent = class SingleVideoComponent {
     getNextVideo(singleVideoTitle, singleSeasonNumber) {
         let observable = this._httpService.getNextVideoDetails(singleVideoTitle, singleSeasonNumber);
         observable.subscribe(data => {
-            console.log("We got the next video data!", data);
             this.nextVideo = data['video'];
         });
     }
@@ -1999,7 +1993,7 @@ let SingleVideoComponent = class SingleVideoComponent {
         let observable = this._httpService.checkSession();
         observable.subscribe(data => {
             if (data['success'] == false) {
-                console.log("No session found!");
+                console.log(" ");
             }
             else {
                 this.session = data['user'];
@@ -2012,10 +2006,9 @@ let SingleVideoComponent = class SingleVideoComponent {
         let observable = this._httpService.checkAdmin();
         observable.subscribe(data => {
             if (data['success'] == false) {
-                console.log("Admin is false");
+                console.log(" ");
             }
             else {
-                console.log("Admin is true");
                 this.admin = data['user'];
             }
         });
@@ -2070,6 +2063,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _http_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../http.service */ "./src/app/http.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/*
+  ||---------------------------------||
+  || User Page Component for Website ||
+  ||---------------------------------||
+*/
 
 
 
@@ -2085,6 +2083,11 @@ let UserInfoComponent = class UserInfoComponent {
         this.updateTrueUser = { admin: true };
         this._httpService.stream$.subscribe(this.receiveMessage.bind(this));
     }
+    /*
+      ||--------------------------------||
+      ||       On Init Functions        ||
+      ||--------------------------------||
+    */
     ngOnInit() {
         this.checkSession();
         this.checkAdmin();
@@ -2093,38 +2096,44 @@ let UserInfoComponent = class UserInfoComponent {
             this.getUserInfo(params['username']);
         });
     }
+    /* Set Title for document header for browser */
     setTitle(newTitle) {
         this.titleService.setTitle(newTitle);
     }
+    /*
+    Grab the parameter string and get a user's information from DB and server
+    */
     getUserInfo(username) {
         let observable = this._httpService.getUserData(username);
         observable.subscribe(data => {
             if (data['success'] == true) {
-                console.log("Got the user data!", data);
                 this.user = data['user'];
                 this.setTitle("Myriathon | User: " + this.user.username);
             }
             else {
-                console.log("ERROR!");
                 this.router.navigateByUrl('home');
             }
         });
     }
+    /*
+    Remove the admin privilages of the user
+    */
     removeAdmin() {
         let observable = this._httpService.removeAdminPrivilages(this.user.username, this.updateFalseUser);
         observable.subscribe(data => {
-            console.log("User data updated: ", data);
+            this.router.navigateByUrl('home');
         });
     }
+    /*
+    Grant admin privilages to the user
+    */
     addAdmin() {
         let observable = this._httpService.addAdminPrivilages(this.user.username, this.updateTrueUser);
         observable.subscribe(data => {
-            console.log("User data updated: ", data);
+            this.router.navigateByUrl('home');
         });
     }
-    receiveMessage(session) {
-        this.session = session;
-    }
+    /* This will check the user's session information.  If session is null from server, nothing will happen.  If session is available, then it'll store */
     checkSession() {
         let observable = this._httpService.checkSession();
         observable.subscribe(data => {
@@ -2132,6 +2141,7 @@ let UserInfoComponent = class UserInfoComponent {
             this._httpService.send(this.session);
         });
     }
+    /* This will check the session's data from the server, and if the data returned has the user admin equal to true, Angular will store admin as the user. */
     checkAdmin() {
         let observable = this._httpService.checkAdmin();
         observable.subscribe(data => {
@@ -2143,6 +2153,10 @@ let UserInfoComponent = class UserInfoComponent {
                 this.admin = data['user'];
             }
         });
+    }
+    /* This is for passing session data accross the angular components */
+    receiveMessage(session) {
+        this.session = session;
     }
 };
 UserInfoComponent.ctorParameters = () => [

@@ -53,7 +53,7 @@ export class AboutPageComponent implements OnInit {
       {
         if(data['success'] == false)
         {
-          console.log("No session found!")
+          console.log(" ")
         }
         else
         {
@@ -70,11 +70,10 @@ export class AboutPageComponent implements OnInit {
     observable.subscribe(data => {
       if(data['success'] == false)
       {
-        console.log("Admin is false");
+        console.log(" ");
       }
       else
       {
-        console.log("Admin is true");
         this.admin = data['user'];
       }
     })

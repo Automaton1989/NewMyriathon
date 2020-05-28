@@ -13,7 +13,6 @@ module.exports = {
 
     //ADDING A NEW USER
     newUser: function(req, res) {
-        console.log("We are in new user controller!");
         if(req.body.newUser.newSecretMessage != SecretPassword)
         {
             console.log("SecretMessages don't match!");
@@ -21,6 +20,7 @@ module.exports = {
         }
         else
         {
+            // There's no error checking for duplicate emails.  Add here //
             bcryptjs.hash(req.body.newUser.newPassword, 10)
             .then(hashed_password => {
                 var user = new User({username: req.body.newUser.newUsername, email: req.body.newUser.newEmail, password: hashed_password});
@@ -70,7 +70,6 @@ module.exports = {
 
     //ADDING A NEW SEASON
     addNewSeason: function(req, res) {
-        console.log("We are in the users.js file now!");
         Season.findOne({number : req.body.newSeason.newSeasonNumber}, function(err, season) 
         {
             if(season == null) 

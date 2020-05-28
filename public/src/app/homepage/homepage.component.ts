@@ -62,11 +62,10 @@ export class HomepageComponent implements OnInit {
     observable.subscribe(data => {
       if(data['success'] == false)
       {
-        console.log("Admin is false");
+        console.log(" ");
       }
       else
       {
-        console.log("Admin is true");
         this.admin = data['user'];
       }
     })

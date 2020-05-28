@@ -19,7 +19,7 @@ export class AllVideosComponent implements OnInit {
   session: any;
   admin: any;
   seasons = [];
-  activeSeasonNumber: any;
+  currentSeason: any;
   dropdownOpen = false;
   recentVideo: any;
   image;
@@ -63,26 +63,24 @@ export class AllVideosComponent implements OnInit {
   toggleDropdown()
   {
     this.dropdownOpen = !this.dropdownOpen;
-    console.log(this.dropdownOpen);
   }
 
   /* Grab all the seasons data from the server */
 
   getAllSeasons()
   {
-    console.log("We are getting all the season's data!");
     let observable = this._httpService.getSeasons();
     observable.subscribe(data => 
       {
         if(data['success'] == false)
         {
-          console.log("We didn't get the data we wanted!")
+          console.log(" ")
         }
         else
         {
           this.seasons = data['seasons'];
           this.seasons.push(this.clearSeason)
-          console.log(this.seasons)
+          //this.sortSeasons(this.seasons);
         }
       })
   }
@@ -91,11 +89,9 @@ export class AllVideosComponent implements OnInit {
 
   getRecentVideo()
   {
-    console.log("We are getting the most recent video's data!");
     let observable = this._httpService.getLastVideo();
     observable.subscribe(data => 
       {
-        console.log("Got the recent video's data!", data);
         this.recentVideo = data['video'];
       })
   }
@@ -105,14 +101,20 @@ export class AllVideosComponent implements OnInit {
   which the user grabbed and display all videos attributed to this season 
 */
 
-  activeSeason(seasonNumber)
+  getCurrentSeason(seasonName)
   {
-    if(seasonNumber == 0)
+    if(seasonName == "Clear Season")
     {
-      this.activeSeasonNumber = null;
+      this.currentSeason = null;
     }
-    this.activeSeasonNumber = seasonNumber;
-    console.log(seasonNumber);
+    else
+    {
+      let observable = this._httpService.getSeasonDetails(seasonName);
+      observable.subscribe(data =>
+        {
+          this.currentSeason = data['season'];
+        })
+    }
   }
 
   /* This will check the user's session information.  If session is null from server, nothing will happen.  If session is available, then it'll store */
@@ -124,7 +126,7 @@ export class AllVideosComponent implements OnInit {
       {
         if(data['success'] == false)
         {
-          console.log("No session found!")
+          console.log(" ")
         }
         else
         {
@@ -141,11 +143,10 @@ export class AllVideosComponent implements OnInit {
     observable.subscribe(data => {
       if(data['success'] == false)
       {
-        console.log("Admin is false");
+        console.log(" ");
       }
       else
       {
-        console.log("Admin is true");
         this.admin = data['user'];
       }
     })
