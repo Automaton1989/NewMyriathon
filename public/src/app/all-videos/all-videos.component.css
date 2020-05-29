@@ -188,3 +188,8 @@ body
 {
     border-radius: 0px;
 }
+
+#admin-navbar
+{
+    width: 100%;
+}

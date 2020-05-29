@@ -60,7 +60,7 @@ export class AdminDashboardComponent implements OnInit {
       {
         if(data['success'] == false)
         {
-          console.log("We didn't get the data we wanted!")
+          console.log(" ")
         }
         else
         {
@@ -79,7 +79,6 @@ export class AdminDashboardComponent implements OnInit {
     let observable = this._httpService.getUsersData();
     observable.subscribe(data => 
       {
-        console.log("Got the user data!", data);
         this.users = data['users'];
       })
   }
@@ -103,12 +102,10 @@ export class AdminDashboardComponent implements OnInit {
     observable.subscribe(data => {
       if(data['success'] == false)
       {
-        console.log("Admin is false");
         this.router.navigateByUrl("home");
       }
       else
       {
-        console.log("Admin is true");
         this.admin = data['user'];
       }
     })

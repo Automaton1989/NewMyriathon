@@ -83,7 +83,6 @@ module.exports = function(app) {
     })
     app.get('/myriathon/logout', function(req, res) 
     {
-        console.log("in routes.js")
         myriathon.logout(req, res)
     })
     app.all("*", (req,res,next) => {

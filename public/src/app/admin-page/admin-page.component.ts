@@ -42,6 +42,7 @@ export class AdminPageComponent implements OnInit {
     this.setTitle("Myriathon | Admin");
     this.checkSession();
     this.receiveMessage(this.session);
+    
   }
 
   /* Set Title for document header for browser */

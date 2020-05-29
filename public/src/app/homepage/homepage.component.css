@@ -189,3 +189,8 @@
             height: 90px;
             margin: 1rem;
         }
+
+#admin-navbar
+{
+    width: 100%;
+}

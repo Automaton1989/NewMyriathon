@@ -5,7 +5,7 @@
 <body>
     <div class = "container-fluid">
         <div *ngIf = "admin" class = "row">
-            <nav class="navbar navbar-light bg-light">
+            <nav id = "admin-navbar" class="navbar navbar-light bg-light">
                 <span class="navbar-brand mb-0 h1">Admin</span>
                 <ul class = "nav">
                     <li class = "nav-item">
@@ -17,7 +17,7 @@
                 </ul>
             </nav>
         </div>
-        <div *ngIf="displayFalseMessage" class = "container">
+        <div *ngIf="displayFalseMessage" id = "Error-container" class = "container">
             <div class = "row d-flex justify-content-center invalid">
                 <div class = "text-center col-sm-12 col-md-6 col-lg-6 col-xl-6">
                     <p>{{falseMessage}}</p>

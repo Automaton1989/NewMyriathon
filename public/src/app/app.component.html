@@ -36,9 +36,13 @@
         <li [routerLinkActive] = "['active']">
             <a [routerLink] = "['about']">About</a>
         </li>
+
+        <!--
         <li [routerLinkActive] = "['active']">
             <a [routerLink] = "['admin']">Admin</a>
         </li>
+        -->
+        
         <div>
             <button style="position: absolute; left: 0; bottom: 0;" class="btn btn-danger btn-block" *ngIf="session" (click) = "logout()">Logout</button>
         </div>

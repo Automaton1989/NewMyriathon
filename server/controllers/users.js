@@ -20,7 +20,10 @@ module.exports = {
         }
         else
         {
-            // There's no error checking for duplicate emails.  Add here //
+            //
+            // There's no error checking for duplicate emails.
+            // Please add here when it's a priority
+            //
             bcryptjs.hash(req.body.newUser.newPassword, 10)
             .then(hashed_password => {
                 var user = new User({username: req.body.newUser.newUsername, email: req.body.newUser.newEmail, password: hashed_password});
@@ -96,7 +99,6 @@ module.exports = {
                 }
                 else
                 {
-                    console.log("This season number is already taken");
                     res.json({success : false, msg: "There is already a season with that number"});
                 }
             }
@@ -105,7 +107,6 @@ module.exports = {
 
     //ADDING A NEW VIDEO
     addNewVideo: function(req, res) {
-        console.log("We are in the users.js file now!")
         Video.findOne({title : req.body.newVideo.newVideoTitle}, function(err, video)
         {
             if(video == null)
@@ -114,7 +115,6 @@ module.exports = {
                 {
                     if(season == null)
                     {
-                        console.log("Season not found!");
                         res.json({success : false, msg: "There is no season with that number in our database!"});
                     }
                     else if(err)
@@ -159,7 +159,6 @@ module.exports = {
             }
             else
             {
-                console.log("There's already a video in the database!");
                 res.json({success : false, msg: "There's already a video with that name in the database!"});
             }
         })
@@ -168,7 +167,6 @@ module.exports = {
     //GET ALL SEASONS DATA
     getAllSeasons: function(req, res)
     {
-        console.log("We are in the users.js file now!");
         Season.find({}, function(err, seasons)
         {
             if(err)
@@ -185,7 +183,6 @@ module.exports = {
     //GET LAST VIDEO DETAILS
     getLastVideo: function(req, res)
     {
-        console.log("We are in the users.js file for last video now!");
         var lastVideo = null;
         Video.find({}, function(err, videos)
         {
@@ -204,7 +201,6 @@ module.exports = {
     //GET SINGLE VIDEO DETAILS
     getVideoDetails: function(req, res)
     {
-        console.log("We are in the users.js file now!");
         Video.find({title: req.params.title}, function(err, video)
         {
             if(err)
@@ -222,7 +218,6 @@ module.exports = {
     //GET SEASON DETAILS
     getSeasonDetails: function(req, res)
     {
-        console.log("We are in the users.js file now for single season details!");
         Season.findOne({name: req.params.name}, function(err, season)
         {
             if(err)
@@ -240,7 +235,6 @@ module.exports = {
     //UPDATE SEASON DATA
     updateSeasonData: function(req, res)
     {
-        console.log("We are in the users.js file now for updating a season!");
         Season.findOne({_id: req.params.id}, function(err, season)
         {
             if(err)
@@ -251,6 +245,10 @@ module.exports = {
             else
             {
                 season.name = req.body.updateSeason.name;
+                //
+                //There's nothing in place currently to check if the new season name is already taken in the database.  
+                //Please add here when making this a priority
+                //
                 season.save(function(err)
                 {
                     if(err)
@@ -270,7 +268,6 @@ module.exports = {
     //UPDATE SINGLE VIDEO
     updateVideoData: function(req, res)
     {
-        console.log("We are in the users.js file for updating video now!");
         Video.findOne({_id: req.params.id}, function(err, video)
         {
             if(err)
@@ -278,6 +275,10 @@ module.exports = {
                 console.log(err);
                 res.json({success : false, msg: "Something went wrong!"});
             }
+            //
+            //Need to consider situation in which the updated video has the same title as a video in database at some point 
+            //Add this functionality here 
+            //
             else
             {
                 video.title = req.body.updateVideo.title;
@@ -330,7 +331,6 @@ module.exports = {
     //GET NEXT VIDEO INFORMATION
     getNextVideoDetails: function(req, res)
     {
-        console.log("We are in the users.js file now for next video!");
         Season.findOne({number : req.params.number}, function(err, season)
         {
             if(err)
@@ -345,7 +345,6 @@ module.exports = {
                 {
                     if(season.videos[i].title == req.params.title && season.videos[i] != season.videos[season.videos.length-1])
                     {
-                        console.log("Found Video!");
                         nextVideo = season.videos[i+1];
                         res.json({success : true, video : nextVideo});
                     }
@@ -365,7 +364,6 @@ module.exports = {
     //GET PREVIOUS VIDEO INFORMATION
     getPreviousVideoDetails: function(req, res)
     {
-        console.log("We are in the users.js file now for previous video!");
         Season.findOne({number : req.params.number}, function(err, season)
         {
             if(err)
@@ -380,7 +378,6 @@ module.exports = {
                 {
                     if(season.videos[i].title == req.params.title)
                     {
-                        console.log("Found Video!");
                         res.json({success : true, video : previousVideo});
                     }
                     else
@@ -509,7 +506,6 @@ module.exports = {
     logout: function(req, res) {
         if(req.session) {
             req.session.destroy();
-            console.log(req.session)
             res.json({success : true})
         }
         else {

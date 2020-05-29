@@ -196,3 +196,8 @@ section{
 {
     margin-bottom: 2rem;
 }
+
+#admin-navbar
+{
+    width: 100%;
+}

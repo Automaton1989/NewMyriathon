@@ -62,14 +62,15 @@ export class EditSeasonComponent implements OnInit {
     let observable = this._httpService.updateSeasonDetails(this.updateSeason);
     observable.subscribe(data =>
     {
-      console.log("We updated the data!", data);
       if(data['success'] == false)
       {
         console.log(data['success']);
+        //
+        // Need to add an Error checking system here to display errors when applicable
+        //
       }
       else
       {
-        console.log(data['success']);
         this.router.navigateByUrl('home');
       }
     })
@@ -84,7 +85,6 @@ export class EditSeasonComponent implements OnInit {
     let observable = this._httpService.getSeasonDetails(name);
     observable.subscribe(data =>
       {
-        console.log("We got the data!", data);
         this.singleSeason = data['season'];
         this.updateSeason = data['season'];
         this.setTitle("Myriathon | Edit Season: " + this.singleSeason.name);
@@ -100,7 +100,7 @@ export class EditSeasonComponent implements OnInit {
       {
         if(data['success'] == false)
         {
-          console.log("No session found!")
+          console.log(" ")
         }
         else
         {
@@ -117,12 +117,10 @@ export class EditSeasonComponent implements OnInit {
     observable.subscribe(data => {
       if(data['success'] == false)
       {
-        console.log("Admin is false");
-        //this.router.navigateByUrl('home');
+        this.router.navigateByUrl('home');
       }
       else
       {
-        console.log("Admin is true");
         this.admin = data['user'];
       }
     })
