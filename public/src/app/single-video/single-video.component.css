@@ -40,3 +40,29 @@
 {
     width: 100%;
 }
+
+#btnPrev
+{
+    background-color: #2e8bdb;
+    color: white;
+}
+
+    #btnPrev:hover
+    {
+        background-color: white;
+        color: #2e8bdb;
+        border: 1px solid #2e8bdb;
+    }
+
+#btnNext
+{
+    background-color: #2e8bdb;
+    color: white;
+}
+
+    #btnNext:hover
+    {
+        background-color: white;
+        color: #2e8bdb;
+        border: 1px solid #2e8bdb;
+    }

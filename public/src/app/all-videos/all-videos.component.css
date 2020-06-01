@@ -47,16 +47,16 @@ body
 
     #homeText button
     {
-        background-color: #6d7fcc;
+        background-color: #2e8bdb;
         color: white;
         opacity: 1;
     }
 
         #homeText button:hover
         {
-            color: #6d7fcc;
+            color: #2e8bdb;
             background-color: white;
-            border: 1px solid #6d7fcc;
+            border: 1px solid #2e8bdb;
             transform: translateY(-3px);
             box-shadow: 3px 3px 10px black;
         }
@@ -95,16 +95,16 @@ body
 
     #homeSmallText button
     {
-        background-color: #6d7fcc;
+        background-color: #2e8bdb;
         color: white;
         opacity: 1;
     }
 
         #homeSmallText button:hover
         {
-            color: #6d7fcc;
+            color: #2e8bdb;
             background-color: white;
-            border: 1px solid #6d7fcc;
+            border: 1px solid #2e8bdb;
             transform: translateY(-3px);
             box-shadow: 3px 3px 10px black;
         }
@@ -165,6 +165,7 @@ body
 {
     width: 335px;
     border-radius: 0px;
+    background-color: #2e8bdb;
 }
 
     #dropdownMenuButton:hover
@@ -188,6 +189,25 @@ body
 {
     border-radius: 0px;
 }
+
+.cardBtn
+{
+    background-color: #2e8bdb;
+    color: white;
+    border: 1px solid #2e8bdb;
+}
+
+    .cardBtn:hover
+    {
+        background-color: white;
+        color: #2e8bdb;
+    }
+
+    .cardBtn:active
+    {
+        background-color: #2e8bdb;
+        color: white;
+    }
 
 #admin-navbar
 {

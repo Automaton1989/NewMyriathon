@@ -169,9 +169,7 @@ section{
     .profile-card-3 i {
     display: inline-block;
         font-size: 16px;
-        color: #232323;
         text-align: center;
-        border: 1px solid #232323;
         width: 30px;
         height: 30px;
         line-height: 30px;
@@ -187,10 +185,34 @@ section{
         text-decoration:none;
     }
     .profile-card-3 i:hover {
-    background-color:#232323;
+    border-color: white;
     color:#fff;
     text-decoration:none;
     }
+
+    .twitch
+    {
+        border: 1px solid purple;
+        color: purple;
+    }
+
+        .twitch:hover
+        {
+            background-color:purple;
+        }
+
+    .twitter
+    {
+        border: 1px solid #2e8bdb;
+        color: #2e8bdb;
+    }
+
+        .twitter:hover
+        {
+            background-color:#2e8bdb;
+        }
+
+        .twitch
 
 .card-wrapper
 {

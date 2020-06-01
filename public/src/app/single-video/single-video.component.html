@@ -59,10 +59,10 @@
         </div>
         <div id = "buttonRow" class = "row">
             <div *ngIf = "previousVideo" class = "d-flex justify-content-start col">
-                <a [routerLink] = "['/', 'video', previousVideo.title]" ><button class = "btn btn-primary"> << Previous Video</button></a>
+                <a [routerLink] = "['/', 'video', previousVideo.title]" ><button id = "btnPrev" class = "btn"> << Previous Video</button></a>
             </div>
             <div *ngIf = "nextVideo" class = "d-flex justify-content-end col">
-                    <a [routerLink] = "['/', 'video', nextVideo.title]" ><button class = "btn btn-primary">Next Video >> </button></a>
+                    <a [routerLink] = "['/', 'video', nextVideo.title]" ><button id = "btnNext" class = "btn">Next Video >> </button></a>
             </div>
         </div>
     </div>

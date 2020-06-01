@@ -22,19 +22,21 @@
             </nav>
         </div>
         <div class="row">
-            <div align="center" id = "image-wrapper">
-                <div class="d-none d-md-block" id="homeText">
+            <div align="center" class = "d-none d-sm-block" id = "image-wrapper-large">
+                <div class="d-none d-sm-block" id="homeText">
                     <h3>Myriathon</h3>
-                    <p>Placeholder text goes here</p>
-                    <a herf="#">
-                        <button class="btn">Link Here</button>
+                    <p>View our most recent videos!</p>
+                    <a [routerLink] = "['/', 'videos']">
+                        <button class="btn">All Videos</button>
                     </a>
                 </div>
-                <div class="d-block d-md-none" id="homeSmallText">
+            </div>
+            <div align="center" class = "d-block d-sm-none" id = "image-wrapper-small">
+                <div class="d-block d-sm-none" id="homeSmallText">
                     <h3>Myriathon</h3>
-                    <p>Placeholder text goes here</p>
-                    <a herf="#">
-                        <button class="btn">Link Here</button>
+                    <p>View our most recent videos!</p>
+                    <a [routerLink] = "['/', 'videos']">
+                        <button class="btn">All Videos</button>
                     </a>
                 </div>
             </div>

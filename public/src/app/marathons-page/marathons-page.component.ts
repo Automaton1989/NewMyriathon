@@ -23,14 +23,14 @@ export class MarathonsPageComponent implements OnInit {
     {src: "/assets/img/M_Assist_Large.jpg"},
     {src: "/assets/img/M_1UP_Large.jpg"},
     {src: "/assets/img/M_Checkpoint_Large.png"},
-    {src: "https://thumbs.dreamstime.com/b/autumn-oak-leaf-fantastic-beautiful-spray-bubbles-blue-background-magic-autumn-blue-background-yellow-oak-leaf-158238643.jpg"},
+    {src: "/assets/img/Myriathon_Home.png"},
   ];
 
   littleSlides = [
     {src: "/assets/img/M_Assist_Small.png"},
     {src: "/assets/img/M_1UP_Small.png"},
     {src: "/assets/img/M_Checkpoint_Small.png"},
-    {src: "https://thumbs.dreamstime.com/b/autumn-oak-leaf-fantastic-beautiful-spray-bubbles-blue-background-magic-autumn-blue-background-yellow-oak-leaf-158238643.jpg"},
+    {src: "/assets/img/Myriathon_Home_tall.png"},
   ]
 
   constructor(private _httpService: HttpService, private router : Router, private titleService: Title) 

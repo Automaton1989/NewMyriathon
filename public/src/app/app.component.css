@@ -57,7 +57,7 @@ a:focus {
     left: -250px;
     height: 100vh;
     z-index: 999;
-    background: #7386D5;
+    background: #2e8bdb;
     color: #fff;
     transition: all 0.3s;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
@@ -73,7 +73,7 @@ a:focus {
     height: 35px;
     line-height: 35px;
     text-align: center;
-    background: #7386D5;
+    background: #2E8BFE;
     position: absolute;
     top: 10px;
     right: 10px;
@@ -85,7 +85,7 @@ a:focus {
 
 #dismiss:hover {
     background: #fff;
-    color: #7386D5;
+    color: #2e8bdb;
 }
 
 .overlay {
@@ -105,7 +105,7 @@ a:focus {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #6d7fcc;
+    background: #2e8bdb;
 }
 
 #sidebar ul.components {
@@ -125,14 +125,14 @@ a:focus {
 }
 
 #sidebar ul li a:hover {
-    color: #7386D5;
+    color: #2e8bdb;
     background: #fff;
 }
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #6d7fcc;
+    background: #2E8BFE;
 }
 
 a[data-toggle="collapse"] {
@@ -150,7 +150,7 @@ a[data-toggle="collapse"] {
 ul ul a {
     font-size: 0.9em !important;
     padding-left: 30px !important;
-    background: #6d7fcc;
+    background: #2E8BFE;
 }
 
 ul.CTAs {
@@ -167,12 +167,12 @@ ul.CTAs a {
 
 a.download {
     background: #fff;
-    color: #7386D5;
+    color: #2e8bdb;
 }
 
 a.article,
 a.article:hover {
-    background: #6d7fcc !important;
+    background: #2E8BFE !important;
     color: #fff !important;
 }
 
@@ -192,13 +192,13 @@ a.article:hover {
 
 #sidebarNotCollapse
 {
-    background-color: #6d7fcc;
+    background-color: #2E8BFE;
     color: white;
 }
 
 #sidebarCollapse
 {
-    background-color: #6d7fcc;
+    background-color: #2E8BFE;
     color: white;
 }
 

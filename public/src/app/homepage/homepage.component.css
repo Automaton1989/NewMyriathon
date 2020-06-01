@@ -3,25 +3,36 @@
     margin-bottom: 1rem;
 }
 
-#image-wrapper
+#image-wrapper-large
 {
     width: 100%;
-    min-height: 575px;
+    height: 620px;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-image: url("/assets/img/Myriathon_Home.gif");
+}
+
+#image-wrapper-small
+{
+    width: 100%;
+    height: 600px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    background-image: url("https://wallpapercave.com/wp/wp1980778.jpg");
+    background-image: url("/assets/img/Myriathon_Home_tall.png");
 }
 
 #homeText
 {
     position: absolute;
     bottom: 0px;
-    margin-left: 300px;
-    margin-bottom: 100px;
+    margin-left: 150px;
+    margin-bottom: 80px;
     z-index: 2;
-    background: rgba(128,128,128, 0.7);
+    background: rgba(0,0,0, 1);
     padding: 15px;
     border-radius: 8px;
     box-shadow: 10px 10px 5px black;
@@ -42,16 +53,16 @@
 
     #homeText button
     {
-        background-color: #6d7fcc;
+        background-color: #2e8bdb;
         color: white;
         opacity: 1;
     }
 
         #homeText button:hover
         {
-            color: #6d7fcc;
+            color: #2e8bdb;
             background-color: white;
-            border: 1px solid #6d7fcc;
+            border: 1px solid #2e8bdb;
             transform: translateY(-3px);
             box-shadow: 3px 3px 10px black;
         }
@@ -64,15 +75,16 @@
 
 #homeSmallText
 {
+    width: 95%;
     position: absolute;
     bottom: 0px;
-    margin-left: 75px;
-    margin-bottom: 100px;
+    margin-left: 7px;
+    margin-bottom: 10px;
     z-index: 2;
-    background: rgba(128,128,128, 0.7);
+    background: rgba(0,0,0, 1);
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 10px 10px 5px black;
+    box-shadow: 5px 5px 5px black;
 }
 
     #homeSmallText h3, p
@@ -90,16 +102,16 @@
 
     #homeSmallText button
     {
-        background-color: #6d7fcc;
+        background-color: #2e8bdb;
         color: white;
         opacity: 1;
     }
 
         #homeSmallText button:hover
         {
-            color: #6d7fcc;
+            color: #2e8bdb;
             background-color: white;
-            border: 1px solid #6d7fcc;
+            border: 1px solid #2e8bdb;
             transform: translateY(-3px);
             box-shadow: 3px 3px 10px black;
         }
@@ -140,7 +152,7 @@
     #image-values-wrapper
     {
         z-index: 2;
-        background: rgba(128,128,128, 0.90);
+        background: rgba(0,0,0, 1);
         padding: 15px;
         border-radius: 8px;
         box-shadow: 10px 10px 5px black;
