@@ -22,8 +22,8 @@
             </nav>
         </div>
         <div class = "row">
-            <div align = "center" id = "image-wrapper">
-                <div *ngIf = "recentVideo" class="d-none d-lg-block" id="homeText">
+            <div align = "center" class="d-none d-md-block" id = "image-wrapper-large">
+                <div *ngIf = "recentVideo" class="d-none d-md-block" id="homeText">
                     <h3>{{recentVideo.title}}</h3>
                     <p>{{recentVideo.description}}</p>
                     <a [routerLink] = "['/', 'video', recentVideo.title]">
@@ -31,8 +31,9 @@
                     </a>
                     
                 </div>
-                <div *ngIf = "recentVideo" class="d-block d-sm-block d-md-block d-lg-none" id="homeSmallText">
-                    
+            </div>
+            <div align = "center" class = "d-block d-sm-block d-md-none" id = "image-wrapper-small">
+                <div *ngIf = "recentVideo" class="d-block d-sm-block d-md-none" id="homeSmallText">
                     <h3>{{recentVideo.title}}</h3>
                     <p>{{recentVideo.description}}</p>
                     <a [routerLink] = "['/', 'video', recentVideo.title]">

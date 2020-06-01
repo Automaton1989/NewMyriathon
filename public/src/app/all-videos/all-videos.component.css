@@ -8,25 +8,36 @@ body
     margin-bottom: 1rem;
 }
 
-#image-wrapper
+#image-wrapper-large
 {
     width: 100%;
     min-height: 600px;
-    background-position: center;
+    /* background-position: center; */
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    background-image: url("https://wallpapercave.com/wp/wp1980778.jpg");
+    background-image: url("/assets/img/Myriathon_Website_Image.png");
+}
+
+#image-wrapper-small
+{
+    width: 100%;
+    min-height: 600px;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-image: url("/assets/img/Myriathon_Home_tall.png");
 }
 
 #homeText
 {
     position: absolute;
     bottom: 0px;
-    margin-left: 300px;
-    margin-bottom: 100px;
+    margin-left: 150px;
+    margin-bottom: 50px;
     z-index: 2;
-    background: rgba(128,128,128, 0.7);
+    background: rgba(0,0,0, 1);
     padding: 15px;
     border-radius: 8px;
     box-shadow: 10px 10px 5px black;
@@ -70,14 +81,15 @@ body
 #homeSmallText
 {
     position: absolute;
+    width: 95%;
     bottom: 0px;
-    margin-left: 50px;
-    margin-bottom: 100px;
+    margin-left: 7px;
+    margin-bottom: 10px;
     z-index: 2;
-    background: rgba(128,128,128, 0.7);
+    background: rgba(0,0,0, 1);
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 10px 10px 5px black;
+    box-shadow: 5px 5px 5px black;
 }
 
     #homeSmallText h3, p

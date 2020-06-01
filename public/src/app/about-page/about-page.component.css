@@ -102,6 +102,7 @@ section{
     text-align: center;
     height:368px;
     border:none;
+    margin-bottom: 1rem;
 }
     .profile-card-3 .background-block {
         float: left;
@@ -192,24 +193,24 @@ section{
 
     .twitch
     {
-        border: 1px solid purple;
-        color: purple;
+        border: 1px solid #9147ff;
+        color: #9147ff;
     }
 
         .twitch:hover
         {
-            background-color:purple;
+            background-color:#9147ff;
         }
 
     .twitter
     {
-        border: 1px solid #2e8bdb;
-        color: #2e8bdb;
+        border: 1px solid #1da1f2;
+        color: #1da1f2;
     }
 
         .twitter:hover
         {
-            background-color:#2e8bdb;
+            background-color:#1da1f2;
         }
 
         .twitch
