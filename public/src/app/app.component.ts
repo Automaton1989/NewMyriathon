@@ -4,7 +4,7 @@
   ||--------------------------------||
 */
 
-import { Component } from '@angular/core';
+import { Component, enableProdMode } from '@angular/core'; enableProdMode();
 import { HttpService } from './http.service';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
