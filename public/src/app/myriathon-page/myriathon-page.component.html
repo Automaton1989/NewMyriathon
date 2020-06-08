@@ -1,9 +1,55 @@
 <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    </head>
-    <body>
-        <p>myriathon-page-module works!</p>
-    </body>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <div class = "container-fluid">
+        <div *ngIf = "admin" class = "row">
+            <nav id = "admin-navbar" class="navbar navbar-light bg-light">
+                <span class="navbar-brand mb-0 h1">Admin</span>
+                <ul class = "nav">
+                    <li class = "nav-item">
+                        <a class = "nav-link" [routerLink] = "['/', 'admin', 'dashboard']">Admin Dash</a>
+                    </li>
+                    <li class = "nav-item">
+                        <a class = "nav-link" [routerLink] = "['/', 'addvideo']">Add Video/Season</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row">
+            <div align="center" class = "d-none d-sm-block" id = "image-wrapper-large">
+                <div class="d-none d-sm-block" id="homeText">
+                    <h3>Myriathon Home</h3>
+                    <p>Check out the stream!</p>
+                    <a href = "https://www.twitch.tv/themyriathon" target = "_blank">
+                        <button class="btn">Watch Stream</button>
+                    </a>
+                </div>
+            </div>
+            <div align="center" class = "d-block d-sm-none" id = "image-wrapper-small">
+                <div class="d-block d-sm-none" id="homeSmallText">
+                    <h3>Myriathon Home</h3>
+                    <p>Check out the stream!</p>
+                    <a href = "https://www.twitch.tv/themyriathon" target = "_blank">
+                        <button class="btn">Watch Stream</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class = "row">
+            <div class = "text-center col">
+                <h3>Schedule</h3>
+            </div>
+        </div>
+        <div id = "iframe-row" class = "row">
+            <div id = "iframe-col" class = "col">
+                <iframe src = "https://horaro.org/myriathonhome/schedule" height="500px" width = "100%" >
+
+                </iframe>
+            </div>
+        </div>
+    </div>
+</body>
     
     

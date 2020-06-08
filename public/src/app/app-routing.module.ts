@@ -20,7 +20,7 @@ const routes: Routes = [
 {path: 'admin', component: AdminPageComponent},
 {path: 'addvideo', component: AddVideoPageComponent},
 {path: 'marathons', component: MarathonsPageComponent},
-{path: 'rescue', component: MyriathonPageComponent},
+{path: 'myriathon-home', component: MyriathonPageComponent},
 {path: 'about', component: AboutPageComponent},
 {path: 'videos', component: AllVideosComponent},
 {path: 'video/:title', component: SingleVideoComponent},

@@ -1,1 +1,135 @@
-/* not empty */
+.row
+{
+    margin-bottom: 1rem;
+}
+
+#image-wrapper-large
+{
+    width: 100%;
+    height: 620px;
+    margin-bottom: 1rem;
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-image: url("/assets/img/Myriathon_Home_Blank.gif");
+}
+
+#image-wrapper-small
+{
+    width: 100%;
+    height: 600px;
+    margin-bottom: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-image: url("/assets/img/Myriathon_Home_tall.png");
+}
+
+#homeText
+{
+    position: absolute;
+    bottom: 0px;
+    margin-left: 150px;
+    margin-bottom: 80px;
+    z-index: 2;
+    background: rgba(0,0,0, 1);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 5px black;
+}
+
+    #homeText h3, p
+    {
+        color: white;
+        opacity: 1;
+    }
+
+    #homeText a
+    {
+        color: lightblue;
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+    #homeText button
+    {
+        background-color: #9352fd;
+        color: white;
+        opacity: 1;
+    }
+
+        #homeText button:hover
+        {
+            color: #9352fd;
+            background-color: white;
+            border: 1px solid #9352fd;
+            transform: translateY(-3px);
+            box-shadow: 3px 3px 10px black;
+        }
+
+        #homeText button:active
+        {
+            box-shadow: 3px 3px 10px black;
+            transform: translateY(2px);
+        }
+
+#homeSmallText
+{
+    width: 95%;
+    position: absolute;
+    bottom: 0px;
+    margin-left: 7px;
+    margin-bottom: 10px;
+    z-index: 2;
+    background: rgba(0,0,0, 1);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px black;
+}
+
+    #homeSmallText h3, p
+    {
+        color: white;
+        opacity: 1;
+    }
+
+    #homeSmallText a
+    {
+        color: lightblue;
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+    #homeSmallText button
+    {
+        background-color: #9352fd;
+        color: white;
+        opacity: 1;
+    }
+
+        #homeSmallText button:hover
+        {
+            color: #9352fd;
+            background-color: white;
+            border: 1px solid #9352fd;
+            transform: translateY(-3px);
+            box-shadow: 3px 3px 10px black;
+        }
+
+        #homeSmallText button:active
+        {
+            box-shadow: 3px 3px 10px black;
+            transform: translateY(2px);
+        }
+
+#iframe-row
+{
+    margin-bottom: 3rem;
+}
+
+#iframe-col
+{
+    padding: 0rem;
+}
