@@ -3,6 +3,46 @@
     margin-bottom: 1rem;
 }
 
+#donate-row
+{
+    margin: 0px;
+    margin-bottom: 0.5rem;
+}
+
+#donate-col
+{
+    padding: 0px;
+}
+
+#donate-bar
+{
+    background-color: #232628;
+    width: 100%;
+    height: 90px;
+}
+
+#donate-bar button
+{
+    background-color: #2E8BFE;
+    color: white;
+    opacity: 1;
+}
+
+    #donate-bar button:hover
+    {
+        color: #2E8BFE;
+        background-color: white;
+        border: 1px solid #2E8BFE;
+        transform: translateY(-3px);
+        box-shadow: 3px 3px 10px black;
+    }
+
+    #donate-bar button:active
+    {
+        box-shadow: 3px 3px 10px black;
+        transform: translateY(2px);
+    }
+
 #image-wrapper-large
 {
     width: 100%;
