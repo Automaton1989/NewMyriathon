@@ -3,6 +3,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
+
+    <!--
+        
     <div id = "donate-row" class = "row">
         <div id = "donate-col" class = "col">
             <div id = "donate-bar" class = "text-center">
@@ -13,6 +16,9 @@
             </div>
         </div>
     </div>
+
+    -->
+
     <div class = "container-fluid">
         <div *ngIf = "admin" class = "row">
             <nav id = "admin-navbar" class="navbar navbar-light bg-light">
@@ -31,27 +37,31 @@
             <div align="center" class = "d-none d-sm-block" id = "image-wrapper-large">
                 <div class="d-none d-sm-block" id="homeText">
                     <h3>Myriathon Home</h3>
-                    <p>Check out the stream!</p>
-                    <a href = "https://www.twitch.tv/themyriathon" target = "_blank">
-                        <button class="btn">Watch Stream</button>
+                    <p>Vods available if you missed out!</p>
+                    <a [routerLink] = "['/', 'videos']">
+                        <button class="btn">Watch Videos</button>
                     </a>
                 </div>
             </div>
             <div align="center" class = "d-block d-sm-none" id = "image-wrapper-small">
                 <div class="d-block d-sm-none" id="homeSmallText">
                     <h3>Myriathon Home</h3>
-                    <p>Check out the stream!</p>
-                    <a href = "https://www.twitch.tv/themyriathon" target = "_blank">
-                        <button class="btn">Watch Stream</button>
+                    <p>Vods available if you missed out!</p>
+                    <a [routerLink] = "['/', 'videos']">
+                        <button class="btn">Watch Videos</button>
                     </a>
                 </div>
             </div>
         </div>
+        
+        <!--
+
         <div class = "row">
             <div class = "text-center col">
                 <h3>Schedule</h3>
             </div>
         </div>
+
         <div id = "iframe-row" class = "row">
             <div id = "iframe-col" class = "col">
                 <iframe src = "https://horaro.org/myriathonhome/schedule" height="500px" width = "100%" >
@@ -59,6 +69,9 @@
                 </iframe>
             </div>
         </div>
+
+        -->
+
     </div>
 </body>
     

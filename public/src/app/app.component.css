@@ -33,6 +33,16 @@ a:focus {
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+.nav-link:hover
+{
+    color: #2e8bdb !important;
+}
+
+.navbar-light .navbar-nav .active>.nav-link
+{
+    color: #2E8BFE !important;
+}
+
 .navbar-btn {
     box-shadow: none;
     outline: none !important;
@@ -182,7 +192,6 @@ a.article:hover {
 
 #content {
     width: 100%;
-    padding: 20px;
     min-height: 100vh;
     transition: all 0.3s;
     position: absolute;
@@ -192,6 +201,11 @@ a.article:hover {
 
 #sidebarNotCollapse
 {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    border-radius: 0px;
+    width: 70px;
     background-color: #2E8BFE;
     color: white;
 }

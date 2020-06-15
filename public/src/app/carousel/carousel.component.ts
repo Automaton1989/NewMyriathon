@@ -33,7 +33,7 @@ export class CarouselComponent implements OnInit {
     "Myriathon Assist ran in the summer of 2018, in support of Direct Relief.  We raised over $1,600 during the marathon!",
     "Myriathon 1 Up ran in the winter of 2018, in support of Extra Life.  We raised over $1,300 during the marathon!",
     "Myriathon Checkpoint ran in the summer of 2019, in support of Checkpoint Org.  We raised over $1,500 during the marathon!",
-    "Myriathon Home is an upcoming marathon slated for summer 2020, in support of Direct Relief.  The event will run from June 8th to June 14th."
+    "Myriathon Home ran from June 8th to June 14th in support of Direct Relief.  We raised over $3,200 during the marathon!"
   ];
 
   title = [
